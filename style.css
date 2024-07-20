@@ -776,11 +776,11 @@ xclip
 
 
 .services-inner-box{
-	padding: 30px;
+	padding: 10px;
 	background: #ffffff;
 	margin-bottom: 30px;
-	border-radius: 100px 0px;
-	box-shadow: 0 7px 10px #e6e6e6;
+	/*border-radius: 100px 0px;*/
+	box-shadow: 0 2px 5px #e6e6e6;
 	text-align: center;
 }
 .ser-icon{
