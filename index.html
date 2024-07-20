@@ -344,7 +344,7 @@
         <div class="section-title text-center">
             <h3>Képzések</h3>
         </div><!-- end title -->
-        <div id="pricing-horizontal-scroll-container" class="horizontal-scroll-container row flex-nowrap overflow-auto" style="overflow-x: scroll; padding-bottom: 1rem; margin-left: 10vw;margin-right: 10vw;">
+        <div id="pricing-horizontal-scroll-container" class="horizontal-scroll-container row flex-nowrap overflow-auto" style="overflow-x: scroll; padding-bottom: 1rem;">
             <div class="col-md-5 col-11" id="basicPackageCard">
                 <div class="pricingTable">
                     <div class="pricingTable-header">
@@ -976,10 +976,10 @@
         $('#intermediatePackageCard').on('click', openIntermediatePackageCardModal);
         $('#professionalPackageCard').on('click', openProfessionalPackageCardModal);
         let outerContentWidth = $('#pricing-horizontal-scroll-container').width();
-        let scrollPosition = outerContentWidth/2;
+        let scrollPosition = outerContentWidth/3;
         $('#pricing-horizontal-scroll-container').scrollLeft(scrollPosition);
         let outerContentWidth2 = $('#services-horizontal-scroll-container').width();
-        let scrollPosition2 = outerContentWidth2/2;
+        let scrollPosition2 = outerContentWidth2/3;
         $('#services-horizontal-scroll-container').scrollLeft(scrollPosition2);
       });	
   </script>
