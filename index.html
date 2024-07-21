@@ -1029,33 +1029,35 @@
     <!-- ALL PLUGINS -->
     <script src="js/custom.js"></script>
     <script>
-       function openBasicPackageCardModal() {
-          let target = $('#basicPackageCardModal');
-          target.modal('show');
-      }
-      function openIntermediatePackageCardModal() {
-          let target = $('#intermediatePackageCardModal');
-          target.modal('show');
-      }
-      function openProfessionalPackageCardModal() {
-          let target = $('#professionalPackageCardModal');
-          target.modal('show');
-      }
-      function openBabyMomSyncPackageCardModal() {
-          let target = $('#babyMomPackageCardModal');
-          target.modal('show');
-      }
-      $(document).ready( function() {
-        $('#basicPackageCard').on('click', openBasicPackageCardModal);
-        $('#intermediatePackageCard').on('click', openIntermediatePackageCardModal);
-        $('#professionalPackageCard').on('click', openProfessionalPackageCardModal);
-        $('#babyMomSyncPackageCard').on('click', openBabyMomSyncPackageCardModal);
-        let outerContentWidth = $('#pricing-horizontal-scroll-container').width();
-        let scrollPosition = outerContentWidth/3;
-        $('#pricing-horizontal-scroll-container').scrollLeft(scrollPosition);
-        let outerContentWidth2 = $('#services-horizontal-scroll-container').width();
-        let scrollPosition2 = outerContentWidth2/3;
-        $('#services-horizontal-scroll-container').scrollLeft(scrollPosition2);
+        function openBasicPackagePdf() {
+            const link = document.createElement('a');
+            link.href = 'pdf/Témakörök.pdf';
+            link.download = 'Témakörök.pdf';
+            link.click();
+        }
+        function openIntermediatePackageCardModal() {
+            let target = $('#intermediatePackageCardModal');
+            target.modal('show');
+        }
+        function openProfessionalPackageCardModal() {
+            let target = $('#professionalPackageCardModal');
+            target.modal('show');
+        }
+        function openBabyMomSyncPackageCardModal() {
+            let target = $('#babyMomPackageCardModal');
+            target.modal('show');
+        }
+        $(document).ready( function() {
+            $('#basicPackageCard').on('click', openBasicPackagePdf);
+            $('#intermediatePackageCard').on('click', openIntermediatePackageCardModal);
+            $('#professionalPackageCard').on('click', openProfessionalPackageCardModal);
+            $('#babyMomSyncPackageCard').on('click', openBabyMomSyncPackageCardModal);
+            let outerContentWidth = $('#pricing-horizontal-scroll-container').width();
+            let scrollPosition = outerContentWidth/3;
+            $('#pricing-horizontal-scroll-container').scrollLeft(scrollPosition);
+            let outerContentWidth2 = $('#services-horizontal-scroll-container').width();
+            let scrollPosition2 = outerContentWidth2/3;
+            $('#services-horizontal-scroll-container').scrollLeft(scrollPosition2);
       });	
   </script>
 </body>
