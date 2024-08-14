@@ -1035,23 +1035,29 @@
             link.download = 'Témakörök.pdf';
             link.click();
         }
-        function openIntermediatePackageCardModal() {
-            let target = $('#intermediatePackageCardModal');
-            target.modal('show');
+        function openIntermediatPackagePdf() {
+            const link = document.createElement('a');
+            link.href = 'pdf/Nőimedihaladó.pdf';
+            link.download = 'Nőimedihaladó.pdf';
+            link.click();
         }
-        function openProfessionalPackageCardModal() {
-            let target = $('#professionalPackageCardModal');
-            target.modal('show');
+        function openProfessionalPackagePdf() {
+            const link = document.createElement('a');
+            link.href = 'pdf/professionpdf.pdf';
+            link.download = 'professionpdf.pdf';
+            link.click();
         }
-        function openBabyMomSyncPackageCardModal() {
-            let target = $('#babyMomPackageCardModal');
-            target.modal('show');
+        function openBabyMomSyncPackagePdf() {
+            const link = document.createElement('a');
+            link.href = 'pdf/anya-baba összehangolást segítő képzés.pdf';
+            link.download = 'anya-baba összehangolást segítő képzés.pdf';
+            link.click();
         }
         $(document).ready( function() {
             $('#basicPackageCard').on('click', openBasicPackagePdf);
-            $('#intermediatePackageCard').on('click', openIntermediatePackageCardModal);
-            $('#professionalPackageCard').on('click', openProfessionalPackageCardModal);
-            $('#babyMomSyncPackageCard').on('click', openBabyMomSyncPackageCardModal);
+            $('#intermediatePackageCard').on('click', openIntermediatPackagePdf);
+            $('#professionalPackageCard').on('click', openProfessionalPackagePdf);
+            $('#babyMomSyncPackageCard').on('click', openBabyMomSyncPackagePdf);
             let outerContentWidth = $('#pricing-horizontal-scroll-container').width();
             let scrollPosition = outerContentWidth/3;
             $('#pricing-horizontal-scroll-container').scrollLeft(scrollPosition);
