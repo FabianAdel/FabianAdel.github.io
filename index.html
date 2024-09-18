@@ -410,7 +410,7 @@
     <div class="row col-12 col-md-12">
         <div class="col-12 col-md-6 offset-md-3">
             <div style="font-size: xx-large; width: 100%; min-height: 10vh; background-color: darksalmon;  text-align: center; display: flex; justify-content: center; align-items: center; font-weight: 900;">
-                <div href="http://eepurl.com/iBo2pY"
+                <div id="priceListCallToAction" href="http://eepurl.com/iBo2pY"
                 style="color: whitesmoke; display: inline-block; vertical-align: middle; line-height: normal;">
                     Arlista
                 </a>
@@ -1064,11 +1064,18 @@
             link.download = 'anya-baba összehangolást segítő képzés.pdf';
             link.click();
         }
+        function openPriceListPdf() {
+            const link = document.createElement('a');
+            link.href = 'pdf/Árlista.pdf';
+            link.download = 'Árlista.pdf';
+            link.click();
+        }
         $(document).ready( function() {
             $('#basicPackageCard').on('click', openBasicPackagePdf);
             $('#intermediatePackageCard').on('click', openIntermediatPackagePdf);
             $('#professionalPackageCard').on('click', openProfessionalPackagePdf);
             $('#babyMomSyncPackageCard').on('click', openBabyMomSyncPackagePdf);
+            $('#priceListCallToAction').on('click', openPriceListPdf);
             let outerContentWidth = $('#pricing-horizontal-scroll-container').width();
             let scrollPosition = outerContentWidth/3;
             $('#pricing-horizontal-scroll-container').scrollLeft(scrollPosition);
