@@ -2775,5 +2775,5 @@ select.mobile-device {
 }
 
 .horizontal-scroll-container::-webkit-scrollbar {
-  display: none;
+  /*display: none;*/
 }

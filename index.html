@@ -141,13 +141,13 @@
         </div>
     </div>
 </div>
-<div id="services" class="section lb">
+<div id="services" class="section lb pl-0 pr-0">
     <div class="container-fluid">
         <div class="section-title text-center">
             <h3>Segítségnyújtás</h3>
         </div><!-- end title -->
         <div id="services-horizontal-scroll-container" class="horizontal-scroll-container row flex-nowrap" style="overflow-x: scroll; padding-bottom: 1rem;">
-            <div class="row flex-wrap overflow-auto" style="min-width: 125vw; margin-left: 10vw;margin-right: 10vw; ">
+            <div class="row flex-wrap overflow-auto" style="min-width: 125vw; margin-left: 15px;margin-right: 15px; ">
                 <div class="col-md-2 col-6">
                     <div class="services-inner-box">
                         <h2>Bántalmazásból adódó trauma feldolgozása</h2>
@@ -415,18 +415,18 @@
                 <div id="priceListCallToAction" href="http://eepurl.com/iBo2pY"
                 style="color: white; display: inline-block; vertical-align: middle; line-height: normal;">
                     Árlista
-                </a>
+                </div>
             </div>
         </div>
     </div>
 </div>
-<div id="pricing" class="section lb">
+<div id="pricing" class="section lb pl-0 pr-0">
     <div class="container-fluid">
         <div class="section-title text-center">
             <h3>Képzések</h3>
         </div><!-- end title -->
         <div id="pricing-horizontal-scroll-container" class="horizontal-scroll-container row flex-nowrap overflow-auto" style="overflow-x: scroll; padding-bottom: 1rem;">
-            <div class="col-md-5 col-11" id="basicPackageCard">
+            <div class="col-md-4 col-11" id="basicPackageCard">
                 <div class="pricingTable">
                     <div class="pricingTable-header">
                         <h3 class="title">Alap</h3>
@@ -449,7 +449,7 @@
                 </div>
             </div>
 
-            <div class="col-md-5 col-11" id="intermediatePackageCard">
+            <div class="col-md-4 col-11" id="intermediatePackageCard">
                 <div class="pricingTable">
                     <div class="pricingTable-header">
                         <h3 class="title" style="font-size: 2rem"><b>Haladó</b></h3>
@@ -470,7 +470,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-md-5 col-11" id="professionalPackageCard">
+            <div class="col-md-4 col-11" id="professionalPackageCard">
                 <div class="pricingTable">
                     <div class="pricingTable-header">
                         <h3 class="title" style="font-size: 1.75rem">Professional</h3>
@@ -492,7 +492,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-md-5 col-11" id="babyMomSyncPackageCard">
+            <div class="col-md-4 col-11" id="babyMomSyncPackageCard">
                 <div class="pricingTable">
                     <div class="pricingTable-header">
                         <h3 class="title" style="font-size: 1.5rem">Anya-Baba összehangolást Segítő</h3>
@@ -1078,12 +1078,12 @@
             $('#professionalPackageCard').on('click', openProfessionalPackagePdf);
             $('#babyMomSyncPackageCard').on('click', openBabyMomSyncPackagePdf);
             $('#priceListCallToAction').on('click', openPriceListPdf);
-            let outerContentWidth = $('#pricing-horizontal-scroll-container').width();
-            let scrollPosition = outerContentWidth/3;
-            $('#pricing-horizontal-scroll-container').scrollLeft(scrollPosition);
-            let outerContentWidth2 = $('#services-horizontal-scroll-container').width();
-            let scrollPosition2 = outerContentWidth2/3;
-            $('#services-horizontal-scroll-container').scrollLeft(scrollPosition2);
+            //let outerContentWidth = $('#pricing-horizontal-scroll-container').width();
+            //let scrollPosition = outerContentWidth/3;
+            //$('#pricing-horizontal-scroll-container').scrollLeft(scrollPosition);
+            //let outerContentWidth2 = $('#services-horizontal-scroll-container').width();
+            //let scrollPosition2 = outerContentWidth2/3;
+            //$('#services-horizontal-scroll-container').scrollLeft(scrollPosition2);
       });	
   </script>
 </body>
