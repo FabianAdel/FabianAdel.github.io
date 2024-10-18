@@ -571,7 +571,7 @@ xclip
 }
 #clouds path {
     fill: #ffffff;
-    bottom: -10px;
+    bottom: -12px;
     overflow: hidden;
     stroke: #ffffff;
 }
