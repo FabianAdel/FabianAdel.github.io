@@ -1099,6 +1099,7 @@ xclip
     position: absolute;
     top: 25px;
     left: -35px;
+    line-height: 22px;
 }
 .pricingTable .month{
     font-size: 12px;
