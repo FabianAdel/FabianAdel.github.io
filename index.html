@@ -432,7 +432,7 @@
                     <div class="pricingTable-header">
                         <h3 class="title" style="font-size: 1.6rem"><b>Női meditáció vezető alapképzés</h3></b>
                         <p style="font-size: 1.2rem; color:slateblue">November 25-27<br>1-2 nap 9:30-14:30 3. nap 9:30-12:45 </p>
-                        <p><b>Két nyelvű tanúsítványt adó képzés🥇 </p></b>
+                        <p><b>Két nyelvű tanúsítványt adó bejelentett képzés🥇 </p></b>
                         <div class="price-value">
                             <div class="value">
                                 <span class="amount">98.000Ft<br>+ÁFA</span>
@@ -455,7 +455,7 @@
                     <div class="pricingTable-header">
                         <h3 class="title" style="font-size:1.6rem"><b>Haladó Női meditáció vezető</b></h3>
                         <p style="font-size: 1.2rem; color:slateblue"> Szervezés alatt&nbsp<br>&nbsp</p>
-                          <p><b>Két nyelvű tanúsítványt adó képzés🥇</p></b>
+                          <p><b>Két nyelvű tanúsítványt adó bejelentett képzés🥇</p></b>
                         <div class="price-value">
                             <div class="value">
                                 <span class="amount">98.000Ft<br>+ÁFA</span>
@@ -477,7 +477,7 @@
                     <div class="pricingTable-header">
                         <h3 class="title" style="font-size: 1.6rem"><b>Professional</h3></b>
                         <p style="font-size: 1.2rem; color:slateblue"> Szervezés alatt&nbsp<br>&nbsp</p>
-                          <p><b>Két nyelvű tanúsítványt adó képzés🥇 </p></b>
+                          <p><b>Két nyelvű tanúsítványt adó bejelentett képzés🥇 </p></b>
                         <div class="price-value">
                             <div class="value">
                                 <span class="amount">120.000Ft<br>+ÁFA</span>
@@ -499,7 +499,7 @@
                     <div class="pricingTable-header">
                         <h3 class="title" style="font-size: 1.4rem"><b>Anya-Baba összehangolást Segítő</h3></b>
                         <p style="font-size: 1.2rem; color:slateblue">Október 16-18<br> 1-2 nap 9:30-14:00 3. nap 9:30-12:30</p>
-                         <p><b>Két nyelvű tanúsítványt adó képzés🥇 </p></b>
+                         <p><b>Két nyelvű tanúsítványt adó bejelentett képzés🥇 </p></b>
                         <div class="price-value">
                             <div class="value">
                                 <span class="amount">98.000Ft<br>+ÁFA</span>
@@ -512,6 +512,30 @@
                         <li>Önismeret  vagy önfejlesztés a várandósság alatt</li>
                         <li>Indítható vállalkozás ,amennyiben segítenéd a várandósság folyamatát</li>
                         <li>Praxisba beépíthető (orvos, szülésznő, bába, dúla, védőnő, jóga stb)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+               <div class="col-lg-4 col-md-6 col-11" id="SzülészetPackageCard" style="margin-bottom: 2rem;">
+                <div class="pricingTable">
+                    <div class="pricingTable-header">
+                        <h3 class="title" style="font-size: 1.4rem"><b>Dúla a szülőszobán-Kórházi kommunikáció, lelki/mentális reziliencia</h3></b>
+                        <p style="font-size: 1.2rem; color:slateblue">November 22, 9:30-16:00<br> </p>
+                         <p><b>Két nyelvű tanúsítványt adó bejelentett képzés🥇 </p></b>
+                        <div class="price-value">
+                            <div class="value">
+                                <span class="amount">49.900Ft<br>+ÁFA</span>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="pricing-content">
+                        <li>Szülőszobai támogatás alapjai</li>
+                        <li>Konfliktusok gyakori okai kórházi környezetben</li>
+                        <li>Konfliktuskezelés, feszültségcsökkentés</li>
+                        <li>Szülő nő képviselete kórházi körülmények között</li>
+                        <li>Szülész/szülésznő/orvos- dúla kapcsolati minőségek</li>
+                        <li>Dúla mentális és pszichés egyensúlya, öngondoskodás (elő,utó)</li>
+                        <li>Szüléskísérésre és szülő nőre vonatkozó jogszabályok, támogatás</li>
                     </ul>
                 </div>
             </div>
@@ -1069,6 +1093,12 @@
             link.download = 'anya-baba összehangolást segítő képzés.pdf';
             link.click();
         }
+        function openSzülészetPackagePdf() {
+            const link = document.createElement('a');
+            link.href = 'pdf/Szülőszobai lelki segítségnyújtás.pdf;
+            link.download = 'Szülőszobai lelki segítségnyújtás.pdf';
+            link.click();
+        }
         function openPriceListPdf() {
             const link = document.createElement('a');
             link.href = 'pdf/Árlista2.pdf';
@@ -1080,6 +1110,7 @@
             $('#intermediatePackageCard').on('click', openIntermediatPackagePdf);
             $('#professionalPackageCard').on('click', openProfessionalPackagePdf);
             $('#babyMomSyncPackageCard').on('click', openBabyMomSyncPackagePdf);
+            $('#SzülészetPackageCard').on('click', openSzülészetPackagePdf);
             $('#priceListCallToAction').on('click', openPriceListPdf);
             //let outerContentWidth = $('#pricing-horizontal-scroll-container').width();
             //let scrollPosition = outerContentWidth/3;
