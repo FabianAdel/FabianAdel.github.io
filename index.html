@@ -492,12 +492,14 @@ Definíciója, hogy valamilyen területen saját átélt és megélt élmények 
                         </div>
                     </div>
                     <ul class="pricing-content">
-                        <li>Imaginatív személyiségfejlesztés</li>
+                        <li>Imagináció  alapjai</li>
                         <li>Önismereti és segítői kompetencia </li>
                         <li>Családterapeuta szakmai közreműködése a képzésben</li>
-                        <li>Transzformációs munka</li>
-                        <li>50 óra kötelező saját élmény</li>
-                        <li>Érzelmi intelligencia</li>
+                        <li>Transzformációs munka, kreatív eszköztárak</li>
+                        <li>50 óra kötelező saját élmény +10 óra mentorálási gyakorlat</li>
+                        <li>Szupervíziók, esetmegbeszélések</li>
+                        <li>Etikai határvonalak</li>
+                        <li>Indítható vállalkozás</li>
                     </ul>
                 </div>
             </div>
@@ -1148,10 +1150,10 @@ Definíciója, hogy valamilyen területen saját átélt és megélt élmények 
             link.click();
         }
         
-        function openIntermediatPackagePdf() {
+        function openImaginativPackageCard() {
             const link = document.createElement('a');
-            link.href = 'pdf/Nőimedihaladó8.pdf.pdf';
-            link.download = 'Nőimedihaladó8.pdf.pdf';
+            link.href = 'pdf/Imaginatív Személyiségfejlesztő Mentor tematika.pdf';
+            link.download = 'Imaginatív Személyiségfejlesztő Mentor tematika.pdf';
             link.click();
         }
         function openProfessionalPackagePdf() {
@@ -1178,6 +1180,11 @@ Definíciója, hogy valamilyen területen saját átélt és megélt élmények 
             link.download = 'Árlista4.pdf';
             link.click();
         }
+        function openIntermediatPackagePdf() {
+            const link = document.createElement('a');
+            link.href = 'pdf/Nőimedihaladó8.pdf.pdf';
+            link.download = 'Nőimedihaladó8.pdf.pdf';
+            link.click();
         $(document).ready( function() {
             $('#basicPackageCard').on('click', openBasicPackagePdf);
             $('#intermediatePackageCard').on('click', openIntermediatPackagePdf);
@@ -1185,6 +1192,7 @@ Definíciója, hogy valamilyen területen saját átélt és megélt élmények 
             $('#babyMomSyncPackageCard').on('click', openBabyMomSyncPackagePdf);
             $('#SzuleszetPackageCard').on('click', openSzuleszetPackagePdf);
             $('#priceListCallToAction').on('click', openPriceListPdf);
+
             //let outerContentWidth = $('#pricing-horizontal-scroll-container').width();
             //let scrollPosition = outerContentWidth/3;
             //$('#pricing-horizontal-scroll-container').scrollLeft(scrollPosition);
