@@ -1181,14 +1181,21 @@ Definíciója, hogy valamilyen területen saját átélt és megélt élmények 
             link.download = 'imaginativtematika.pdf';
             link.click();
             }
+        function openbabyMomSyncPackagePdf() {
+            const link = document.createElement('a');
+            link.href = 'pdf/anyababauj.pdf';
+            link.download = 'anyababauj.pdf';
+            link.click();
+            }
           $(document).ready( function() {
             $('#basicPackageCard').on('click', openBasicPackagePdf);
-            $('#intermediatePackageCard').on('click', openIntermediatPackagePdf);
-            $('#professionalPackageCard').on('click', openProfessionalPackagePdf);
-            $('#babyMomSyncPackageCard').on('click', openBabyMomSyncPackagePdf);
-            $('#ImaginativPackageCard').on('click', openImaginativPackagePdf);
             $('#SzuleszetPackageCard').on('click', openSzuleszetPackagePdf);
             $('#priceListCallToAction').on('click', openPriceListPdf);
+            $('#professionalPackageCard').on('click', openProfessionalPackagePdf);
+            $('#intermediatePackageCard').on('click', openIntermediatPackagePdf);
+            $('#babyMomSyncPackageCard').on('click', openBabyMomSyncPackagePdf);
+            $('#ImaginativPackageCard').on('click', openImaginativPackagePdf);
+            
 
             //let outerContentWidth = $('#pricing-horizontal-scroll-container').width();
             //let scrollPosition = outerContentWidth/3;
