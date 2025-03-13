@@ -1155,6 +1155,12 @@ Definíciója, hogy valamilyen területen saját átélt és megélt élmények 
             link.href = 'pdf/anyababauj.pdf';
             link.download = 'anyababauj.pdf';
             link.click();
+            }
+        function openImaginativPackagePdf() {
+            const link = document.createElement('a');
+            link.href = 'pdf/imaginativtematika.pdf';
+            link.download = 'imaginativtematika.pdf';
+            link.click();
         }
         function openSzuleszetPackagePdf() {
             const link = document.createElement('a');
@@ -1172,24 +1178,20 @@ Definíciója, hogy valamilyen területen saját átélt és megélt élmények 
             const link = document.createElement('a');
             link.href = 'pdf/professionaluj.pdf';
             link.download = 'professionaluj.pdf';
-            link.click();  
-        } 
-        function openImaginativPackagePdf() {
-            const link = document.createElement('a');
-            link.href = 'pdf/imaginativtematika.pdf';
-            link.download = 'imaginativtematika.pdf';
-            link.click();   
+            link.click();    
         }
         function openIntermediatPackagePdf() {
             const link = document.createElement('a');
             link.href = 'pdf/Nőimedihaladó8.pdf.pdf';
             link.download = 'Nőimedihaladó8.pdf.pdf';
             link.click();
-        $(document).ready( function() {
+            }
+          $(document).ready( function() {
             $('#basicPackageCard').on('click', openBasicPackagePdf);
             $('#intermediatePackageCard').on('click', openIntermediatPackagePdf);
             $('#professionalPackageCard').on('click', openProfessionalPackagePdf);
             $('#babyMomSyncPackageCard').on('click', openBabyMomSyncPackagePdf);
+            $('#ImaginativPackageCard').on('click', openImaginativPackagePdf);
             $('#SzuleszetPackageCard').on('click', openSzuleszetPackagePdf);
             $('#priceListCallToAction').on('click', openPriceListPdf);
 
