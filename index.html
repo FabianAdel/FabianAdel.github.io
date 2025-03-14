@@ -1164,12 +1164,12 @@ Definíciója, hogy valamilyen területen saját átélt és megélt élmények 
             link.download = 'Árlista4.pdf';
             link.click();    
          }
-         function openbabyMomSyncPackagePdf() {
-            const link = document.createElement('a');
-            link.href = 'pdf/anyababa.pdf';
-            link.download = 'anyababa.pdf';
-            link.click();
-        }
+        function openbabyMomSyncPackagePdf() {
+    const link = document.createElement('a');
+    link.href = 'pdf/anyababa.pdf';//
+    link.target = '_blank'; //
+    link.click();
+}
         function openIntermediatPackagePdf() {
             const link = document.createElement('a');
             link.href = 'pdf/Nőimedihaladó8.pdf.pdf';
