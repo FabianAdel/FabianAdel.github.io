@@ -234,60 +234,68 @@ Saját tapasztalati tudásom a családon belüli erőszak, az agresszió, a gyer
         </div><!-- end row -->
     </div><!-- end container -->
 </div><!-- end section -->
-<div id="elegant-floating-bar" style="
-    position: fixed; 
-    bottom: 30px; 
-    left: 50%; 
-    transform: translateX(-50%); 
-    width: 90%; 
-    max-width: 600px;
-    background: rgba(30, 30, 30, 0.95); 
-    backdrop-filter: blur(10px); 
-    color: white; 
-    padding: 15px 25px; 
-    border-radius: 100px; 
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center; 
-    box-shadow: 0 15px 40px rgba(0,0,0,0.5); 
-    z-index: 10000;
-    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    border: 1px solid rgba(255,255,255,0.15);
-">
-    <button onclick="document.getElementById('elegant-floating-bar').style.display='none'" style="
-        position: absolute;
-        top: -5px;
-        right: 20px;
-        background: #ff4757;
-        color: white;
-        border: none;
-        border-radius: 50%;
-        width: 24px;
-        height: 24px;
-        cursor: pointer;
-        font-weight: bold;
-        font-size: 12px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-    ">✕</button>
+<div id="safe-sticky-wrapper" style="all: initial;">
+    <div id="elegant-floating-bar" style="
+        position: fixed !important; 
+        bottom: 20px !important; 
+        left: 50% !important; 
+        transform: translateX(-50%) !important; 
+        width: 90% !important; 
+        max-width: 550px !important;
+        background: #1e1e1e !important; 
+        color: white !important; 
+        padding: 12px 20px !important; 
+        border-radius: 50px !important; 
+        display: flex !important; 
+        justify-content: space-between !important; 
+        align-items: center !important; 
+        box-shadow: 0 10px 30px rgba(0,0,0,0.5) !important; 
+        z-index: 2147483647 !important; /* A lehető legmagasabb réteg */
+        font-family: Arial, sans-serif !important;
+        border: 1px solid rgba(255,255,255,0.2) !important;
+        box-sizing: border-box !important;
+    ">
+        <button onclick="document.getElementById('safe-sticky-wrapper').style.display='none'" style="
+            position: absolute !important;
+            top: -5px !important;
+            right: 15px !important;
+            background: #ff4757 !important;
+            color: white !important;
+            border: none !important;
+            border-radius: 50% !important;
+            width: 22px !important;
+            height: 22px !important;
+            cursor: pointer !important;
+            font-size: 12px !important;
+            font-weight: bold !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+        ">✕</button>
 
-    <div style="display: flex; align-items: center; gap: 12px;">
-        <span style="font-size: 20px;">🎓</span>
-        <span style="font-size: 15px; font-weight: 400; letter-spacing: 0.2px; line-height: 1.2;">
-            Nem szeretnél lemaradni a képzésekről? <strong>Iratkozz fel!</strong>
-        </span>
+        <div style="display: flex !important; align-items: center !important; gap: 10px !important; margin: 0 !important;">
+            <span style="font-size: 18px !important;">🎓</span>
+            <span style="font-size: 14px !important; color: white !important; font-weight: 400 !important; line-height: 1.2 !important; text-align: left !important;">
+                Nem szeretnél lemaradni a képzésekről? <strong>Iratkozz fel!</strong>
+            </span>
+        </div>
+        
+        <a href="http://eepurl.com/iBo2pY" target="_blank" style="
+            background-color: white !important; 
+            color: black !important; 
+            text-decoration: none !important; 
+            padding: 8px 18px !important; 
+            border-radius: 40px !important; 
+            font-size: 13px !important; 
+            font-weight: bold !important;
+            text-transform: uppercase !important;
+            white-space: nowrap !important;
+            display: inline-block !important;
+        ">
+            Feliratkozom
+        </a>
     </div>
-    
-    <a href="http://eepurl.com/iBo2pY" target="_blank" style="
-        background-color: #ffffff; 
-        color: #000000; 
-        text-decoration: none; 
-        padding: 10px 22px; 
-        border-radius: 50px; 
-        font-size: 13px; 
-        font-weight
+</div>
 </div>
 <div id="services" class="section lb pl-0 pr-0">
     <div class="container-fluid">
