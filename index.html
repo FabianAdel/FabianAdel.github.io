@@ -593,7 +593,7 @@ Saját tapasztalati tudásom a családon belüli erőszak, az agresszió, a gyer
     </a>
 <style>
 
-  <style>
+<style>
     .pricingTable {
         height: auto !important;
         display: block;
@@ -601,10 +601,17 @@ Saját tapasztalati tudásom a családon belüli erőszak, az agresszió, a gyer
         padding-bottom: 20px;
     }
     
-    .pricing-grid [class*="col-"] {
-        margin-bottom: 20px !important;
+    .pricing-grid-clean {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .pricing-grid-clean [class*="col-"] {
+        padding: 0;
+        margin: 0;
         display: block;
-        min-height: 1px;
     }
 
     @keyframes pulse-green { 0% { transform: scale(1); opacity: 1; } 100% { transform: scale(3.5); opacity: 0; } }
@@ -612,8 +619,7 @@ Saját tapasztalati tudásom a családon belüli erőszak, az agresszió, a gyer
 
     @media (min-width: 992px) {
         .col-custom {
-            width: 33.33% !important;
-            float: left !important;
+            width: calc(33.33% - 14px) !important;
         }
     }
 </style>
@@ -622,198 +628,158 @@ Saját tapasztalati tudásom a családon belüli erőszak, az agresszió, a gyer
     Az IAOTH (International Association of Therapists) nem állami, hanem nemzetközi szakmai szervezet.
 </div>
 
-<div id="pricing-grid-container" class="container-fluid">
-    <div class="row" style="display: block; clear: both;">
+<div class="pricing-grid-clean container-fluid">
 
-        <div class="col-lg-4 col-md-6 col-12 col-custom" id="ImaginativPackageCard">
-            <div class="pricingTable">
-                <div class="pricingTable-header">
-                    <h3 class="title" style="font-size: 1.6rem"><b>Imaginatív Személyiségfejlesztő Mentor(162 óra)(IAOTH által akkreditált)</h3></b>
-                    <p style="font-size: 1.2rem; color:slateblue"> Új turnus 2026 FEBRUÁR 24-SZEPTEMBER 29&nbsp<br>&nbsp 
-                    <div style="color: #C86B8A; font-size: 1.3em; font-weight: bold; text-align: center; border: 2px solid #C86B8A; padding: 10px; border-radius: 8px; display: inline-block;">Tematika</div>
-                    </p>
-                    <div style="display: inline-flex; align-items: center; background: linear-gradient(135deg, rgba(255,165,0,0.15) 0%, rgba(50,205,50,0.15) 100%); border: 2px solid #ff8c00; padding: 10px 20px; border-radius: 12px; font-family: 'Arial Black', sans-serif; box-shadow: 0 4px 15px rgba(0,0,0,0.1); margin: 10px 0; border-image: linear-gradient(to right, #ff8c00, #32cd32) 1;">
-                        <div style="width: 12px; height: 12px; background-color: #32cd32; border-radius: 50%; margin-right: 15px; position: relative;">
-                            <div style="position: absolute; width: 100%; height: 100%; background: #32cd32; border-radius: 50%; animation: pulse-green 1.4s infinite;"></div>
-                        </div>
-                        <span style="font-size: 14px; font-weight: 900; text-transform: uppercase; letter-spacing: 0.5px; animation: gradient-shift 2s infinite ease-in-out; display: flex; gap: 5px;">
-                        Jelentkezés nyitva, hamarosan indul: 12 / 10 SZABAD HELY
-                        </span>
+    <div class="col-lg-4 col-md-6 col-12 col-custom">
+        <div class="pricingTable">
+            <div class="pricingTable-header">
+                <h3 class="title" style="font-size: 1.6rem"><b>Imaginatív Személyiségfejlesztő Mentor(162 óra)(IAOTH által akkreditált)</h3></b>
+                <p style="font-size: 1.2rem; color:slateblue"> Új turnus 2026 FEBRUÁR 24-SZEPTEMBER 29&nbsp<br>&nbsp </p>
+                <div style="color: #C86B8A; font-size: 1.3em; font-weight: bold; text-align: center; border: 2px solid #C86B8A; padding: 10px; border-radius: 8px; display: inline-block;">Tematika</div>
+                
+                <div style="display: inline-flex; align-items: center; background: linear-gradient(135deg, rgba(255,165,0,0.15) 0%, rgba(50,205,50,0.15) 100%); border: 2px solid #ff8c00; padding: 10px 20px; border-radius: 12px; font-family: 'Arial Black', sans-serif; box-shadow: 0 4px 15px rgba(0,0,0,0.1); margin: 10px 0; border-image: linear-gradient(to right, #ff8c00, #32cd32) 1;">
+                    <div style="width: 12px; height: 12px; background-color: #32cd32; border-radius: 50%; margin-right: 15px; position: relative;">
+                        <div style="position: absolute; width: 100%; height: 100%; background: #32cd32; border-radius: 50%; animation: pulse-green 1.4s infinite;"></div>
                     </div>
-                    <p><b>A képzés két nyelvű FAR tanúsítványt, valamint az International Association of Therapists (IAOTH) szakmai szervezet által kiadott akkreditációval rendelkező nemzetközi tanúsítványt és Course Summaryt biztosít. </p></b>
-                    <div class="price-value">
-                        <div class="value">
-                            <span class="amount">498,990Ft<br></span>
-                        </div>
-                    </div>
+                    <span style="font-size: 14px; font-weight: 900; text-transform: uppercase; letter-spacing: 0.5px; animation: gradient-shift 2s infinite ease-in-out; display: flex; gap: 5px;">Jelentkezés nyitva, hamarosan indul: 12 / 10 SZABAD HELY</span>
                 </div>
-                <ul class="pricing-content">
-                    <li>Imagináció  alapjai</li>
-                    <li>Transzformációs munka, kreatív eszközök </li>
-                    <li>Tudattalan működése, értelmezése</li>
-                    <li>Családterapeuta szakmai közreműködése a képzésben</li>
-                    <li>Rendszerszemléletű imaginációs munka</li>
-                    <li>Gyakorlatfókuszú képzés beadandókkal</li>
-                    <li>50 óra kötelező saját élmény +10 óra mentorálási gyakorlat</li>
-                    <li>Szupervíziók, esetmegbeszélések</li>
-                    <li>Etikai határvonalak</li>
-                    <li>Részletfizetési lehetőség</li>
-                    <li>Indítható vállalkozás vagy praxisba beépíthető</li>
-                </ul>
+                <p style="font-size: 0.9rem; line-height: 1.4;"><b>A képzés két nyelvű FAR tanúsítványt, valamint az International Association of Therapists (IAOTH) szakmai szervezet által kiadott akkreditációval rendelkező nemzetközi tanúsítványt és Course Summaryt biztosít. </b></p>
+                <div class="price-value"><div class="value"><span class="amount">498,990Ft<br></span></div></div>
             </div>
+            <ul class="pricing-content">
+                <li>Imagináció alapjai</li>
+                <li>Transzformációs munka, kreatív eszközök </li>
+                <li>Tudattalan működése, értelmezése</li>
+                <li>Családterapeuta szakmai közreműködése a képzésben</li>
+                <li>Rendszerszemléletű imaginációs munka</li>
+                <li>Gyakorlatfókuszú képzés beadandókkal</li>
+                <li>50 óra kötelező saját élmény +10 óra mentorálási gyakorlat</li>
+                <li>Szupervíziók, esetmegbeszélések</li>
+                <li>Etikai határvonalak</li>
+                <li>Részletfizetési lehetőség</li>
+                <li>Indítható vállalkozás vagy praxisba beépíthető</li>
+            </ul>
         </div>
-
-        <div class="col-lg-4 col-md-6 col-12 col-custom" id="bevezetesPackageCard">
-            <div class="pricingTable">
-                <div class="pricingTable-header">
-                    <h3 class="title" style="font-size: 1.6rem"><b>Meditációs alapok, idegrendszeri szabályozás és Wellbeing(🗣️ 🇭🇺/🇺🇸) (IAOTH által akkreditált) </h3></b>
-                    <p style="font-size: 1.2rem; color:slateblue"> Március 9 9:30-16:00 &nbsp<br>&nbsp</p>
-                    <div style="color: #C86B8A; font-size: 1.1em; font-weight: bold; text-align: center; border: 2px solid #C86B8A; padding: 10px; border-radius: 8px; display: inline-block;">Tematika</div>
-                    <p><b>A képzés két nyelvű FAR tanúsítványt, International Association of Therapists (IAOTH)által akkreditált szakmai képzés elvégzését igazoló tanúsítványt és Course summaryt ad.</p></b>
-                    <div class="price-value">
-                        <div class="value">
-                            <span class="amount">72.990Ft<br></span>
-                        </div>
-                    </div>
-                </div>
-                <ul class="pricing-content">
-                    <li>Stressz és paraszimpatikus idegrendszer kapcsolata</li>
-                    <li>Meditáció alapfogalmai</li>
-                    <li>Testpásztázás, elraktározott feszültség enyhítése</li>
-                    <li>Légzéstechnika és idegrendszer kapcsolata</li>
-                    <li>Neuroplaszticitás- és ezt elősegítő gyakorlatok</li>
-                    <li>Wellbeing fogalma, alapja és gyakorlatok</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 col-12 col-custom" id="basicPackageCard">
-            <div class="pricingTable">
-                <div class="pricingTable-header">
-                    <h3 class="title" style="font-size: 1.6rem"><b> Női meditáció vezető alapképzés (IAOTH által akkreditált) </h3></b>
-                    <p style="font-size: 1.2rem; color:slateblue"> Új turnus: Február 25-27  <br><div style="color: #C86B8A; font-size: 1.3em; font-weight: bold; text-align: center; border: 2px solid #C86B8A; padding: 10px; border-radius: 8px; display: inline-block;">Tematika</div></p>
-                    <p><b>A képzés két nyelvű FAR tanúsítványt, International Association of Therapists (IAOTH)által akkreditált szakmai képzés elvégzését igazoló tanúsítványt és Course summaryt ad.</p></b>
-                    <p style="color: green;">Február 25-26 9:30-14:30, Február 27 (gyakorlati nap/online), 9:30-13:30</p>
-                    <div class="price-value">
-                        <div class="value">
-                            <span class="amount">134.990 Ft<br></span>
-                        </div>
-                    </div>
-                </div>
-                <ul class="pricing-content">
-                    <li>Pszichológiai és mentálhigiénés szemlélet</li>
-                    <li>Tudásbővítés, praxisba beépíthető</li>
-                    <li>Indítható vállalkozás</li>
-                    <li>Vezethetsz Női kört vagy meditációkat</li>
-                    <li>Gyakorlatorientált</li>
-                    <li>Tömény elmélet</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 col-12 col-custom" id="intermediatePackageCard" style="clear: left;">
-            <div class="pricingTable">
-                <div class="pricingTable-header">
-                    <h3 class="title" style="font-size:1.6rem"><b>Haladó Női meditáció vezető(IAOTH által akkreditált)</b></h3>
-                    <p style="font-size: 1.2rem; color:slateblue"> 2026 Február 7-8 9:30-14:30&nbsp<br>&nbsp</p>
-                    <div style="color: #C86B8A; font-size: 1.3em; font-weight: bold; text-align: center; border: 2px solid #C86B8A; padding: 10px; border-radius: 8px; display: inline-block;">Tematika</div>
-                    <p><b>A képzés két nyelvű FAR tanúsítványt, Elismerő Oklevelet és Course Summeryt ad.</p></b>
-                    <div class="price-value">
-                        <div class="value">
-                            <span class="amount">116.000 Ft<br></span>
-                        </div>
-                    </div>
-                </div>
-                <ul class="pricing-content">
-                    <li>Feltétel az alapképzés sikeres elvégzése</li>
-                    <li>Pszichológiai és mentálhigiénés szemlélet</li>
-                    <li>Tudásbővítés, elmélyülés a mély meditációk területén</li>
-                    <li>13 új meditációs technika</li>
-                    <li>Tömény elmélet</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 col-12 col-custom" id="professionalPackageCard">
-            <div class="pricingTable">
-                <div class="pricingTable-header">
-                    <h3 class="title" style="font-size: 1.6rem"><b>Meditációs instruktor és csoportvezető (Professional szint) (IAOTH által akkreditált) (42 óra)</h3></b>
-                    <p style="font-size: 1.2rem; color:slateblue"> November 6- Március 19, minden csütörtök 9:30-12:00 &nbsp<br>&nbsp</p>
-                    <div style="color: #C86B8A; font-size: 1.3em; font-weight: bold; text-align: center; border: 2px solid #C86B8A; padding: 10px; border-radius: 8px; display: inline-block;">Tematika</div>
-                    <p><b>A képzés két nyelvű FAR tanúsítványt, International Association of Therapists (IAOTH)által akkreditált szakmai képzés elvégzését igazoló tanúsítványt és Course summaryt ad </p></b>
-                    <div class="price-value">
-                        <div class="value">
-                            <span class="amount">184.990Ft<br></span>
-                        </div>
-                    </div>
-                </div>
-                <ul class="pricing-content">
-                    <li>Feltétel az alap és a haladó képzés sikeres elvégzése</li>
-                    <li>Esetmegbeszélők, mentálhigiénés műhely</li>
-                    <li>Tudásbővítés</li>
-                    <li>Klienssel való szerződés</li>
-                    <li>75% gyakorlat, 25% elmélet</li>
-                    <li>Professional minősítés</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 col-12 col-custom" id="babyMomSyncPackageCard">
-            <div class="pricingTable">
-                <div class="pricingTable-header">
-                    <h3 class="title" style="font-size: 1.4rem"><b>Pre-és Perinatális Kapcsolódási Mentor(IAOTH által akkreditált)</h3></b>
-                    <p style="font-size: 1.2rem; color:slateblue">Március 25-27 Első két nap 9:30-14:30, 3. nap 9:30-12:30 
-                    <div style="color: #C86B8A; font-size: 1.3em; font-weight: bold; text-align: center; border: 2px solid #C86B8A; padding: 10px; border-radius: 8px; display: inline-block;">Tematika</div></p>
-                    <p><b>A képzés két nyelvű FAR tanúsítványt, International Association of Therapists (IAOTH)által akkreditált szakmai képzés elvégzését igazoló tanúsítványt és Course summaryt ad </p></b>
-                    <div class="price-value">
-                        <div class="value">
-                            <span class="amount">134.990Ft<br></span>
-                        </div>
-                    </div>
-                </div>
-                <ul class="pricing-content">
-                    <li>Várandósság folyamatának lelki kísérése, várandóslélektan</li>
-                    <li>Kompetenciafejlesztés, esetelemzések</li>
-                    <li>Önismeret, önfejlesztés a várandósság alatt</li>
-                    <li>Indítható vállalkozás</li>
-                    <li>Praxisba beépíthető (orvos, szülésznő, bába, dúla, védőnő,jóga stb)</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 col-12 col-custom" id="SzuleszetPackageCard" style="clear: left;">
-            <div class="pricingTable">
-                <div class="pricingTable-header">
-                    <h3 class="title" style="font-size: 1.4rem"><b>Dúla a szülőszobán-Kórházi kommunikáció, lelki/mentális reziliencia(IAOTH által akkreditált)</h3></b>
-                    <p style="font-size: 1.2rem; color:slateblue">Következő turnus: Március 4 9:30-15:30</p>
-                    <div style="color: #C86B8A; font-size: 1.3em; font-weight: bold; text-align: center; border: 2px solid #C86B8A; padding: 10px; border-radius: 8px; display: inline-block;">Tematika</div>
-                    <p><b>A képzés két nyelvű FAR tanúsítványt, International Association of Therapists (IAOTH)által akkreditált szakmai képzés elvégzését igazoló tanúsítványt és Course summaryt ad </p></b>
-                    <div class="price-value">
-                        <div class="value">
-                            <span class="amount">66.990Ft<br></span>
-                        </div>
-                    </div>
-                </div>
-                <ul class="pricing-content">
-                    <li>Minőségibb szülőszobai támogatás </li>
-                    <li>Konfliktuskezelés, feszültségcsökkentés kórházi környezetben</li>
-                    <li>Dúlai hivatásba beépíthető</li>
-                    <li>Szülész/szülésznő/orvos- dúla kapcsolati minőségek</li>
-                    <li>Dúla mentális és pszichés egyensúlya, öngondoskodás</li>
-                    <li>Sikeresebb kórházi szüléskísérés</li>
-                </ul>
-            </div>
-        </div>
-
     </div>
-</div>
 
-<div style="width: 100%; padding: 40px 0; text-align: center; clear: both;">
-    <a href="https://tally.so/r/Pdz84x" style="display: inline-block; background-color: #e9967a; color: #ffffff !important; font-size: 18px; font-weight: 700; text-decoration: none !important; padding: 15px 35px; border-radius: 50px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); transition: all 0.3s ease; text-transform: uppercase; font-family: sans-serif;">Jelentkezés a képzésekre</a>
-</div>
+    <div class="col-lg-4 col-md-6 col-12 col-custom">
+        <div class="pricingTable">
+            <div class="pricingTable-header">
+                <h3 class="title" style="font-size: 1.6rem"><b>Meditációs alapok, idegrendszeri szabályozás és Wellbeing(🗣️ 🇭🇺/🇺🇸) (IAOTH által akkreditált) </h3></b>
+                <p style="font-size: 1.2rem; color:slateblue"> Március 9 9:30-16:00 &nbsp<br>&nbsp</p>
+                <div style="color: #C86B8A; font-size: 1.3em; font-weight: bold; text-align: center; border: 2px solid #C86B8A; padding: 10px; border-radius: 8px; display: inline-block;">Tematika</div>
+                <p style="font-size: 0.9rem; line-height: 1.4;"><b>A képzés két nyelvű FAR tanúsítványt, International Association of Therapists (IAOTH)által akkreditált szakmai képzés elvégzését igazoló tanúsítványt és Course summaryt ad.</b></p>
+                <div class="price-value"><div class="value"><span class="amount">72.990Ft<br></span></div></div>
+            </div>
+            <ul class="pricing-content">
+                <li>Stressz és paraszimpatikus idegrendszer kapcsolata</li>
+                <li>Meditáció alapfogalmai</li>
+                <li>Testpásztázás, elraktározott feszültség enyhítése</li>
+                <li>Légzéstechnika és idegrendszer kapcsolata</li>
+                <li>Neuroplaszticitás- és ezt elősegítő gyakorlatok</li>
+                <li>Wellbeing fogalma, alapja és gyakorlatok</li>
+            </ul>
+        </div>
     </div>
-</div>
 
+    <div class="col-lg-4 col-md-6 col-12 col-custom">
+        <div class="pricingTable">
+            <div class="pricingTable-header">
+                <h3 class="title" style="font-size: 1.6rem"><b> Női meditáció vezető alapképzés (IAOTH által akkreditált) </h3></b>
+                <p style="font-size: 1.2rem; color:slateblue"> Új turnus: Február 25-27 </p>
+                <div style="color: #C86B8A; font-size: 1.3em; font-weight: bold; text-align: center; border: 2px solid #C86B8A; padding: 10px; border-radius: 8px; display: inline-block;">Tematika</div>
+                <p style="font-size: 0.9rem; line-height: 1.4;"><b>A képzés két nyelvű FAR tanúsítványt, International Association of Therapists (IAOTH)által akkreditált szakmai képzés elvégzését igazoló tanúsítványt és Course summaryt ad.</b></p>
+                <p style="color: green;">Február 25-26 9:30-14:30, Február 27 (gyakorlati nap/online), 9:30-13:30</p>
+                <div class="price-value"><div class="value"><span class="amount">134.990 Ft<br></span></div></div>
+            </div>
+            <ul class="pricing-content">
+                <li>Pszichológiai és mentálhigiénés szemlélet</li>
+                <li>Tudásbővítés, praxisba beépíthető</li>
+                <li>Indítható vállalkozás</li>
+                <li>Vezethetsz Női kört vagy meditációkat</li>
+                <li>Gyakorlatorientált</li>
+                <li>Tömény elmélet</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="col-lg-4 col-md-6 col-12 col-custom">
+        <div class="pricingTable">
+            <div class="pricingTable-header">
+                <h3 class="title" style="font-size:1.6rem"><b>Haladó Női meditáció vezető(IAOTH által akkreditált)</b></h3>
+                <p style="font-size: 1.2rem; color:slateblue"> 2026 Február 7-8 9:30-14:30 </p>
+                <div style="color: #C86B8A; font-size: 1.3em; font-weight: bold; text-align: center; border: 2px solid #C86B8A; padding: 10px; border-radius: 8px; display: inline-block;">Tematika</div>
+                <p style="font-size: 0.9rem; line-height: 1.4;"><b>A képzés két nyelvű FAR tanúsítványt, Elismerő Oklevelet és Course Summeryt ad.</b></p>
+                <div class="price-value"><div class="value"><span class="amount">116.000 Ft<br></span></div></div>
+            </div>
+            <ul class="pricing-content">
+                <li>Feltétel az alapképzés sikeres elvégzése</li>
+                <li>Pszichológiai és mentálhigiénés szemlélet</li>
+                <li>Tudásbővítés, elmélyülés a mély meditációk területén</li>
+                <li>13 új meditációs technika</li>
+                <li>Tömény elmélet</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="col-lg-4 col-md-6 col-12 col-custom">
+        <div class="pricingTable">
+            <div class="pricingTable-header">
+                <h3 class="title" style="font-size: 1.6rem"><b>Meditációs instruktor és csoportvezető (Professional szint) (IAOTH által akkreditált) (42 óra)</h3></b>
+                <p style="font-size: 1.2rem; color:slateblue"> November 6- Március 19, minden csütörtök 9:30-12:00 </p>
+                <div style="color: #C86B8A; font-size: 1.3em; font-weight: bold; text-align: center; border: 2px solid #C86B8A; padding: 10px; border-radius: 8px; display: inline-block;">Tematika</div>
+                <p style="font-size: 0.9rem; line-height: 1.4;"><b>A képzés két nyelvű FAR tanúsítványt, International Association of Therapists (IAOTH)által akkreditált szakmai képzés elvégzését igazoló tanúsítványt és Course summaryt ad.</b></p>
+                <div class="price-value"><div class="value"><span class="amount">184.990Ft<br></span></div></div>
+            </div>
+            <ul class="pricing-content">
+                <li>Feltétel az alap és a haladó képzés sikeres elvégzése</li>
+                <li>Esetmegbeszélők, mentálhigiénés műhely</li>
+                <li>Tudásbővítés</li>
+                <li>Klienssel való szerződés</li>
+                <li>75% gyakorlat, 25% elmélet</li>
+                <li>Professional minősítés</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="col-lg-4 col-md-6 col-12 col-custom">
+        <div class="pricingTable">
+            <div class="pricingTable-header">
+                <h3 class="title" style="font-size: 1.4rem"><b>Pre-és Perinatális Kapcsolódási Mentor(IAOTH által akkreditált)</h3></b>
+                <p style="font-size: 1.2rem; color:slateblue">Március 25-27 Első két nap 9:30-14:30, 3. nap 9:30-12:30 </p>
+                <div style="color: #C86B8A; font-size: 1.3em; font-weight: bold; text-align: center; border: 2px solid #C86B8A; padding: 10px; border-radius: 8px; display: inline-block;">Tematika</div>
+                <p style="font-size: 0.9rem; line-height: 1.4;"><b>A képzés két nyelvű FAR tanúsítványt, International Association of Therapists (IAOTH)által akkreditált szakmai képzés elvégzését igazoló tanúsítványt és Course summaryt ad.</b></p>
+                <div class="price-value"><div class="value"><span class="amount">134.990Ft<br></span></div></div>
+            </div>
+            <ul class="pricing-content">
+                <li>Várandósság folyamatának lelki kísérése, várandóslélektan</li>
+                <li>Kompetenciafejlesztés, esetelemzések</li>
+                <li>Önismeret, önfejlesztés a várandósság alatt</li>
+                <li>Indítható vállalkozás</li>
+                <li>Praxisba beépíthető (orvos, szülésznő, bába, dúla, védőnő,jóga stb)</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="col-lg-4 col-md-6 col-12 col-custom">
+        <div class="pricingTable">
+            <div class="pricingTable-header">
+                <h3 class="title" style="font-size: 1.4rem"><b>Dúla a szülőszobán-Kórházi kommunikáció, lelki/mentális reziliencia(IAOTH által akkreditált)</h3></b>
+                <p style="font-size: 1.2rem; color:slateblue">Következő turnus: Március 4 9:30-15:30</p>
+                <div style="color: #C86B8A; font-size: 1.3em; font-weight: bold; text-align: center; border: 2px solid #C86B8A; padding: 10px; border-radius: 8px; display: inline-block;">Tematika</div>
+                <p style="font-size: 0.9rem; line-height: 1.4;"><b>A képzés két nyelvű FAR tanúsítványt, International Association of Therapists (IAOTH)által akkreditált szakmai képzés elvégzését igazoló tanúsítványt és Course summaryt ad.</b></p>
+                <div class="price-value"><div class="value"><span class="amount">66.990Ft<br></span></div></div>
+            </div>
+            <ul class="pricing-content">
+                <li>Minőségibb szülőszobai támogatás </li>
+                <li>Konfliktuskezelés, feszültségcsökkentés kórházi környezetben</li>
+                <li>Dúlai hivatásba beépíthető</li>
+                <li>Szülész/szülésznő/orvos- dúla kapcsolati minőségek</li>
+                <li>Dúla mentális és pszichés egyensúlya, öngondoskodás</li>
+                <li>Sikeresebb kórházi szüléskísérés</li>
+            </ul>
+        </div>
+    </div>
 <div style="width: 100%; padding: 40px 0; text-align: center; clear: both;">
     <a href="https://tally.so/r/Pdz84x" style="display: inline-block; background-color: #e9967a; color: #ffffff !important; font-size: 18px; font-weight: 700; text-decoration: none !important; padding: 15px 35px; border-radius: 50px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); transition: all 0.3s ease; text-transform: uppercase; font-family: sans-serif;">Jelentkezés a képzésekre</a>
 </div>
