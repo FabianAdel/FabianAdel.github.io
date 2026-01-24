@@ -810,6 +810,43 @@ Saját tapasztalati tudásom a családon belüli erőszak, az agresszió, a gyer
                 <li>Dúla mentális és pszichés egyensúlya, öngondoskodás</li>
                 <li>Sikeresebb kórházi szüléskísérés</li>
             </ul>
+            <style>
+  @keyframes pulse-glow {
+    0% { box-shadow: 0 0 0 0 rgba(218, 68, 187, 0.7); }
+    70% { box-shadow: 0 0 0 15px rgba(218, 68, 187, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(218, 68, 187, 0); }
+  }
+
+  .pulse-btn {
+    display: inline-block;
+    background: linear-gradient(135deg, #da44bb, #892cdc);
+    color: #ffffff !important;
+    font-size: 16px; /* Kicsit kisebb, hogy kényelmesen elférjen a kártyán */
+    font-weight: 700;
+    text-decoration: none !important;
+    padding: 12px 30px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+    animation: pulse-glow 2s infinite;
+    margin: 20px 0;
+  }
+  
+  .pulse-btn:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+    animation: none;
+    box-shadow: 0 10px 25px rgba(218, 68, 187, 0.5);
+  }
+</style>
+
+<div style="text-align: center; width: 100%;"> 
+    <a href="https://tally.so/r/Pdz84x" target="_blank" class="pulse-btn"> 
+        Jelentkezés
+    </a> 
+</div>
         </div>
      </div>
 
