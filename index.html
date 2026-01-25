@@ -810,7 +810,7 @@ Saját tapasztalati tudásom a családon belüli erőszak, az agresszió, a gyer
                 <li>Dúla mentális és pszichés egyensúlya, öngondoskodás</li>
                 <li>Sikeresebb kórházi szüléskísérés</li>
             </ul>
-            <style>
+  <style>
   @keyframes pulse-glow {
     0% { box-shadow: 0 0 0 0 rgba(218, 68, 187, 0.7); }
     70% { box-shadow: 0 0 0 15px rgba(218, 68, 187, 0); }
@@ -821,7 +821,7 @@ Saját tapasztalati tudásom a családon belüli erőszak, az agresszió, a gyer
     display: inline-block;
     background: linear-gradient(135deg, #da44bb, #892cdc);
     color: #ffffff !important;
-    font-size: 16px; /* Kicsit kisebb, hogy kényelmesen elférjen a kártyán */
+    font-size: 16px;
     font-weight: 700;
     text-decoration: none !important;
     padding: 12px 30px;
@@ -831,7 +831,9 @@ Saját tapasztalati tudásom a családon belüli erőszak, az agresszió, a gyer
     border: 1px solid rgba(255, 255, 255, 0.3);
     transition: all 0.3s ease;
     animation: pulse-glow 2s infinite;
-    margin: 20px 0;
+    cursor: pointer;
+    position: relative;
+    z-index: 999;
   }
   
   .pulse-btn:hover {
@@ -842,10 +844,13 @@ Saját tapasztalati tudásom a családon belüli erőszak, az agresszió, a gyer
   }
 </style>
 
-<div style="text-align: center; width: 100%;"> 
-    <a href="https://tally.so/r/Pdz84x" target="_blank" class="pulse-btn"> 
+<div style="text-align: center; padding: 20px 0; width: 100%;">
+    <a href="https://tally.so/r/Pdz84x" 
+       target="_blank" 
+       class="pulse-btn" 
+       onclick="event.stopPropagation();">
         Jelentkezés
-    </a> 
+    </a>
 </div>
         </div>
      </div>
