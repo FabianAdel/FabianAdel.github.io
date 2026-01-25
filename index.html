@@ -82,55 +82,17 @@ ted <!DOCTYPE html>
         </div>
     </div>
 </nav>
-
-<!DOCTYPE html>
 <html lang="hu">
 <head>
-  <meta charset="UTF-8">
-  <title>Sütik használata</title>
-  <style>
-    #cookie-banner {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      background-color: #222;
-      color: white;
-      padding: 15px;
-      text-align: center;
-      font-size: 16px;
-      z-index: 1000;
-    }
-    #cookie-banner button {
-      margin-left: 15px;
-      padding: 10px 20px;
-      background-color: #4CAF50;
-      border: none;
-      color: white;
-      cursor: pointer;
-      border-radius: 5px;
-    }
-  </style>
-</head>
-<body>
-
-<div id="cookie-banner">
-  Ez a weboldal sütiket használ a jobb felhasználói élmény érdekében.
-  <button onclick="acceptCookies()">Elfogadom</button>
+<div id="cookie-banner" style="display: none; position: fixed; bottom: 0; left: 0; width: 100%; background-color: rgba(34, 34, 34, 0.98); color: white; padding: 25px; text-align: center; font-size: 14px; z-index: 999999; border-top: 2px solid #d4af37; font-family: sans-serif;">
+    <div style="max-width: 900px; margin: 0 auto; line-height: 1.6;">
+        <strong>Kedves Látogató!</strong> 🌸 Tájékoztatunk, hogy a honlapunkon sütiket (cookie-kat) használunk a böngészési élmény javítása és a forgalom elemzése érdekében. 
+        A "Megértettem és elfogadom" gombra kattintással hozzájárulsz a sütik használatához. 
+        Részleteket az <a href="pdf/Fabian_Adel_Adatkezelesi_tajekoztato.pdf" target="_blank" style="color: #d4af37; text-decoration: underline;">Adatkezelési tájékoztatóban</a> olvashatsz.
+        <br>
+        <button onclick="acceptCookies();" style="margin-top: 15px; padding: 12px 35px; background: linear-gradient(135deg, #d4af37 0%, #b8860b 100%); border: none; color: white; cursor: pointer; border-radius: 50px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">Megértettem és elfogadom</button>
+    </div>
 </div>
-
-<script>
-  function acceptCookies() {
-    localStorage.setItem("cookiesAccepted", "true");
-    document.getElementById("cookie-banner").style.display = "none";
-  }
-
-  window.onload = function () {
-    if (localStorage.getItem("cookiesAccepted") === "true") {
-      document.getElementById("cookie-banner").style.display = "none";
-    }
-  };
-</script>
 
 </body>
 </html>
