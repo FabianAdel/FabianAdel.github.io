@@ -260,14 +260,17 @@ Saját tapasztalati tudásom a családon belüli erőszak, az agresszió, a gyer
             justify-content: center !important;
         ">✕</button>
 
-    <script>
-    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
-    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
-    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
-    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
-    ml('account', '1183313'); 
+<script>
+    if (!window.ml) {
+        (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+        .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+        n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+        (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+        ml('account', '1183313');
+    }
 </script>
-<div style="display: flex; align-items: center; justify-content: space-between; background: #333; padding: 15px; border-radius: 10px; font-family: sans-serif;">
+
+<div id="ml-custom-bar" style="display: flex; align-items: center; justify-content: space-between; background: #333 !important; padding: 15px !important; border-radius: 10px !important; font-family: sans-serif !important; max-width: 100%; margin: 10px 0;">
     <div style="display: flex; align-items: center; gap: 10px;">
         <span style="font-size: 18px !important;">🎓</span>
         <span style="font-size: 14px !important; color: white !important; font-weight: 400 !important; line-height: 1.2 !important; text-align: left !important;">
@@ -275,7 +278,7 @@ Saját tapasztalati tudásom a családon belüli erőszak, az agresszió, a gyer
         </span>
     </div>
     
-    <a class="ml-onclick-form" href="javascript:void(0)" onclick="ml('show', 'PVTDFE', true)" style="
+    <button type="button" onclick="ml('show', 'PVTDFE', true)" style="
         background-color: white !important; 
         color: black !important; 
         text-decoration: none !important; 
@@ -288,10 +291,10 @@ Saját tapasztalati tudásom a családon belüli erőszak, az agresszió, a gyer
         display: inline-block !important;
         cursor: pointer !important;
         border: none !important;
+        outline: none !important;
     ">
         Feliratkozom
-    </a>
-</div>
+    </button>
 </div>
 <div id="services" class="section lb pl-0 pr-0">
     <div class="container-fluid">
