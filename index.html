@@ -287,6 +287,11 @@ Saját tapasztalati tudásom a családon belüli erőszak, az agresszió, a gyer
   font-size: 26px;
   font-weight: bold;
   cursor: pointer;
+  color: #f4c2c2; /* puder rózsaszín */
+  transition: color 0.2s ease;
+}
+#ml-fixed-close:hover {
+  color: #ffb6c1; /* világosabb rózsaszín hover-re */
 }
 #ml-fixed-bottom.hidden {
   transform: translateY(100%);
@@ -306,7 +311,7 @@ Saját tapasztalati tudásom a családon belüli erőszak, az agresszió, a gyer
         l=d.createElement(e); l.async=1; l.src=u;
         n=d.getElementsByTagName(e)[0]; n.parentNode.insertBefore(l,n);
       })(window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
-      ml('account','2094197'); // Fiókod azonosítója
+      ml('account','2094197'); // Itt a fiókod azonosítója
     </script>
 
     <!-- Embedded Form -->
@@ -315,11 +320,11 @@ Saját tapasztalati tudásom a családon belüli erőszak, az agresszió, a gyer
 </div>
 
 <script>
-const mlForm = document.getElementById('ml-fixed-bottom');
 document.getElementById('ml-fixed-close').onclick = function() {
-  mlForm.classList.add('hidden'); // szép animációval tűnik el
+  document.getElementById('ml-fixed-bottom').classList.add('hidden');
 };
 </script>
+
 
     </div>
 </div>
