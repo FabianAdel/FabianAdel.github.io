@@ -259,103 +259,61 @@ Saját tapasztalati tudásom a családon belüli erőszak, az agresszió, a gyer
             align-items: center !important;
             justify-content: center !important;
         ">✕</button>
+<!-- MailerLite Fixed Subscription Form -->
 <style>
-#ml-bottom-bar {
+#ml-fixed-bottom {
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
-  background: #c94d4d; /* A kért piros szín */
-  color: #fff;
-  z-index: 9999;
-  padding: 12px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center; /* Középre rendezve a tartalmat */
+  max-height: 90vh;
+  background: #fff;
+  z-index: 999999;
+  box-shadow: 0 -6px 25px rgba(0,0,0,0.25);
+  overflow-y: auto;
   font-family: Arial, sans-serif;
-  box-sizing: border-box;
 }
-
-#ml-bottom-bar .bar-content {
-  display: flex;
-  align-items: center;
-  gap: 20px; /* Távolság a szöveg és a gomb között */
-  max-width: 1200px;
+#ml-fixed-inner {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 48px 16px 24px;
+  position: relative;
 }
-
-#ml-bottom-bar a.ml-subscribe-button {
-  background: #fff !important;
-  color: #c94d4d !important;
-  text-decoration: none !important;
-  padding: 8px 20px !important;
-  border-radius: 40px !important;
-  font-size: 13px !important;
-  font-weight: bold !important;
-  text-transform: uppercase !important;
-  white-space: nowrap !important;
-  display: inline-block !important;
-  transition: opacity 0.3s;
-}
-
-#ml-bottom-bar a.ml-subscribe-button:hover {
-  opacity: 0.9;
-}
-
-#ml-bottom-bar .ml-close {
+#ml-fixed-close {
   position: absolute;
-  right: 20px;
-  top: 50%;
-  transform: translateY(-50%);
-  cursor: pointer;
-  font-size: 24px;
+  top: 10px;
+  right: 12px;
+  font-size: 26px;
   font-weight: bold;
-  color: #fff;
-  opacity: 0.7;
-}
-
-#ml-bottom-bar .ml-close:hover {
-  opacity: 1;
-}
-
-/* Mobilon egymás alá rakja őket, hogy jól nézzen ki */
-@media (max-width: 600px) {
-  #ml-bottom-bar {
-    flex-direction: column;
-    padding: 15px;
-    text-align: center;
-  }
-  #ml-bottom-bar .bar-content {
-    flex-direction: column;
-    gap: 10px;
-  }
-  #ml-bottom-bar .ml-close {
-    top: 10px;
-    transform: none;
-  }
+  cursor: pointer;
 }
 </style>
 
-<div id="ml-bottom-bar">
-  <div class="bar-content">
-    <span style="font-size: 18px;">🎓</span>
-    <span style="font-size: 14px; font-weight: 400;">
-      Nem szeretnél lemaradni a képzésekről? <strong>Iratkozz fel!</strong>
-    </span>
-    
-    <a href="http://eepurl.com/iBo2pY" target="_blank" class="ml-subscribe-button">
-      Feliratkozom
-    </a>
+<div id="ml-fixed-bottom">
+  <div id="ml-fixed-inner">
+    <div id="ml-fixed-close">×</div>
+
+    <!-- MailerLite Script -->
+    <script>
+      (function(w,d,e,u,f,l,n){
+        w[f]=w[f]||function(){(w[f].q=w[f].q||[]).push(arguments);};
+        l=d.createElement(e); l.async=1; l.src=u;
+        n=d.getElementsByTagName(e)[0]; n.parentNode.insertBefore(l,n);
+      })(window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+      ml('account','2094197'); // Itt a fiókod azonosítója
+    </script>
+
+    <!-- Embedded Form -->
+    <div class="ml-embedded" data-form="PVTDFE"></div>
   </div>
-
-  <span class="ml-close" onclick="document.getElementById('ml-bottom-bar').style.display='none'">
-    ×
-  </span>
 </div>
 
-  <span class="ml-close" onclick="document.getElementById('ml-bottom-bar').style.display='none'">
-    ×
-  </span>
-</div>
+<script>
+document.getElementById('ml-fixed-close').onclick = function() {
+  document.getElementById('ml-fixed-bottom').style.display = 'none';
+};
+</script>
+
 </div>
     </div>
 </div>
