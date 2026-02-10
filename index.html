@@ -271,33 +271,55 @@ ml('account', '2094197');
 </script>
 <!-- End MailerLite Universal -->
 
-<div style="clear: both; width: 100%; margin: 10px 0; display: block !important;">
-    <div style="background-color: #333 !important; padding: 6px 20px !important; border-radius: 10px !important; display: flex !important; align-items: center !important; justify-content: space-between !important; min-height: 40px !important; font-family: sans-serif !important; box-sizing: border-box !important;">
-        
-        <div style="display: flex !important; align-items: center !important; gap: 10px !important;">
-            <span style="font-size: 18px !important;">🎓</span>
-            <span style="font-size: 13px !important; color: white !important; font-weight: 400 !important; line-height: 1 !important;">
-                Nem szeretnél lemaradni a képzésekről? <strong style="color: white !important;">Iratkozz fel!</strong>
-            </span>
-        </div>
-        
-        <a href="https://subscribepage.io/PVTDFE" target="_blank" style="
-            background-color: white !important; 
-            color: black !important; 
-            text-decoration: none !important; 
-            padding: 5px 15px !important; 
-            border-radius: 40px !important; 
-            font-size: 12px !important; 
-            font-weight: bold !important;
-            text-transform: uppercase !important;
-            white-space: nowrap !important;
-            display: inline-block !important;
-            cursor: pointer !important;
-            border: none !important;
-        ">
-            Feliratkozom
-        </a>
-    </div>
+<style>
+#ml-bottom-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #c94d4d;
+  color: #fff;
+  z-index: 9999;
+  padding: 12px 50px 12px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: Arial, sans-serif;
+}
+
+#ml-bottom-bar button {
+  background: #fff;
+  color: #c94d4d;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#ml-bottom-bar .ml-close {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+}
+</style>
+
+<div id="ml-bottom-bar">
+  <div>
+    📩 Nem szeretnél lemaradni a képzésekről? Iratkozz fel a hírlevelünkre!
+  </div>
+
+  <button onclick="ml('show', 'PVTDFE', true)">
+    Feliratkozom
+  </button>
+
+  <span class="ml-close" onclick="document.getElementById('ml-bottom-bar').style.display='none'">
+    ×
+  </span>
 </div>
 
 </div>
