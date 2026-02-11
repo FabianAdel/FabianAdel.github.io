@@ -1003,97 +1003,232 @@ function openbevezetesPackagePdf() {
 
     </div>
 
-    <div class="card-container-fixed" id="basicPackageCard">
-        <div class="pricingTable">
-            <div class="pricingTable-header">
-                <h3 class="title" style="font-size: 1.6rem"><b> Női meditáció vezető alapképzés (IAOTH által akkreditált) </h3></b>
-                <p style="font-size: 1.2rem; color:slateblue"> Új turnus: Február 25-27 <br><div style="color: #C86B8A; font-size: 1.3em; font-weight: bold; text-align: center; border: 2px solid #C86B8A; padding: 10px; border-radius: 8px; display: inline-block;">Tematika</div></p>
-               <p style="font-size: 14px; line-height: 1.5; color: #555; margin-top: 15px; padding: 0 10px;">
-    A képzés két nyelvű FAR tanúsítványt, valamint az International Association of Therapists (IAOTH) szakmai szervezet által kiadott akkreditációval rendelkező nemzetközi tanúsítványt és Course Summaryt biztosít.
-</p>
-                <p style="color: green;">Február 25-26 9:30-14:30, Február 27 (gyakorlati nap/online), 9:30-13:30</p>
-                <div class="price-value">
-                    <div class="value">
-                        <span class="amount">134.990 Ft<br></span>
-                    </div>
-                </div>
-            </div>
-            <ul class="pricing-content">
-                <li>Pszichológiai és mentálhigiénés szemlélet</li>
-                <li>Tudásbővítés, praxisba beépíthető</li>
-                <li>Indítható vállalkozás</li>
-                <li>Vezethetsz Női kört vagy meditációkat</li>
-                <li>Gyakorlatorientált</li>
-                <li>Tömény elmélet</li>
-            </ul>
-              <style>
-  @keyframes pulse-glow {
-    0% { box-shadow: 0 0 0 0 rgba(218, 68, 187, 0.7); }
-    70% { box-shadow: 0 0 0 15px rgba(218, 68, 187, 0); }
-    100% { box-shadow: 0 0 0 0 rgba(218, 68, 187, 0); }
-  }
+    <div class="card-container-fixed" style="display: flex; flex-wrap: wrap; gap: 20px;">
 
-  .pulse-btn {
-    display: inline-block;
-    background: linear-gradient(135deg, #da44bb, #892cdc);
-    color: #ffffff !important;
-    font-size: 16px;
-    font-weight: 700;
-    text-decoration: none !important;
-    padding: 12px 30px;
-    border-radius: 50px;
-    text-transform: uppercase;
-    font-family: sans-serif;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    transition: all 0.3s ease;
-    animation: pulse-glow 2s infinite;
-    cursor: pointer;
-    position: relative;
-    z-index: 999;
-  }
-  
-  .pulse-btn:hover {
-    transform: scale(1.05);
-    filter: brightness(1.1);
-    animation: none;
-    box-shadow: 0 10px 25px rgba(218, 68, 187, 0.5);
-  }
+  <!-- Imaginatív kártya -->
+  <div class="szuleszet-card" id="ImaginativPackageCard">
+    <div class="szuleszet-title">
+      ©Imaginatív Személyiségfejlesztő Mentor (162 óra) 
+      <div class="szuleszet-accredit">(IAOTH által akkreditált)</div>
+    </div>
+
+    <div class="imaginativ-date">
+      Új turnus 2026 FEBRUÁR 24-SZEPTEMBER 29
+    </div>
+
+    <div class="imaginativ-info">
+      Két nyelvű FAR tanúsítvány + nemzetközi IAOTH tanúsítvány.
+    </div>
+
+    <div class="price-value">
+      <span class="amount">498.990 Ft</span>
+    </div>
+
+    <ul class="imaginativ-list">
+      <li>Imagináció alapjai</li>
+      <li>Tudattalan működése, értelmezése</li>
+      <li>Családterapeuta szakmai közreműködése</li>
+      <li>Rendszerszemléletű imaginációs munka</li>
+      <li>50 óra saját élmény +10 óra mentorálás</li>
+      <li>Szupervíziók, esetmegbeszélések</li>
+      <li>Etikai határvonalak</li>
+      <li>Részletfizetési lehetőség</li>
+    </ul>
+
+    <div style="display: flex; justify-content: center; gap: 10px; margin-top: 10px;">
+      <a href="https://tally.so/r/Pdz84x" target="_blank" class="szuleszet-btn">Jelentkezés</a>
+      <button onclick="openImaginativPackagePdf();" class="szuleszet-secondary">Tematika</button>
+    </div>
+  </div>
+
+  <!-- Bevezetés kártya -->
+  <div class="szuleszet-card" id="bevezetesPackageCard">
+    <div class="szuleszet-title">
+      Meditációs alapok, idegrendszeri szabályozás és Wellbeing
+      <div class="szuleszet-accredit">(IAOTH által akkreditált)</div>
+    </div>
+
+    <div class="bevezetes-date">
+      Március 9 9:30-16:00
+    </div>
+
+    <div class="bevezetes-info">
+      Két nyelvű FAR tanúsítvány + nemzetközi IAOTH tanúsítvány.
+    </div>
+
+    <div class="price-value">
+      <span class="amount">72.990 Ft</span>
+    </div>
+
+    <ul class="bevezetes-list">
+      <li>Stressz és paraszimpatikus idegrendszer kapcsolata</li>
+      <li>Meditáció alapfogalmai</li>
+      <li>Testpásztázás, elraktározott feszültség enyhítése</li>
+      <li>Légzéstechnika és idegrendszer kapcsolata</li>
+      <li>Neuroplaszticitás- és ezt elősegítő gyakorlatok</li>
+      <li>Wellbeing fogalma, alapja és gyakorlatok</li>
+    </ul>
+
+    <div style="display: flex; justify-content: center; gap: 10px; margin-top: 10px;">
+      <a href="https://tally.so/r/Pdz84x" target="_blank" class="szuleszet-btn">Jelentkezés</a>
+      <button onclick="openbevezetesPackagePdf();" class="szuleszet-secondary">Tematika</button>
+    </div>
+  </div>
+
+  <!-- Alapképzés kártya -->
+  <div class="szuleszet-card" id="basicPackageCard">
+    <div class="szuleszet-title">
+      Női meditáció vezető alapképzés
+      <div class="szuleszet-accredit">(IAOTH által akkreditált)</div>
+    </div>
+
+    <div class="basic-date">
+      Új turnus: Február 25-27
+    </div>
+
+    <div class="basic-info">
+      Két nyelvű FAR tanúsítvány + nemzetközi IAOTH tanúsítvány.
+    </div>
+
+    <p style="color: green;">Február 25-26 9:30-14:30, Február 27 (gyakorlati nap/online), 9:30-13:30</p>
+
+    <div class="price-value">
+      <span class="amount">134.990 Ft</span>
+    </div>
+
+    <ul class="basic-list">
+      <li>Pszichológiai és mentálhigiénés szemlélet</li>
+      <li>Tudásbővítés, praxisba beépíthető</li>
+      <li>Indítható vállalkozás</li>
+      <li>Vezethetsz Női kört vagy meditációkat</li>
+      <li>Gyakorlatorientált</li>
+      <li>Tömény elmélet</li>
+    </ul>
+
+    <div style="display: flex; justify-content: center; gap: 10px; margin-top: 10px;">
+      <a href="https://tally.so/r/Pdz84x" target="_blank" class="szuleszet-btn">Jelentkezés</a>
+      <button onclick="openBasicPackagePdf();" class="szuleszet-secondary">Tematika</button>
+    </div>
+  </div>
+
+</div>
+
+<style>
+.szuleszet-card {
+  max-width: 380px;
+  width: 100%;
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+  padding: 20px 18px;
+  text-align: left;
+  font-family: inherit;
+}
+
+.szuleszet-title {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.3;
+  margin-bottom: 4px;
+}
+
+.szuleszet-accredit {
+  font-size: 0.75rem;
+  color: #7b2cbf;
+  margin-top: 2px;
+}
+
+.szuleszet-date,
+.imaginativ-date,
+.bevezetes-date,
+.basic-date {
+  font-size: 0.85rem;
+  color: slateblue;
+  font-weight: 600;
+  margin: 8px 0;
+}
+
+.szuleszet-info,
+.imaginativ-info,
+.bevezetes-info,
+.basic-info {
+  font-size: 0.75rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.price-value {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #892cdc;
+  margin: 10px 0;
+}
+
+.szuleszet-list,
+.imaginativ-list,
+.bevezetes-list,
+.basic-list {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+  font-size: 0.8rem;
+}
+
+.szuleszet-list li,
+.imaginativ-list li,
+.bevezetes-list li,
+.basic-list li {
+  margin-bottom: 5px;
+  padding-left: 14px;
+  position: relative;
+}
+
+.szuleszet-list li::before,
+.imaginativ-list li::before,
+.bevezetes-list li::before,
+.basic-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #da44bb;
+}
+
+.szuleszet-btn {
+  display: inline-block;
+  padding: 6px 14px;
+  background: linear-gradient(135deg, #da44bb, #892cdc);
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.75rem;
+  border-radius: 30px;
+}
+
+.szuleszet-secondary {
+  display: inline-block;
+  padding: 6px 14px;
+  background: transparent;
+  border: 1.5px solid #C86B8A;
+  color: #C86B8A;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 0.7rem;
+  cursor: pointer;
+}
 </style>
 
-<div style="text-align: center; padding: 20px 0; width: 100%;">
-    <a href="https://tally.so/r/Pdz84x" 
-       target="_blank" 
-       class="pulse-btn" 
-       onclick="event.stopPropagation();">
-        Jelentkezés
-    </a>
-</div>
-            <div style="text-align: center; padding: 15px 0;">
-    <button 
-        type="button"
-        onclick="event.stopPropagation(); openBasicPackagePdf();" 
-        style="
-            background-color: transparent;
-            color: #C86B8A;
-            font-size: 13px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1.2px;
-            padding: 10px 30px;
-            border: 2px solid #C86B8A;
-            border-radius: 50px; 
-            cursor: pointer;
-            transition: all 0.3s ease;
-            display: inline-block;
-            font-family: sans-serif;
-        "
-        onmouseover="this.style.backgroundColor='#C86B8A'; this.style.color='#ffffff';"
-        onmouseout="this.style.backgroundColor='transparent'; this.style.color='#C86B8A';"
-    >
-        Tematika
-    </button>
-</div>
-        </div>
+<script>
+function openImaginativPackagePdf() {
+    window.open('pdf/IMAGINATIVTEM.pdf');
+}
+function openbevezetesPackagePdf() {
+    window.open('pdf/MNSW-tematika.pdf');
+}
+function openBasicPackagePdf() {
+    window.open('pdf/nmvtematika.pdf');
+}
+</script>
+
     </div>
 
     <div class="card-container-fixed" id="intermediatePackageCard">
