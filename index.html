@@ -1017,9 +1017,7 @@ function openBasicPackagePdf() {
 }
 </style>
 
-<div class="card-row" style="margin-top: 20px;">
-    
-   <div class="card-row" style="margin-top: 45px;">
+<div class="card-row" style="margin-top: 45px; display: flex; flex-wrap: wrap; gap: 45px; justify-content: flex-start;">
     
     <div class="card-container" id="intermediatePackageCard">
         <div class="card-header">
@@ -1041,7 +1039,7 @@ function openBasicPackagePdf() {
         </ul>
         <div class="card-buttons">
             <a href="https://tally.so/r/Pdz84x" target="_blank" class="card-apply-btn">Jelentkezés</a>
-            <button type="button" onclick="openIntermediatPackagePdf();" class="card-theme-btn">Tematika</button>
+            <button type="button" onclick="openIntermediatePackagePdf();" class="card-theme-btn">Tematika</button>
         </div>
     </div>
 
@@ -1094,55 +1092,18 @@ function openBasicPackagePdf() {
         </div>
     </div>
 </div>
-    <div class="card-row" style="margin-top: 20px; display: flex; flex-wrap: wrap; gap: 40px;">
 
-    <div class="card-container" id="professionalPackageCard">
-        <div class="card-header">
-            <div class="card-title">Meditációs instruktor Professional (IAOTH által akkreditált)</div>
-            <div class="card-date">November 6 – Március 19, minden csütörtök 9:30-12:00</div>
-            <div class="card-info">A képzés két nyelvű FAR tanúsítványt, valamint az International Association of Therapists (IAOTH) szakmai szervezet által kiadott akkreditációval rendelkező nemzetközi tanúsítványt és Course Summaryt biztosít.</div>
-            <div class="price-value"><span class="amount">184.990 Ft</span></div>
-        </div>
-        <ul class="card-list">
-            <li>Feltétel az alap és a haladó képzés sikeres elvégzése</li>
-            <li>Esetmegbeszélők, mentálhigiénés műhely</li>
-            <li>Tudásbővítés</li>
-            <li>Klienssel való szerződés</li>
-            <li>75% gyakorlat, 25% elmélet</li>
-            <li>Professional minősítés</li>
-        </ul>
-        <div class="card-buttons">
-            <a href="https://tally.so/r/Pdz84x" target="_blank" class="card-apply-btn">Jelentkezés</a>
-            <button type="button" onclick="openProfessionalPackagePdf();" class="card-theme-btn">Tematika</button>
-        </div>
-    </div>
-
-    <div class="card-container" id="babyMomSyncPackageCard">
-        <div class="card-header">
-            <div class="card-title">©Anya-Baba Kapcsolódási Facilitátor (trimeszter-alapú) (IAOTH által akkreditált)</div>
-            <div class="card-date">Március 25-27, 1-2. nap 9:30-14:30, 3. nap 9:30-12:30</div>
-            <div class="card-info">A képzés két nyelvű FAR tanúsítványt, valamint az International Association of Therapists (IAOTH) szakmai szervezet által kiadott akkreditációval rendelkező nemzetközi tanúsítványt és Course Summaryt biztosít.</div>
-            <div class="price-value"><span class="amount">134.990 Ft</span></div>
-        </div>
-        <ul class="card-list">
-            <li>Várandósság folyamatának lelki kísérése, várandóslélektan</li>
-            <li>Kompetenciafejlesztés, esetelemzések</li>
-            <li>Önismeret, önfejlesztés a várandósság alatt</li>
-            <li>Indítható vállalkozás</li>
-            <li>Praxisba beépíthető</li>
-        </ul>
-        <div class="card-buttons">
-            <a href="https://tally.so/r/Pdz84x" target="_blank" class="card-apply-btn">Jelentkezés</a>
-            <button type="button" onclick="openBabyMomSyncPackagePdf();" class="card-theme-btn">Tematika</button>
-        </div>
-    </div>
-</div> <div class="card-row" style="margin-top: 20px; display: flex; flex-wrap: wrap; gap: 45px; width: 100%;">
+<div class="card-row" style="margin-top: 45px; display: flex; flex-wrap: wrap; gap: 45px; justify-content: flex-start; width: 100%;">
     
     <div class="card-container" id="PerinatalisPackageCard">
         <div class="card-header">
-            <div class="card-title">Perinatális-és rendszerszintű gyászkísérés (IAOTH által akkreditált)</div>
+            <div class="card-title">
+                Perinatális-és rendszerszintű gyászkísérés (IAOTH által akkreditált)
+            </div>
             <div class="card-date">Modul I. Április 8, 10:00-16:00 | Modul II. Április 15, 9:00-16:00</div>
-            <div class="card-info">Teljes képzés (2 modul) egy összegben: 85.980 Ft (42.990 Ft/ modul). Modulonként külön fizetve: 49.990 Ft.</div>
+            <div class="card-info">
+                Teljes képzés (2 modul) egy összegben: 85.980 Ft (42.990 Ft/ modul). Modulonként külön fizetve: 49.990 Ft.
+            </div>
             <div class="price-value"><span class="amount">42.990 Ft</span></div>
         </div>
         <ul class="card-list">
@@ -1160,9 +1121,13 @@ function openBasicPackagePdf() {
 
     <div class="card-container" id="SzuleszetPackageCard">
         <div class="card-header">
-            <div class="card-title">Dúla a szülőszobán – Kórházi kommunikáció (IAOTH által akkreditált)</div>
+            <div class="card-title">
+                Dúla a szülőszobán – Kórházi kommunikáció (IAOTH által akkreditált)
+            </div>
             <div class="card-date">Következő turnus: Március 4. 9:30–15:30</div>
-            <div class="card-info">A képzés két nyelvű FAR tanúsítványt, valamint az International Association of Therapists (IAOTH) szakmai szervezet által kiadott akkreditációval rendelkező nemzetközi tanúsítványt és Course Summaryt biztosít.</div>
+            <div class="card-info">
+                A képzés két nyelvű FAR tanúsítványt, valamint az International Association of Therapists (IAOTH) szakmai szervezet által kiadott akkreditációval rendelkező nemzetközi tanúsítványt és Course Summaryt biztosít.
+            </div>
             <div class="price-value"><span class="amount">66.990 Ft</span></div>
         </div>
         <ul class="card-list">
@@ -1180,7 +1145,8 @@ function openBasicPackagePdf() {
 </div>
 
 <script>
-function openIntermediatePackagePdf() { window.open('pdf/Nőimedihaladó9.pdf'); }
+// PDF FÜGGVÉNYEK - Pontosan a fájlnevekkel
+function openIntermediatePackagePdf() { window.open('pdf/Nőimedihaladó9.pdf', '_blank'); }
 function openProfessionalPackagePdf() { window.open('pdf/instruktortematika.pdf'); }
 function openBabyMomSyncPackagePdf() { window.open('pdf/anyababa.pdf'); }
 function openPerinatalisPackagePdf() { window.open('pdf/Perinatalis-tematika.pdf'); } 
