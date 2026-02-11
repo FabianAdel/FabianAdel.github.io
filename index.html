@@ -765,7 +765,7 @@ document.getElementById('ml-fixed-close').onclick = function() {
       </div>
       <div class="card-date">Új turnus: Február 25-27</div>
       <div class="card-info">
-        Két nyelvű FAR + IAOTH nemzetközi tanúsítvány.
+        Két nyelvű FAR + Nemzetközi tanúsítvány, Course Summary
       </div>
       <div class="price-value"><span class="amount">134.990 Ft</span></div>
     </div>
@@ -906,123 +906,238 @@ function openBasicPackagePdf() {
 }
 </script>
 
-<!-- 2. sor: Haladó / Professional / Baby-Mom -->
+<div class="card-row" style="margin-top: 20px;">
+  
+  <style>
+/* Konténer a kártyáknak */
+.card-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 45px; /* A kért 45px távolság */
+    justify-content: flex-start;
+    margin-bottom: 40px;
+}
+
+/* Egyedi kártya stílus a mintád alapján */
+.card-container {
+    flex: 0 0 380px;
+    max-width: 380px;
+    background: #ffffff;
+    border-radius: 14px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+    padding: 20px;
+    font-family: inherit;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 4px;
+    min-height: 2.5em;
+}
+
+.card-date {
+    font-size: 0.85rem;
+    color: slateblue;
+    font-weight: 600;
+    margin: 8px 0;
+}
+
+.card-info {
+    font-size: 0.75rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.price-value .amount {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #892cdc;
+    margin: 10px 0;
+    display: block;
+}
+
+.card-list {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
+    font-size: 0.8rem;
+    flex-grow: 1;
+}
+
+.card-list li {
+    margin-bottom: 5px;
+    padding-left: 14px;
+    position: relative;
+}
+
+.card-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #da44bb;
+}
+
+/* Gombok stílusa */
+.card-buttons {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.card-apply-btn {
+    padding: 8px 18px;
+    background: linear-gradient(135deg, #da44bb, #892cdc);
+    color: #fff !important;
+    text-decoration: none !important;
+    font-weight: 600;
+    font-size: 0.75rem;
+    border-radius: 30px;
+    display: inline-block;
+}
+
+.card-theme-btn {
+    padding: 6px 16px;
+    background: transparent;
+    border: 1.5px solid #C86B8A;
+    color: #C86B8A;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 0.7rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.card-theme-btn:hover {
+    background-color: #C86B8A;
+    color: #fff;
+}
+</style>
+
 <div class="card-row">
-    <!-- Haladó -->
-    <div class="card-container-fixed" id="intermediatePackageCard">
-        <div class="pricingTable-header">
-            <h3 class="title"><b>Haladó Női meditáció vezető</b></h3>
-            <p style="font-size:1.2rem; color:slateblue;">2026 Február 7-8 9:30-14:30</p>
-            <div class="price-value"><div class="amount">116.000 Ft</div></div>
+    <div class="card-container">
+        <div class="card-header">
+            <div class="card-title">Haladó Női meditáció vezető (IAOTH által akkreditált)</div>
+            <div class="card-date">2026 Február 7-8 9:30-14:30</div>
+            <div class="card-info">Két nyelvű FAR tanúsítvány + IAOTH nemzetközi tanúsítvány.</div>
+            <div class="price-value"><span class="amount">116.000 Ft</span></div>
         </div>
-        <ul class="pricing-content">
+        <ul class="card-list">
             <li>Feltétel az alapképzés sikeres elvégzése</li>
             <li>Pszichológiai és mentálhigiénés szemlélet</li>
             <li>Tudásbővítés, elmélyülés a mély meditációk területén</li>
             <li>13 új meditációs technika</li>
-            <li>Tömény elmélet</li>
         </ul>
-        <div style="text-align:center; padding:10px;">
-            <a href="https://tally.so/r/Pdz84x" target="_blank" class="pulse-btn">Jelentkezés</a>
-            <br>
-            <button class="tematika-btn" onclick="openIntermediatPackagePdf()">Tematika</button>
+        <div class="card-buttons">
+            <a href="https://tally.so/r/Pdz84x" target="_blank" class="card-apply-btn">Jelentkezés</a>
+            <button type="button" onclick="openIntermediatPackagePdf()" class="card-theme-btn">Tematika</button>
         </div>
     </div>
 
-    <!-- Professional -->
-    <div class="card-container-fixed" id="professionalPackageCard">
-        <div class="pricingTable-header">
-            <h3 class="title"><b>Meditációs instruktor Professional</b></h3>
-            <p style="font-size:1.2rem; color:slateblue;">November 6 – Március 19</p>
-            <div class="price-value"><div class="amount">184.990 Ft</div></div>
+    <div class="card-container">
+        <div class="card-header">
+            <div class="card-title">Meditációs instruktor Professional (IAOTH által akkreditált)</div>
+            <div class="card-date">November 6 – Március 19</div>
+            <div class="card-info">Két nyelvű FAR tanúsítvány + IAOTH nemzetközi tanúsítvány.</div>
+            <div class="price-value"><span class="amount">184.990 Ft</span></div>
         </div>
-        <ul class="pricing-content">
-            <li>Feltétel az alap és a haladó képzés sikeres elvégzése</li>
+        <ul class="card-list">
+            <li>Feltétel az alap és a haladó képzés elvégzése</li>
             <li>Esetmegbeszélők, mentálhigiénés műhely</li>
-            <li>Tudásbővítés</li>
             <li>Klienssel való szerződés</li>
             <li>75% gyakorlat, 25% elmélet</li>
-            <li>Professional minősítés</li>
         </ul>
-        <div style="text-align:center; padding:10px;">
-            <a href="https://tally.so/r/Pdz84x" target="_blank" class="pulse-btn">Jelentkezés</a>
-            <br>
-            <button class="tematika-btn" onclick="openProfessionalPackagePdf()">Tematika</button>
+        <div class="card-buttons">
+            <a href="https://tally.so/r/Pdz84x" target="_blank" class="card-apply-btn">Jelentkezés</a>
+            <button type="button" onclick="openProfessionalPackagePdf()" class="card-theme-btn">Tematika</button>
         </div>
     </div>
 
-    <!-- Baby-Mom -->
-    <div class="card-container-fixed" id="babyMomSyncPackageCard">
-        <div class="pricingTable-header">
-            <h3 class="title"><b>©Anya-Baba Kapcsolódási Facilitátor</b></h3>
-            <p style="font-size:1.2rem; color:slateblue;">Március 25-27</p>
-            <div class="price-value"><div class="amount">134.990 Ft</div></div>
+    <div class="card-container">
+        <div class="card-header">
+            <div class="card-title">©Anya-Baba Kapcsolódási Facilitátor (IAOTH által akkreditált)</div>
+            <div class="card-date">Március 25-27</div>
+            <div class="card-info">Két nyelvű FAR tanúsítvány + IAOTH nemzetközi tanúsítvány.</div>
+            <div class="price-value"><span class="amount">134.990 Ft</span></div>
         </div>
-        <ul class="pricing-content">
+        <ul class="card-list">
             <li>Várandósság lelki kísérése</li>
             <li>Kompetenciafejlesztés, esetelemzések</li>
             <li>Önismeret, önfejlesztés a várandósság alatt</li>
-            <li>Indítható vállalkozás</li>
             <li>Praxisba beépíthető</li>
         </ul>
-        <div style="text-align:center; padding:10px;">
-            <a href="https://tally.so/r/Pdz84x" target="_blank" class="pulse-btn">Jelentkezés</a>
-            <br>
-            <button class="tematika-btn" onclick="openBabyMomSyncPackagePdf()">Tematika</button>
+        <div class="card-buttons">
+            <a href="https://tally.so/r/Pdz84x" target="_blank" class="card-apply-btn">Jelentkezés</a>
+            <button type="button" onclick="openBabyMomSyncPackagePdf()" class="card-theme-btn">Tematika</button>
         </div>
     </div>
 </div>
 
-<!-- 3. sor: Perinatális + Dúla -->
 <div class="card-row">
-    <!-- Perinatális -->
-    <div class="card-container-fixed" id="PerinatalisPackageCard">
-        <div class="pricingTable-header">
-            <h3 class="title"><b>Perinatális- és rendszerszintű gyászkísérés</b></h3>
-            <p style="font-size:1.2rem; color:slateblue;">Április 8 & 15</p>
-            <div class="price-value"><div class="amount">42.990 Ft</div></div>
+    <div class="card-container">
+        <div class="card-header">
+            <div class="card-title">Perinatális- és rendszerszintű gyászkísérés (IAOTH által akkreditált)</div>
+            <div class="card-date">Modul I: Ápr 8 | Modul II: Ápr 15</div>
+            <div class="card-info">Teljes képzés vagy modulonként is fizethető.</div>
+            <div class="price-value"><span class="amount">42.990 Ft-tól</span></div>
         </div>
-        <ul class="pricing-content">
-            <li>Perinatális gyász spektrumai</li>
-            <li>Orvosi vs pszichológiai definíciók</li>
+        <ul class="card-list">
+            <li>Perinatális gyász spektrumjai</li>
             <li>Spirituális és vallási aspektusok</li>
-            <li>Szomatikus lenyomat</li>
-            <li>24. hét különbségek</li>
-            <li>Rendszerszintű hatások, családterapeutával</li>
-            <li>Klinikai jelenlét és kísérés</li>
-            <li>Kórházi protokoll vs gyász</li>
-            <li>Búcsúmunka, rituálék</li>
+            <li>Testemlék-szomatikus lenyomat</li>
+            <li>Búcsú munka, rituálék</li>
         </ul>
-        <div style="text-align:center; padding:10px;">
-            <a href="https://tally.so/r/Pdz84x" target="_blank" class="pulse-btn">Jelentkezés</a>
-            <br>
-            <button class="tematika-btn" onclick="openPerinatalisPackagePdf()">Tematika</button>
+        <div class="card-buttons">
+            <a href="https://tally.so/r/Pdz84x" target="_blank" class="card-apply-btn">Jelentkezés</a>
+            <button type="button" onclick="openPerinatalisPackagePdf()" class="card-theme-btn">Tematika</button>
         </div>
     </div>
 
-    <!-- Dúla -->
-    <div class="card-container-fixed" id="SzuleszetPackageCard">
-        <div class="pricingTable-header">
-            <h3 class="title"><b>Dúla a szülőszobán</b></h3>
-            <p style="font-size:1.2rem; color:slateblue;">Március 4 9:30–15:30</p>
-            <div class="price-value"><div class="amount">66.990 Ft</div></div>
+    <div class="card-container">
+        <div class="card-header">
+            <div class="card-title">Dúla a szülőszobán – Kórházi kommunikáció (IAOTH által akkreditált)</div>
+            <div class="card-date">Március 4. 9:30–15:30</div>
+            <div class="card-info">Két nyelvű FAR tanúsítvány + nemzetközi tanúsítvány.</div>
+            <div class="price-value"><span class="amount">66.990 Ft</span></div>
         </div>
-        <ul class="pricing-content">
+        <ul class="card-list">
             <li>Minőségibb szülőszobai támogatás</li>
             <li>Konfliktuskezelés kórházi környezetben</li>
-            <li>Dúlai hivatásba beépíthető</li>
             <li>Szülész–dúla kapcsolati minőségek</li>
             <li>Mentális reziliencia, öngondoskodás</li>
         </ul>
-        <div style="text-align:center; padding:10px;">
-            <a href="https://tally.so/r/Pdz84x" target="_blank" class="pulse-btn">Jelentkezés</a>
-            <br>
-            <button class="tematika-btn" onclick="openSzuleszetPackagePdf()">Tematika</button>
+        <div class="card-buttons">
+            <a href="https://tally.so/r/Pdz84x" target="_blank" class="card-apply-btn">Jelentkezés</a>
+            <button type="button" onclick="openSzuleszetPackagePdf()" class="card-theme-btn">Tematika</button>
         </div>
     </div>
 </div>
 
+<script>
+// Ezek a függvények nyitják meg a PDF fájlokat
+function openIntermediatPackagePdf() {
+    window.open('pdf/Nőimedihaladó9.pdf', '_blank');
+}
+function openProfessionalPackagePdf() {
+    window.open('pdf/instruktortematika.pdf', '_blank');
+}
+function openBabyMomSyncPackagePdf() {
+    window.open('pdf/anyababa.pdf', '_blank');
+}
+function openPerinatalisPackagePdf() {
+    window.open('pdf/perinatalis-tematika.pdf', '_blank');
+}
+function openSzuleszetPackagePdf() {
+    window.open('pdf/dulatematika1.pdf', '_blank');
+}
+</script>
+  </div>
 
+</div>
+</div>
     
 
 </div>
