@@ -1408,7 +1408,9 @@ Modulonként külön fizetve: 49.990 Ft
     Jelentkezés
   </a>
 
-  <button onclick="openSzuleszetPackagePdf();" class="szuleszet-secondary">
+  <button 
+        type="button"
+        onclick="event.stopPropagation(); openSzuleszetPackagePdf()">
     Tematika
   </button>
 
