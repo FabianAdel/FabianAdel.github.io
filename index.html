@@ -718,7 +718,10 @@ document.getElementById('ml-fixed-close').onclick = function() {
   </ul>
 
   <div class="button-row">
-    <a href="#" class="szuleszet-btn" onclick="openImaginativPackagePdf(); return false;">Jelentkezés</a>
+    <!-- Jelentkezés Tally űrlapra -->
+    <a href="https://tally.so/r/Pdz84x" target="_blank" class="szuleszet-btn">Jelentkezés</a>
+
+    <!-- Tematika PDF -->
     <button type="button" class="szuleszet-secondary" onclick="openImaginativPackagePdf();">Tematika</button>
   </div>
 </div>
@@ -800,7 +803,7 @@ document.getElementById('ml-fixed-close').onclick = function() {
   margin-top: 12px;
 }
 
-/* Jelentkezés gomb stílusa a dúla kártyáról */
+/* Jelentkezés gomb stílusa */
 .szuleszet-btn {
   display: inline-block;
   padding: 8px 18px;
@@ -813,7 +816,7 @@ document.getElementById('ml-fixed-close').onclick = function() {
   cursor: pointer;
 }
 
-/* Tematika gomb stílusa a dúla kártyáról */
+/* Tematika gomb stílusa */
 .szuleszet-secondary {
   display: inline-block;
   padding: 6px 16px;
@@ -838,6 +841,7 @@ function openImaginativPackagePdf() {
     window.open('pdf/IMAGINATIVTEM.pdf');
 }
 </script>
+
 
 
         </div>
