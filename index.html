@@ -1095,26 +1095,32 @@ function openBasicPackagePdf() {
     </div>
 </div>
 
-<div class="card-row" style="margin-top: 45px;">
+<div class="card-row" style="margin-top: 45px; display: flex; flex-wrap: wrap; gap: 45px;">
+    <div class="card-container" id="intermediatePackageCard">
+        <div class="card-buttons">
+            <a href="https://tally.so/r/Pdz84x" target="_blank" class="card-apply-btn">Jelentkezés</a>
+            <button type="button" onclick="openIntermediatePackagePdf();" class="card-theme-btn">Tematika</button>
+        </div>
+    </div>
+
+    <div class="card-container" id="professionalPackageCard">
+        <div class="card-buttons">
+            <a href="https://tally.so/r/Pdz84x" target="_blank" class="card-apply-btn">Jelentkezés</a>
+            <button type="button" onclick="openProfessionalPackagePdf();" class="card-theme-btn">Tematika</button>
+        </div>
+    </div>
+
+    <div class="card-container" id="babyMomSyncPackageCard">
+        <div class="card-buttons">
+            <a href="https://tally.so/r/Pdz84x" target="_blank" class="card-apply-btn">Jelentkezés</a>
+            <button type="button" onclick="openBabyMomSyncPackagePdf();" class="card-theme-btn">Tematika</button>
+        </div>
+    </div>
+</div>
+
+<div class="card-row" style="margin-top: 45px; display: flex; flex-wrap: wrap; gap: 45px; width: 100%;">
     
     <div class="card-container" id="PerinatalisPackageCard">
-        <div class="card-header">
-            <div class="card-title">
-                Perinatális-és rendszerszintű gyászkísérés (IAOTH által akkreditált)
-            </div>
-            <div class="card-date">Modul I. Április 8, 10:00-16:00 | Modul II. Április 15, 9:00-16:00</div>
-            <div class="card-info">
-                Teljes képzés (2 modul) egy összegben: 85.980 Ft (42.990 Ft/ modul). Modulonként külön fizetve: 49.990 Ft.
-            </div>
-            <div class="price-value"><span class="amount">42.990 Ft</span></div>
-        </div>
-        <ul class="card-list">
-            <li>Perinatális gyász spektrumjai és fogalmak</li>
-            <li>Spirituális és vallási aspektusok</li>
-            <li>Testemlék-szomatikus lenyomat</li>
-            <li>A perinatális veszteség rendszerszintű hatásai</li>
-            <li>Klinikai jelenlét, kórházi protokoll és rituálék</li>
-        </ul>
         <div class="card-buttons">
             <a href="https://tally.so/r/Pdz84x" target="_blank" class="card-apply-btn">Jelentkezés</a>
             <button type="button" onclick="openPerinatalisPackagePdf();" class="card-theme-btn">Tematika</button>
@@ -1122,23 +1128,6 @@ function openBasicPackagePdf() {
     </div>
 
     <div class="card-container" id="SzuleszetPackageCard">
-        <div class="card-header">
-            <div class="card-title">
-                Dúla a szülőszobán – Kórházi kommunikáció (IAOTH által akkreditált)
-            </div>
-            <div class="card-date">Következő turnus: Március 4. 9:30–15:30</div>
-            <div class="card-info">
-                A képzés két nyelvű FAR tanúsítványt, valamint az International Association of Therapists (IAOTH) szakmai szervezet által kiadott akkreditációval rendelkező nemzetközi tanúsítványt és Course Summaryt biztosít.
-            </div>
-            <div class="price-value"><span class="amount">66.990 Ft</span></div>
-        </div>
-        <ul class="card-list">
-            <li>Minőségibb szülőszobai támogatás</li>
-            <li>Konfliktuskezelés kórházi környezetben</li>
-            <li>Dúlai hivatásba beépíthető</li>
-            <li>Szülész–dúla kapcsolati minőségek</li>
-            <li>Mentális reziliencia, öngondoskodás</li>
-        </ul>
         <div class="card-buttons">
             <a href="https://tally.so/r/Pdz84x" target="_blank" class="card-apply-btn">Jelentkezés</a>
             <button type="button" onclick="openSzuleszetPackagePdf();" class="card-theme-btn">Tematika</button>
@@ -1147,11 +1136,11 @@ function openBasicPackagePdf() {
 </div>
 
 <script>
-function openIntermediatPackagePdf() { window.open('pdf/Nőimedihaladó9.pdf'); }
-function openProfessionalPackagePdf() { window.open('pdf/instruktortematika.pdf'); }
-function openBabyMomSyncPackagePdf() { window.open('pdf/anyababa.pdf'); }
-function openPerinatalisPackagePdf() { window.open('pdf/Perinatalis-tematika.pdf'); } 
-function openSzuleszetPackagePdf() { window.open('pdf/dulatematika1.pdf'); }
+function openIntermediatePackagePdf() { window.open('pdf/Nőimedihaladó9.pdf', '_blank'); }
+function openProfessionalPackagePdf() { window.open('pdf/instruktortematika.pdf', '_blank'); }
+function openBabyMomSyncPackagePdf() { window.open('pdf/anyababa.pdf', '_blank'); }
+function openPerinatalisPackagePdf() { window.open('pdf/Perinatalis-tematika.pdf', '_blank'); } 
+function openSzuleszetPackagePdf() { window.open('pdf/dulatematika1.pdf', '_blank'); }
 </script>
 
 </div>
