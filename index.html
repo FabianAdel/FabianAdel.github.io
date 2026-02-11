@@ -1250,6 +1250,102 @@ document.getElementById('ml-fixed-close').onclick = function() {
 </div>
         </div>
     </div>
+        <div class="card-container-fixed" id="PerinatalisPackageCard">
+        <div class="pricingTable">
+            <div class="pricingTable-header">
+                <h3 class="title" style="font-size: 1.4rem"><b>Perinatális-és rendszerszintű gyászkísérés(IAOTH által akkreditált)</h3></b>
+                <p style="font-size: 1.2rem; color:slateblue">Modul I. Április 8, 10:00-16:00 Modul II. Április 15, 9:00-16:00<br> </p>
+              <p style="font-size: 14px; line-height: 1.5; color: #555; margin-top: 15px; padding: 0 10px;">
+   Teljes képzés (2 modul) egy összegben: 85.980 Ft (42.990 Ft/ modul)
+Modulonként külön fizetve: 49.990 Ft
+                  
+</p>
+                <div class="price-value">
+                    <div class="value">
+                        <span class="amount">42.990 Ft<br></span>
+                    </div>
+                </div>
+            </div>
+            <ul class="pricing-content">
+                <li>Perinatális gyász spektrumjai </li>
+                <li>Fogalmak(orvosi vs pszichológiai definíciók)</li>
+                <li>Spirituális és vallási aspektusok a perinatális gyászban</li>
+                <li>Testemlék-szomatikus lenyomat</li>
+                <li>24.hét(jogi/orvosi/lélektani különbség)</li>
+                <li>A perinatális veszteség rendszerszintű hatásai, eszköztárai családterapeutával</li>
+                <li>Klinikai jelenlét és kísérés</li>
+                <li>Kórházi protokoll vs gyász</li>
+                <li>Búcsú munka, rituálék</li>
+              
+            </ul>
+  <style>
+  @keyframes pulse-glow {
+    0% { box-shadow: 0 0 0 0 rgba(218, 68, 187, 0.7); }
+    70% { box-shadow: 0 0 0 15px rgba(218, 68, 187, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(218, 68, 187, 0); }
+  }
+
+  .pulse-btn {
+    display: inline-block;
+    background: linear-gradient(135deg, #da44bb, #892cdc);
+    color: #ffffff !important;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none !important;
+    padding: 12px 30px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+    animation: pulse-glow 2s infinite;
+    cursor: pointer;
+    position: relative;
+    z-index: 999;
+  }
+  
+  .pulse-btn:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+    animation: none;
+    box-shadow: 0 10px 25px rgba(218, 68, 187, 0.5);
+  }
+</style>
+
+<div style="text-align: center; padding: 20px 0; width: 100%;">
+    <a href="https://tally.so/r/Pdz84x" 
+       target="_blank" 
+       class="pulse-btn" 
+       onclick="event.stopPropagation();">
+        Jelentkezés
+    </a>
+</div>
+            <div style="text-align: center; padding: 15px 0;">
+    <button 
+        type="button"
+        onclick="event.stopPropagation(); openPerinatalisPackagePdf();" 
+        style="
+            background-color: transparent;
+            color: #C86B8A;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            padding: 10px 30px;
+            border: 2px solid #C86B8A;
+            border-radius: 50px; 
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-block;
+            font-family: sans-serif;
+        "
+        onmouseover="this.style.backgroundColor='#C86B8A'; this.style.color='#ffffff';"
+        onmouseout="this.style.backgroundColor='transparent'; this.style.color='#C86B8A';"
+    >
+        Tematika
+    </button>
+</div>
+        </div>
 
     <div class="card-container-fixed" id="SzuleszetPackageCard">
         <div class="pricingTable">
@@ -1544,6 +1640,7 @@ Képzésekkel kapcsolatban: kepzes@fabianadel.com
         function openBabyMomSyncPackagePdf() {
             window.open('pdf/anyababa.pdf');
         }
+      function openPerinatalisPackagePdf() {
     
           $(document).ready( function() { 
            
