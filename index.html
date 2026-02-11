@@ -688,106 +688,136 @@ document.getElementById('ml-fixed-close').onclick = function() {
 
 <div class="pricing-grid-fixed">
 
-    <div class="card-container-fixed" id="ImaginativPackageCard">
-        <div class="pricingTable">
-            <div class="pricingTable-header">
-                <h3 class="title" style="font-size: 1.6rem"><b>©Imaginatív Személyiségfejlesztő Mentor(162 óra)(IAOTH által akkreditált)</h3></b>
-                <p style="font-size: 1.2rem; color:slateblue"> Új turnus 2026 FEBRUÁR 24-SZEPTEMBER 29&nbsp<br>&nbsp  
-                <div style="display: inline-flex; align-items: center; background: linear-gradient(135deg, rgba(255,165,0,0.15) 0%, rgba(50,205,50,0.15) 100%); border: 2px solid #ff8c00; padding: 10px 20px; border-radius: 12px; font-family: 'Arial Black', sans-serif; box-shadow: 0 4px 15px rgba(0,0,0,0.1); margin: 10px 0; border-image: linear-gradient(to right, #ff8c00, #32cd32) 1;">
-                    <div style="width: 12px; height: 12px; background-color: #32cd32; border-radius: 50%; margin-right: 15px; position: relative;">
-                        <div style="position: absolute; width: 100%; height: 100%; background: #32cd32; border-radius: 50%; animation: pulse-green 1.4s infinite;"></div>
-                    </div>
-                    <span style="font-size: 14px; font-weight: 900; text-transform: uppercase; letter-spacing: 0.5px; animation: gradient-shift 2s infinite ease-in-out; display: flex; gap: 5px;">
-                    Jelentkezés nyitva, hamarosan indul: 12 / 10 SZABAD HELY
-                    </span>
-                </div>
-                <p style="font-size: 14px; line-height: 1.5; color: #555; margin-top: 15px; padding: 0 10px;">
-    A képzés két nyelvű FAR tanúsítványt, valamint az International Association of Therapists (IAOTH) szakmai szervezet által kiadott akkreditációval rendelkező nemzetközi tanúsítványt és Course Summaryt biztosít.
-</p>
-                <div class="price-value">
-                    <div class="value">
-                        <span class="amount">498,990Ft<br></span>
-                    </div>
-                </div>
-            </div>
-            <ul class="pricing-content">
-                <li>Imagináció alapjai</li>
-                <li>Tudattalan működése, értelmezése</li>
-                <li>Családterapeuta szakmai közreműködése a képzésben</li>
-                <li>Rendszerszemléletű imaginációs munka</li>
-                <li>50 óra kötelező saját élmény +10 óra mentorálási gyakorlat</li>
-                <li>Szupervíziók, esetmegbeszélések</li>
-                <li>Etikai határvonalak</li>
-                <li>Részletfizetési lehetőség</li>
-            </ul> 
-              <style>
-  @keyframes pulse-glow {
-    0% { box-shadow: 0 0 0 0 rgba(218, 68, 187, 0.7); }
-    70% { box-shadow: 0 0 0 15px rgba(218, 68, 187, 0); }
-    100% { box-shadow: 0 0 0 0 rgba(218, 68, 187, 0); }
-  }
+   <div class="szuleszet-card">
+  <div id="imaginativ-title">
+    ©Imaginatív Személyiségfejlesztő Mentor (162 óra)
+    <div id="imaginativ-accredit">(IAOTH által akkreditált)</div>
+  </div>
 
-  .pulse-btn {
-    display: inline-block;
-    background: linear-gradient(135deg, #da44bb, #892cdc);
-    color: #ffffff !important;
-    font-size: 16px;
-    font-weight: 700;
-    text-decoration: none !important;
-    padding: 12px 30px;
-    border-radius: 50px;
-    text-transform: uppercase;
-    font-family: sans-serif;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    transition: all 0.3s ease;
-    animation: pulse-glow 2s infinite;
-    cursor: pointer;
-    position: relative;
-    z-index: 999;
-  }
-  
-  .pulse-btn:hover {
-    transform: scale(1.05);
-    filter: brightness(1.1);
-    animation: none;
-    box-shadow: 0 10px 25px rgba(218, 68, 187, 0.5);
-  }
+  <div id="imaginativ-date">
+    Új turnus: 2026 FEBRUÁR 24 – SZEPTEMBER 29
+  </div>
+
+  <div id="imaginativ-info">
+    A képzés két nyelvű FAR tanúsítványt, valamint az International Association of Therapists (IAOTH) szakmai szervezet által kiadott akkreditációval rendelkező nemzetközi tanúsítványt és Course Summaryt biztosít.
+  </div>
+
+  <!-- Price megőrizve -->
+  <div id="imaginativ-price">
+    498,990 Ft
+  </div>
+
+  <ul id="imaginativ-list">
+    <li>Imagináció alapjai</li>
+    <li>Tudattalan működése, értelmezése</li>
+    <li>Családterapeuta szakmai közreműködése a képzésben</li>
+    <li>Rendszerszemléletű imaginációs munka</li>
+    <li>50 óra kötelező saját élmény + 10 óra mentorálási gyakorlat</li>
+    <li>Szupervíziók, esetmegbeszélések</li>
+    <li>Etikai határvonalak</li>
+    <li>Részletfizetési lehetőség</li>
+  </ul>
+
+  <a href="https://tally.so/r/Pdz84x" target="_blank" class="szuleszet-btn">
+    Jelentkezés
+  </a>
+
+  <button onclick="openImaginativPackagePdf();" class="szuleszet-secondary">
+    Tematika
+  </button>
+</div>
+
+<style>
+.szuleszet-card {
+  max-width: 360px;
+  width: 100%;
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+  padding: 20px 18px;
+  text-align: left;
+  font-family: inherit;
+}
+
+#imaginativ-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.3;
+  margin-bottom: 4px;
+}
+
+#imaginativ-accredit {
+  font-size: 0.7rem;
+  color: #7b2cbf;
+  margin-top: 2px;
+}
+
+#imaginativ-date {
+  font-size: 0.85rem;
+  color: slateblue;
+  font-weight: 600;
+  margin: 8px 0;
+}
+
+#imaginativ-info {
+  font-size: 0.75rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+#imaginativ-price {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #892cdc;
+  margin: 10px 0;
+}
+
+#imaginativ-list {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+  font-size: 0.8rem;
+}
+
+#imaginativ-list li {
+  margin-bottom: 5px;
+  padding-left: 14px;
+  position: relative;
+}
+
+#imaginativ-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #da44bb;
+}
+
+.szuleszet-btn {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 8px 18px;
+  background: linear-gradient(135deg, #da44bb, #892cdc);
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.75rem;
+  border-radius: 30px;
+}
+
+.szuleszet-secondary {
+  display: inline-block;
+  margin-top: 6px;
+  padding: 6px 16px;
+  background: transparent;
+  border: 1.5px solid #C86B8A;
+  color: #C86B8A;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 0.7rem;
+  cursor: pointer;
+}
 </style>
 
-<div style="text-align: center; padding: 20px 0; width: 100%;">
-    <a href="https://tally.so/r/Pdz84x" 
-       target="_blank" 
-       class="pulse-btn" 
-       onclick="event.stopPropagation();">
-        Jelentkezés
-    </a>
-</div> 
-  <div style="text-align: center; padding: 15px 0;">
-    <button 
-        type="button"
-        onclick="event.stopPropagation(); openImaginativPackagePdf();" 
-        style="
-            background-color: transparent;
-            color: #C86B8A;
-            font-size: 13px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1.2px;
-            padding: 10px 30px;
-            border: 2px solid #C86B8A;
-            border-radius: 50px; 
-            cursor: pointer;
-            transition: all 0.3s ease;
-            display: inline-block;
-            font-family: sans-serif;
-        "
-        onmouseover="this.style.backgroundColor='#C86B8A'; this.style.color='#ffffff';"
-        onmouseout="this.style.backgroundColor='transparent'; this.style.color='#C86B8A';"
-    >
-        Tematika
-    </button>
-</div>
-            
         </div>
     </div>
 
