@@ -906,31 +906,32 @@ function openBasicPackagePdf() {
 
     </div>
 
-  <!-- Új sor a következő három kártyának -->
-<div class="card-row" style="margin-top: 40px;"> <!-- kis távolság az előző sor fölött -->
+ <div style="display: flex; flex-wrap: wrap; gap: 20px; margin-top: 40px;">
+
   <!-- Intermediate Package -->
   <div class="card-container-fixed" id="intermediatePackageCard">
     <div class="pricingTable">
       <div class="pricingTable-header">
-        <h3 class="title" style="font-size:1.6rem"><b>Haladó Női meditáció vezető(IAOTH által akkreditált)</b></h3>
-        <p style="font-size: 1.2rem; color:slateblue">2026 Február 7-8 9:30-14:30</p>
-        <p style="font-size: 14px; line-height: 1.5; color: #555; margin-top: 15px; padding: 0 10px;">
-          A képzés két nyelvű FAR tanúsítványt, valamint az International Association of Therapists (IAOTH) szakmai szervezet által kiadott akkreditációval rendelkező nemzetközi tanúsítványt és Course Summaryt biztosít.
+        <h3 class="title" style="font-size: 1.6rem;"><b>Haladó Női meditáció vezető (IAOTH által akkreditált)</b></h3>
+        <p class="intermediate-date" style="font-size: 1.2rem; color:slateblue;">2026 Február 7-8 9:30-14:30</p>
+        <p class="intermediate-info" style="font-size: 0.85rem; color: #555; margin-top: 10px;">
+          A képzés két nyelvű FAR tanúsítványt, valamint az IAOTH által kiadott nemzetközi tanúsítványt biztosít.
         </p>
         <div class="price-value">
-          <div class="value"><span class="amount">116.000 Ft<br></span></div>
+          <div class="value"><span class="amount">116.000 Ft</span></div>
         </div>
       </div>
-      <ul class="pricing-content">
+      <ul class="intermediate-list">
         <li>Feltétel az alapképzés sikeres elvégzése</li>
         <li>Pszichológiai és mentálhigiénés szemlélet</li>
         <li>Tudásbővítés, elmélyülés a mély meditációk területén</li>
         <li>13 új meditációs technika</li>
         <li>Tömény elmélet</li>
       </ul>
-      <div class="button-row">
+
+      <div style="display:flex; gap:10px; margin-top:10px; justify-content: center;">
         <a href="https://tally.so/r/Pdz84x" target="_blank" class="pulse-btn">Jelentkezés</a>
-        <button onclick="openIntermediatPackagePdf();" class="tematika-btn">Tematika</button>
+        <button onclick="openIntermediatPackagePdf();" class="intermediate-tematika-btn">Tematika</button>
       </div>
     </div>
   </div>
@@ -939,16 +940,16 @@ function openBasicPackagePdf() {
   <div class="card-container-fixed" id="professionalPackageCard">
     <div class="pricingTable">
       <div class="pricingTable-header">
-        <h3 class="title" style="font-size:1.6rem"><b>Meditációs instruktor Professional (IAOTH által akkreditált)</b></h3>
-        <p style="font-size: 1.2rem; color:slateblue">November 6- Március 19, minden csütörtök 9:30-12:00</p>
-        <p style="font-size: 14px; line-height: 1.5; color: #555; margin-top: 15px; padding: 0 10px;">
-          A képzés két nyelvű FAR tanúsítványt, valamint az International Association of Therapists (IAOTH) szakmai szervezet által kiadott akkreditációval rendelkező nemzetközi tanúsítványt és Course Summaryt biztosít.
+        <h3 class="title" style="font-size: 1.6rem;"><b>Meditációs instruktor Professional (IAOTH által akkreditált)</b></h3>
+        <p class="professional-date" style="font-size: 1.2rem; color:slateblue;">November 6- Március 19, minden csütörtök 9:30-12:00</p>
+        <p class="professional-info" style="font-size: 0.85rem; color: #555; margin-top: 10px;">
+          A képzés két nyelvű FAR tanúsítványt, valamint az IAOTH által kiadott nemzetközi tanúsítványt biztosít.
         </p>
         <div class="price-value">
-          <div class="value"><span class="amount">184.990 Ft<br></span></div>
+          <div class="value"><span class="amount">184.990 Ft</span></div>
         </div>
       </div>
-      <ul class="pricing-content">
+      <ul class="professional-list">
         <li>Feltétel az alap és a haladó képzés sikeres elvégzése</li>
         <li>Esetmegbeszélők, mentálhigiénés műhely</li>
         <li>Tudásbővítés</li>
@@ -956,9 +957,10 @@ function openBasicPackagePdf() {
         <li>75% gyakorlat, 25% elmélet</li>
         <li>Professional minősítés</li>
       </ul>
-      <div class="button-row">
+
+      <div style="display:flex; gap:10px; margin-top:10px; justify-content: center;">
         <a href="https://tally.so/r/Pdz84x" target="_blank" class="pulse-btn">Jelentkezés</a>
-        <button onclick="openProfessionalPackagePdf();" class="tematika-btn">Tematika</button>
+        <button onclick="openProfessionalPackagePdf();" class="professional-tematika-btn">Tematika</button>
       </div>
     </div>
   </div>
@@ -967,38 +969,33 @@ function openBasicPackagePdf() {
   <div class="card-container-fixed" id="babyMomSyncPackageCard">
     <div class="pricingTable">
       <div class="pricingTable-header">
-        <h3 class="title" style="font-size:1.6rem"><b>©Anya-Baba Kapcsolódási Facilitátor(trimeszter-alapú)(IAOTH által akkreditált)</b></h3>
-        <p style="font-size: 1.2rem; color:slateblue">Március 25-27<br>Első két nap 9:30-14:30, 3. nap 9:30-12:30</p>
-        <p style="font-size: 14px; line-height: 1.5; color: #555; margin-top: 15px; padding: 0 10px;">
-          A képzés két nyelvű FAR tanúsítványt, valamint az International Association of Therapists (IAOTH) szakmai szervezet által kiadott akkreditációval rendelkező nemzetközi tanúsítványt és Course Summaryt biztosít.
+        <h3 class="title" style="font-size: 1.6rem;"><b>©Anya-Baba Kapcsolódási Facilitátor (trimeszter-alapú)(IAOTH által akkreditált)</b></h3>
+        <p class="babymom-date" style="font-size: 1.2rem; color:slateblue;">Március 25-27<br>Első két nap 9:30-14:30, 3. nap 9:30-12:30</p>
+        <p class="babymom-info" style="font-size: 0.85rem; color: #555; margin-top: 10px;">
+          A képzés két nyelvű FAR tanúsítványt, valamint az IAOTH által kiadott nemzetközi tanúsítványt biztosít.
         </p>
         <div class="price-value">
-          <div class="value"><span class="amount">134.990 Ft<br></span></div>
+          <div class="value"><span class="amount">134.990 Ft</span></div>
         </div>
       </div>
-      <ul class="pricing-content">
+      <ul class="babymom-list">
         <li>Várandósság folyamatának lelki kísérése, várandóslélektan</li>
         <li>Kompetenciafejlesztés, esetelemzések</li>
         <li>Önismeret, önfejlesztés a várandósság alatt</li>
         <li>Indítható vállalkozás</li>
         <li>Praxisba beépíthető</li>
       </ul>
-      <div class="button-row">
+
+      <div style="display:flex; gap:10px; margin-top:10px; justify-content: center;">
         <a href="https://tally.so/r/Pdz84x" target="_blank" class="pulse-btn">Jelentkezés</a>
-        <button onclick="openBabyMomSyncPackagePdf();" class="tematika-btn">Tematika</button>
+        <button onclick="openBabyMomSyncPackagePdf();" class="babymom-tematika-btn">Tematika</button>
       </div>
     </div>
   </div>
+
 </div>
 
 <style>
-.card-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px; /* kis távolság a kártyák között */
-  justify-content: flex-start;
-}
-
 .card-container-fixed {
   max-width: 360px;
   width: 100%;
@@ -1017,26 +1014,38 @@ function openBasicPackagePdf() {
   margin: 10px 0;
 }
 
-.button-row {
-  display: flex;
-  justify-content: space-between;
-  gap: 10px;
-  margin-top: 10px;
+ul {
+  list-style: none;
+  padding-left: 0;
+  font-size: 0.8rem;
+  margin: 10px 0;
+}
+
+ul li {
+  margin-bottom: 5px;
+  padding-left: 14px;
+  position: relative;
+}
+
+ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #da44bb;
 }
 
 .pulse-btn {
   display: inline-block;
   background: linear-gradient(135deg, #da44bb, #892cdc);
   color: #ffffff !important;
-  font-size: 14px;
-  font-weight: 700;
+  font-size: 0.75rem;
+  font-weight: 600;
   text-decoration: none !important;
   padding: 8px 18px;
   border-radius: 30px;
   text-transform: uppercase;
   font-family: sans-serif;
   border: 1px solid rgba(255,255,255,0.3);
-  transition: all 0.3s ease;
   cursor: pointer;
 }
 
@@ -1045,26 +1054,27 @@ function openBasicPackagePdf() {
   filter: brightness(1.1);
 }
 
-.tematika-btn {
+.tematika-btn, .intermediate-tematika-btn, .professional-tematika-btn, .babymom-tematika-btn {
   background-color: transparent;
   color: #C86B8A;
-  font-size: 13px;
-  font-weight: 700;
+  font-size: 0.7rem;
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1.2px;
-  padding: 10px 30px;
-  border: 2px solid #C86B8A;
-  border-radius: 50px; 
+  padding: 6px 16px;
+  border: 1.5px solid #C86B8A;
+  border-radius: 30px;
   cursor: pointer;
   transition: all 0.3s ease;
   font-family: sans-serif;
 }
 
-.tematika-btn:hover {
+.tematika-btn:hover, .intermediate-tematika-btn:hover, .professional-tematika-btn:hover, .babymom-tematika-btn:hover {
   background-color: #C86B8A;
   color: #ffffff;
 }
 </style>
+
 
         </div>
     </div>
