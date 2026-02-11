@@ -906,278 +906,166 @@ function openBasicPackagePdf() {
 
     </div>
 
-    <div class="card-container-fixed" id="intermediatePackageCard">
-        <div class="pricingTable">
-            <div class="pricingTable-header">
-                <h3 class="title" style="font-size:1.6rem"><b>Haladó Női meditáció vezető(IAOTH által akkreditált)</b></h3>
-                <p style="font-size: 1.2rem; color:slateblue"> 2026 Február 7-8 9:30-14:30&nbsp<br>&nbsp</p>
-                <div style="color: #C86B8A; font-size: 1.1em; font-weight: bold; text-align: center; border: 2px solid #C86B8A; padding: 10px; border-radius: 8px; display: inline-block;">Tematika</div>
-               <p style="font-size: 14px; line-height: 1.5; color: #555; margin-top: 15px; padding: 0 10px;">
-    A képzés két nyelvű FAR tanúsítványt, valamint az International Association of Therapists (IAOTH) szakmai szervezet által kiadott akkreditációval rendelkező nemzetközi tanúsítványt és Course Summaryt biztosít.
-</p>
-                <div class="price-value">
-                    <div class="value">
-                        <span class="amount">116.000 Ft<br></span>
-                    </div>
-                </div>
-            </div>
-            <ul class="pricing-content">
-                <li>Feltétel az alapképzés sikeres elvégzése</li>
-                <li>Pszichológiai és mentálhigiénés szemlélet</li>
-                <li>Tudásbővítés, elmélyülés a mély meditációk területén</li>
-                <li>13 új meditációs technika</li>
-                <li>Tömény elmélet</li>
-            </ul>
-              <style>
-  @keyframes pulse-glow {
-    0% { box-shadow: 0 0 0 0 rgba(218, 68, 187, 0.7); }
-    70% { box-shadow: 0 0 0 15px rgba(218, 68, 187, 0); }
-    100% { box-shadow: 0 0 0 0 rgba(218, 68, 187, 0); }
-  }
-
-  .pulse-btn {
-    display: inline-block;
-    background: linear-gradient(135deg, #da44bb, #892cdc);
-    color: #ffffff !important;
-    font-size: 16px;
-    font-weight: 700;
-    text-decoration: none !important;
-    padding: 12px 30px;
-    border-radius: 50px;
-    text-transform: uppercase;
-    font-family: sans-serif;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    transition: all 0.3s ease;
-    animation: pulse-glow 2s infinite;
-    cursor: pointer;
-    position: relative;
-    z-index: 999;
-  }
-  
-  .pulse-btn:hover {
-    transform: scale(1.05);
-    filter: brightness(1.1);
-    animation: none;
-    box-shadow: 0 10px 25px rgba(218, 68, 187, 0.5);
-  }
-</style>
-
-<div style="text-align: center; padding: 20px 0; width: 100%;">
-    <a href="https://tally.so/r/Pdz84x" 
-       target="_blank" 
-       class="pulse-btn" 
-       onclick="event.stopPropagation();">
-        Jelentkezés
-    </a>
-</div>
-            <div style="text-align: center; padding: 15px 0;">
-    <button 
-        type="button"
-        onclick="event.stopPropagation(); openIntermediatPackagePdf();" 
-        style="
-            background-color: transparent;
-            color: #C86B8A;
-            font-size: 13px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1.2px;
-            padding: 10px 30px;
-            border: 2px solid #C86B8A;
-            border-radius: 50px; 
-            cursor: pointer;
-            transition: all 0.3s ease;
-            display: inline-block;
-            font-family: sans-serif;
-        "
-        onmouseover="this.style.backgroundColor='#C86B8A'; this.style.color='#ffffff';"
-        onmouseout="this.style.backgroundColor='transparent'; this.style.color='#C86B8A';"
-    >
-        Tematika
-    </button>
-</div>
+  <!-- Új sor a következő három kártyának -->
+<div class="card-row" style="margin-top: 40px;"> <!-- kis távolság az előző sor fölött -->
+  <!-- Intermediate Package -->
+  <div class="card-container-fixed" id="intermediatePackageCard">
+    <div class="pricingTable">
+      <div class="pricingTable-header">
+        <h3 class="title" style="font-size:1.6rem"><b>Haladó Női meditáció vezető(IAOTH által akkreditált)</b></h3>
+        <p style="font-size: 1.2rem; color:slateblue">2026 Február 7-8 9:30-14:30</p>
+        <p style="font-size: 14px; line-height: 1.5; color: #555; margin-top: 15px; padding: 0 10px;">
+          A képzés két nyelvű FAR tanúsítványt, valamint az International Association of Therapists (IAOTH) szakmai szervezet által kiadott akkreditációval rendelkező nemzetközi tanúsítványt és Course Summaryt biztosít.
+        </p>
+        <div class="price-value">
+          <div class="value"><span class="amount">116.000 Ft<br></span></div>
         </div>
+      </div>
+      <ul class="pricing-content">
+        <li>Feltétel az alapképzés sikeres elvégzése</li>
+        <li>Pszichológiai és mentálhigiénés szemlélet</li>
+        <li>Tudásbővítés, elmélyülés a mély meditációk területén</li>
+        <li>13 új meditációs technika</li>
+        <li>Tömény elmélet</li>
+      </ul>
+      <div class="button-row">
+        <a href="https://tally.so/r/Pdz84x" target="_blank" class="pulse-btn">Jelentkezés</a>
+        <button onclick="openIntermediatPackagePdf();" class="tematika-btn">Tematika</button>
+      </div>
     </div>
+  </div>
 
-    <div class="card-container-fixed" id="professionalPackageCard">
-        <div class="pricingTable">
-            <div class="pricingTable-header">
-                <h3 class="title" style="font-size: 1.6rem"><b>Meditációs instruktor Professional (IAOTH által akkreditált)</h3></b>
-                <p style="font-size: 1.2rem; color:slateblue"> November 6- Március 19, minden csütörtök 9:30-12:00 &nbsp<br>&nbsp</p>
-                <p style="font-size: 14px; line-height: 1.5; color: #555; margin-top: 15px; padding: 0 10px;">
-    A képzés két nyelvű FAR tanúsítványt, valamint az International Association of Therapists (IAOTH) szakmai szervezet által kiadott akkreditációval rendelkező nemzetközi tanúsítványt és Course Summaryt biztosít.
-</p>
-                <div class="price-value">
-                    <div class="value">
-                        <span class="amount">184.990Ft<br></span>
-                    </div>
-                </div>
-            </div>
-            <ul class="pricing-content">
-                <li>Feltétel az alap és a haladó képzés sikeres elvégzése</li>
-                <li>Esetmegbeszélők, mentálhigiénés műhely</li>
-                <li>Tudásbővítés</li>
-                <li>Klienssel való szerződés</li>
-                <li>75% gyakorlat, 25% elmélet</li>
-                <li>Professional minősítés</li>
-            </ul>
-              <style>
-  @keyframes pulse-glow {
-    0% { box-shadow: 0 0 0 0 rgba(218, 68, 187, 0.7); }
-    70% { box-shadow: 0 0 0 15px rgba(218, 68, 187, 0); }
-    100% { box-shadow: 0 0 0 0 rgba(218, 68, 187, 0); }
-  }
-
-  .pulse-btn {
-    display: inline-block;
-    background: linear-gradient(135deg, #da44bb, #892cdc);
-    color: #ffffff !important;
-    font-size: 16px;
-    font-weight: 700;
-    text-decoration: none !important;
-    padding: 12px 30px;
-    border-radius: 50px;
-    text-transform: uppercase;
-    font-family: sans-serif;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    transition: all 0.3s ease;
-    animation: pulse-glow 2s infinite;
-    cursor: pointer;
-    position: relative;
-    z-index: 999;
-  }
-  
-  .pulse-btn:hover {
-    transform: scale(1.05);
-    filter: brightness(1.1);
-    animation: none;
-    box-shadow: 0 10px 25px rgba(218, 68, 187, 0.5);
-  }
-</style>
-
-<div style="text-align: center; padding: 20px 0; width: 100%;">
-    <a href="https://tally.so/r/Pdz84x" 
-       target="_blank" 
-       class="pulse-btn" 
-       onclick="event.stopPropagation();">
-        Jelentkezés
-    </a>
-</div>
-            <div style="text-align: center; padding: 15px 0;">
-    <button 
-        type="button"
-        onclick="event.stopPropagation(); openProfessionalPackagePdf();" 
-        style="
-            background-color: transparent;
-            color: #C86B8A;
-            font-size: 13px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1.2px;
-            padding: 10px 30px;
-            border: 2px solid #C86B8A;
-            border-radius: 50px; 
-            cursor: pointer;
-            transition: all 0.3s ease;
-            display: inline-block;
-            font-family: sans-serif;
-        "
-        onmouseover="this.style.backgroundColor='#C86B8A'; this.style.color='#ffffff';"
-        onmouseout="this.style.backgroundColor='transparent'; this.style.color='#C86B8A';"
-    >
-        Tematika
-    </button>
-</div>
+  <!-- Professional Package -->
+  <div class="card-container-fixed" id="professionalPackageCard">
+    <div class="pricingTable">
+      <div class="pricingTable-header">
+        <h3 class="title" style="font-size:1.6rem"><b>Meditációs instruktor Professional (IAOTH által akkreditált)</b></h3>
+        <p style="font-size: 1.2rem; color:slateblue">November 6- Március 19, minden csütörtök 9:30-12:00</p>
+        <p style="font-size: 14px; line-height: 1.5; color: #555; margin-top: 15px; padding: 0 10px;">
+          A képzés két nyelvű FAR tanúsítványt, valamint az International Association of Therapists (IAOTH) szakmai szervezet által kiadott akkreditációval rendelkező nemzetközi tanúsítványt és Course Summaryt biztosít.
+        </p>
+        <div class="price-value">
+          <div class="value"><span class="amount">184.990 Ft<br></span></div>
         </div>
+      </div>
+      <ul class="pricing-content">
+        <li>Feltétel az alap és a haladó képzés sikeres elvégzése</li>
+        <li>Esetmegbeszélők, mentálhigiénés műhely</li>
+        <li>Tudásbővítés</li>
+        <li>Klienssel való szerződés</li>
+        <li>75% gyakorlat, 25% elmélet</li>
+        <li>Professional minősítés</li>
+      </ul>
+      <div class="button-row">
+        <a href="https://tally.so/r/Pdz84x" target="_blank" class="pulse-btn">Jelentkezés</a>
+        <button onclick="openProfessionalPackagePdf();" class="tematika-btn">Tematika</button>
+      </div>
     </div>
+  </div>
 
-    <div class="card-container-fixed" id="babyMomSyncPackageCard">
-        <div class="pricingTable">
-            <div class="pricingTable-header">
-                <h3 class="title" style="font-size: 1.4rem"><b>©Anya-Baba Kapcsolódási Facilitátor(trimeszter -alapú)(IAOTH által akkreditált)</h3></b>
-                <p style="font-size: 1.2rem; color:slateblue">Március 25-27<br> Első két  nap 9:30-14:30, 3. nap 9:30-12:30
-                <p style="font-size: 14px; line-height: 1.5; color: #555; margin-top: 15px; padding: 0 10px;">
-    A képzés két nyelvű FAR tanúsítványt, valamint az International Association of Therapists (IAOTH) szakmai szervezet által kiadott akkreditációval rendelkező nemzetközi tanúsítványt és Course Summaryt biztosít.
-</p>
-                <div class="price-value">
-                    <div class="value">
-                        <span class="amount">134.990Ft<br></span>
-                    </div>
-                </div>
-            </div>
-            <ul class="pricing-content">
-                <li>Várandósság folyamatának lelki kísérése, várandóslélektan</li>
-                <li>Kompetenciafejlesztés, esetelemzések</li>
-                <li>Önismeret, önfejlesztés a várandósság alatt</li>
-                <li>Indítható vállalkozás</li>
-                <li>Praxisba beépíthető</li>
-            </ul>
-              <style>
-  @keyframes pulse-glow {
-    0% { box-shadow: 0 0 0 0 rgba(218, 68, 187, 0.7); }
-    70% { box-shadow: 0 0 0 15px rgba(218, 68, 187, 0); }
-    100% { box-shadow: 0 0 0 0 rgba(218, 68, 187, 0); }
-  }
+  <!-- Baby Mom Sync Package -->
+  <div class="card-container-fixed" id="babyMomSyncPackageCard">
+    <div class="pricingTable">
+      <div class="pricingTable-header">
+        <h3 class="title" style="font-size:1.6rem"><b>©Anya-Baba Kapcsolódási Facilitátor(trimeszter-alapú)(IAOTH által akkreditált)</b></h3>
+        <p style="font-size: 1.2rem; color:slateblue">Március 25-27<br>Első két nap 9:30-14:30, 3. nap 9:30-12:30</p>
+        <p style="font-size: 14px; line-height: 1.5; color: #555; margin-top: 15px; padding: 0 10px;">
+          A képzés két nyelvű FAR tanúsítványt, valamint az International Association of Therapists (IAOTH) szakmai szervezet által kiadott akkreditációval rendelkező nemzetközi tanúsítványt és Course Summaryt biztosít.
+        </p>
+        <div class="price-value">
+          <div class="value"><span class="amount">134.990 Ft<br></span></div>
+        </div>
+      </div>
+      <ul class="pricing-content">
+        <li>Várandósság folyamatának lelki kísérése, várandóslélektan</li>
+        <li>Kompetenciafejlesztés, esetelemzések</li>
+        <li>Önismeret, önfejlesztés a várandósság alatt</li>
+        <li>Indítható vállalkozás</li>
+        <li>Praxisba beépíthető</li>
+      </ul>
+      <div class="button-row">
+        <a href="https://tally.so/r/Pdz84x" target="_blank" class="pulse-btn">Jelentkezés</a>
+        <button onclick="openBabyMomSyncPackagePdf();" class="tematika-btn">Tematika</button>
+      </div>
+    </div>
+  </div>
+</div>
 
-  .pulse-btn {
-    display: inline-block;
-    background: linear-gradient(135deg, #da44bb, #892cdc);
-    color: #ffffff !important;
-    font-size: 16px;
-    font-weight: 700;
-    text-decoration: none !important;
-    padding: 12px 30px;
-    border-radius: 50px;
-    text-transform: uppercase;
-    font-family: sans-serif;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    transition: all 0.3s ease;
-    animation: pulse-glow 2s infinite;
-    cursor: pointer;
-    position: relative;
-    z-index: 999;
-  }
-  
-  .pulse-btn:hover {
-    transform: scale(1.05);
-    filter: brightness(1.1);
-    animation: none;
-    box-shadow: 0 10px 25px rgba(218, 68, 187, 0.5);
-  }
+<style>
+.card-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px; /* kis távolság a kártyák között */
+  justify-content: flex-start;
+}
+
+.card-container-fixed {
+  max-width: 360px;
+  width: 100%;
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+  padding: 20px 18px;
+  text-align: left;
+  font-family: inherit;
+}
+
+.price-value .value .amount {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #892cdc;
+  margin: 10px 0;
+}
+
+.button-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.pulse-btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #da44bb, #892cdc);
+  color: #ffffff !important;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none !important;
+  padding: 8px 18px;
+  border-radius: 30px;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  border: 1px solid rgba(255,255,255,0.3);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.pulse-btn:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+.tematika-btn {
+  background-color: transparent;
+  color: #C86B8A;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  padding: 10px 30px;
+  border: 2px solid #C86B8A;
+  border-radius: 50px; 
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: sans-serif;
+}
+
+.tematika-btn:hover {
+  background-color: #C86B8A;
+  color: #ffffff;
+}
 </style>
 
-<div style="text-align: center; padding: 20px 0; width: 100%;">
-    <a href="https://tally.so/r/Pdz84x" 
-       target="_blank" 
-       class="pulse-btn" 
-       onclick="event.stopPropagation();">
-        Jelentkezés
-    </a>
-</div>
-            <div style="text-align: center; padding: 15px 0;">
-    <button 
-        type="button"
-        onclick="event.stopPropagation(); openBabyMomSyncPackagePdf();" 
-        style="
-            background-color: transparent;
-            color: #C86B8A;
-            font-size: 13px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1.2px;
-            padding: 10px 30px;
-            border: 2px solid #C86B8A;
-            border-radius: 50px; 
-            cursor: pointer;
-            transition: all 0.3s ease;
-            display: inline-block;
-            font-family: sans-serif;
-        "
-        onmouseover="this.style.backgroundColor='#C86B8A'; this.style.color='#ffffff';"
-        onmouseout="this.style.backgroundColor='transparent'; this.style.color='#C86B8A';"
-    >
-        Tematika
-    </button>
-</div>
         </div>
     </div>
         <div class="card-container-fixed" id="PerinatalisPackageCard">
