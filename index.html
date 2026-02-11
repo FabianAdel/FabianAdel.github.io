@@ -693,316 +693,160 @@ document.getElementById('ml-fixed-close').onclick = function() {
 
 <div class="card-row">
 
-  <!-- Imaginatív kártya -->
-  <div class="card-container" id="ImaginativPackageCard">
-    <div class="card-header">
-      <div class="card-title">
-        ©Imaginatív Személyiségfejlesztő Mentor (162 óra) (IAOTH által akkreditált)
-      </div>
-      <div class="card-date">Új turnus 2026 FEBRUÁR 24-SZEPTEMBER 29</div>
-      <div class="card-info">
-        Két nyelvű FAR tanúsítvány + Nemzetközi tanúsítvány, Course summary
-      </div>
-      <div class="price-value"><span class="amount">498.990 Ft</span></div>
-    </div>
-    <ul class="card-list">
-      <li>Imagináció alapjai</li>
-      <li>Tudattalan működése, értelmezése</li>
-      <li>Családterapeuta szakmai közreműködése</li>
-      <li>Rendszerszemléletű imaginációs munka</li>
-      <li>50 óra kötelező saját élmény +10 óra mentorálás</li>
-      <li>Szupervíziók, esetmegbeszélések</li>
-      <li>Etikai határvonalak</li>
-      <li>Részletfizetési lehetőség</li>
-    </ul>
-    <div class="card-buttons">
-      <a href="https://tally.so/r/Pdz84x" target="_blank" class="card-apply-btn">
-        Jelentkezés
-      </a>
-      <button type="button" onclick="openImaginativPackagePdf();" class="card-theme-btn">
-        Tematika
-      </button>
-    </div>
-  </div>
+Oké! Akkor készítek egy **teljes kódot**, ahol:
 
-  <!-- Bevezetés kártya -->
-  <div class="card-container" id="bevezetesPackageCard">
-    <div class="card-header">
-      <div class="card-title">
-        Meditációs alapok, idegrendszeri szabályozás és Wellbeing (🗣️ 🇭🇺/🇺🇸) (IAOTH által akkreditált)
-      </div>
-      <div class="card-date">Március 9 9:30-16:00</div>
-      <div class="card-info">
-        Két nyelvű FAR + Nemzetközi tanúsítvány, Course summary
-      </div>
-      <div class="price-value"><span class="amount">72.990 Ft</span></div>
-    </div>
-    <ul class="card-list">
-      <li>Stressz és paraszimpatikus idegrendszer kapcsolata</li>
-      <li>Meditáció alapfogalmai</li>
-      <li>Testpásztázás, elraktározott feszültség enyhítése</li>
-      <li>Légzéstechnika és idegrendszer kapcsolata</li>
-      <li>Neuroplaszticitás- és ezt elősegítő gyakorlatok</li>
-      <li>Wellbeing fogalma, alapja és gyakorlatok</li>
-    </ul>
-    <div class="card-buttons">
-      <a href="https://tally.so/r/Pdz84x" target="_blank" class="card-apply-btn">
-        Jelentkezés
-      </a>
-      <button type="button" onclick="openbevezetesPackagePdf();" class="card-theme-btn">
-        Tematika
-      </button>
-    </div>
-  </div>
+* Az **első három kártya** ugyanúgy néz ki, mint az előző blokk.
+* A **második három kártya** (Intermediate, Professional, Baby-Mom Sync) **ugyanazzal a dizájnnal**, **ugyanazzal a stílussal**, 45px távolsággal a kártyák között.
+* Két sorban lesznek: **első sorban az első három**, **második sorban a következő három**.
+* Jelentkezés és Tematika gombok működnek a saját PDF-jükkel / Tally linkjükkel.
 
-  <!-- Basic kártya -->
-  <div class="card-container" id="basicPackageCard">
-    <div class="card-header">
-      <div class="card-title">
-        Női meditáció vezető alapképzés (IAOTH által akkreditált)
-      </div>
-      <div class="card-date">Új turnus: Február 25-27</div>
-      <div class="card-info">
-        Két nyelvű FAR + Nemzetközi tanúsítvány, Course summary
-      </div>
-      <div class="price-value"><span class="amount">134.990 Ft</span></div>
-    </div>
-    <ul class="card-list">
-      <li>Pszichológiai és mentálhigiénés szemlélet</li>
-      <li>Tudásbővítés, praxisba beépíthető</li>
-      <li>Indítható vállalkozás</li>
-      <li>Vezethetsz Női kört vagy meditációkat</li>
-      <li>Gyakorlatorientált</li>
-      <li>Tömény elmélet</li>
-    </ul>
-    <div class="card-buttons">
-      <a href="https://tally.so/r/Pdz84x" target="_blank" class="card-apply-btn">
-        Jelentkezés
-      </a>
-      <button type="button" onclick="openBasicPackagePdf();" class="card-theme-btn">
-        Tematika
-      </button>
-    </div>
-  </div>
+Íme a komplett HTML + CSS:
 
-</div>
+```html
+<!-- KÁRTYÁK TARTÓJA -->
+<div class="cards-wrapper" style="display:flex; flex-direction:column; gap:45px;">
+
+  <!-- ELSŐ SOR: Dúla, Imaginatív, Bevezetés -->
+  <div class="card-row" style="display:flex; gap:45px;">
+    
+    <!-- Dúla kártya -->
+    <div class="szuleszet-card">
+      <div class="szuleszet-title">
+        Dúla a szülőszobán – Kórházi kommunikáció, lelki/mentális reziliencia
+        <div class="szuleszet-accredit">(IAOTH által akkreditált)</div>
+      </div>
+      <div class="szuleszet-date">Következő turnus: Március 4. 9:30–15:30</div>
+      <div class="szuleszet-info">Két nyelvű FAR tanúsítvány + nemzetközi IAOTH tanúsítvány.</div>
+      <div class="szuleszet-price">66.990 Ft</div>
+      <ul class="szuleszet-list">
+        <li>Minőségibb szülőszobai támogatás</li>
+        <li>Konfliktuskezelés kórházi környezetben</li>
+        <li>Dúlai hivatásba beépíthető</li>
+        <li>Szülész–dúla kapcsolati minőségek</li>
+        <li>Mentális reziliencia, öngondoskodás</li>
+      </ul>
+      <a href="https://tally.so/r/Pdz84x" target="_blank" class="szuleszet-btn">Jelentkezés</a>
+      <button onclick="openSzuleszetPackagePdf();" class="szuleszet-secondary">Tematika</button>
+    </div>
+
+    <!-- Imaginatív kártya -->
+    <div class="szuleszet-card">
+      <div class="szuleszet-title">
+        ©Imaginatív Személyiségfejlesztő Mentor (162 óra)
+        <div class="szuleszet-accredit">(IAOTH által akkreditált)</div>
+      </div>
+      <div class="szuleszet-date">Új turnus 2026 FEBRUÁR 24 - SZEPTEMBER 29</div>
+      <div class="szuleszet-info">Két nyelvű FAR tanúsítvány + IAOTH nemzetközi tanúsítvány és Course Summary.</div>
+      <div class="szuleszet-price">498.990 Ft</div>
+      <ul class="szuleszet-list">
+        <li>Imagináció alapjai</li>
+        <li>Tudattalan működése, értelmezése</li>
+        <li>Családterapeuta szakmai közreműködése</li>
+        <li>Rendszerszemléletű imaginációs munka</li>
+        <li>50 óra kötelező saját élmény +10 óra mentorálás</li>
+        <li>Szupervíziók, esetmegbeszélések</li>
+        <li>Etikai határvonalak</li>
+        <li>Részletfizetési lehetőség</li>
+      </ul>
+      <a href="https://tally.so/r/Pdz84x" target="_blank" class="szuleszet-btn">Jelentkezés</a>
+      <button onclick="openImaginativPackagePdf();" class="szuleszet-secondary">Tematika</button>
+    </div>
+
+    <!-- Bevezetés kártya -->
+    <div class="szuleszet-card">
+      <div class="szuleszet-title">
+        Meditációs alapok, idegrendszeri szabályozás és Wellbeing
+        <div class="szuleszet-accredit">(IAOTH által akkreditált)</div>
+      </div>
+      <div class="szuleszet-date">Március 9 9:30–16:00</div>
+      <div class="szuleszet-info">Két nyelvű FAR tanúsítvány + IAOTH nemzetközi tanúsítvány és Course Summary.</div>
+      <div class="szuleszet-price">72.990 Ft</div>
+      <ul class="szuleszet-list">
+        <li>Stressz és paraszimpatikus idegrendszer kapcsolata</li>
+        <li>Meditáció alapfogalmai</li>
+        <li>Testpásztázás, feszültség enyhítése</li>
+        <li>Légzéstechnika és idegrendszer kapcsolata</li>
+        <li>Neuroplaszticitás és gyakorlatok</li>
+        <li>Wellbeing alapjai és gyakorlatok</li>
+      </ul>
+      <a href="https://tally.so/r/Pdz84x" target="_blank" class="szuleszet-btn">Jelentkezés</a>
+      <button onclick="openbevezetesPackagePdf();" class="szuleszet-secondary">Tematika</button>
+    </div>
+
+  </div> <!-- Első sor vége -->
+
+  <!-- MÁSODIK SOR: Haladó, Professional, Baby-Mom Sync -->
+  <div class="card-row" style="display:flex; gap:45px;">
+    
+    <!-- Haladó kártya -->
+    <div class="szuleszet-card">
+      <div class="szuleszet-title">
+        Haladó Női meditáció vezető
+        <div class="szuleszet-accredit">(IAOTH által akkreditált)</div>
+      </div>
+      <div class="szuleszet-date">2026 Február 7-8 9:30–14:30</div>
+      <div class="szuleszet-info">Két nyelvű FAR + IAOTH nemzetközi tanúsítvány és Course Summary.</div>
+      <div class="szuleszet-price">116.000 Ft</div>
+      <ul class="szuleszet-list">
+        <li>Feltétel az alapképzés sikeres elvégzése</li>
+        <li>Pszichológiai és mentálhigiénés szemlélet</li>
+        <li>Tudásbővítés, mély meditációk</li>
+        <li>13 új meditációs technika</li>
+        <li>Tömény elmélet</li>
+      </ul>
+      <a href="https://tally.so/r/Pdz84x" target="_blank" class="szuleszet-btn">Jelentkezés</a>
+      <button onclick="openIntermediatPackagePdf();" class="szuleszet-secondary">Tematika</button>
+    </div>
+
+    <!-- Professional kártya -->
+    <div class="szuleszet-card">
+      <div class="szuleszet-title">
+        Meditációs instruktor Professional
+        <div class="szuleszet-accredit">(IAOTH által akkreditált)</div>
+      </div>
+      <div class="szuleszet-date">November 6 - Március 19, csütörtök 9:30–12:00</div>
+      <div class="szuleszet-info">Két nyelvű FAR + IAOTH nemzetközi tanúsítvány és Course Summary.</div>
+      <div class="szuleszet-price">184.990 Ft</div>
+      <ul class="szuleszet-list">
+        <li>Feltétel az alap és a haladó képzés sikeres elvégzése</li>
+        <li>Esetmegbeszélők, mentálhigiénés műhely</li>
+        <li>Tudásbővítés</li>
+        <li>Klienssel való szerződés</li>
+        <li>75% gyakorlat, 25% elmélet</li>
+        <li>Professional minősítés</li>
+      </ul>
+      <a href="https://tally.so/r/Pdz84x" target="_blank" class="szuleszet-btn">Jelentkezés</a>
+      <button onclick="openProfessionalPackagePdf();" class="szuleszet-secondary">Tematika</button>
+    </div>
+
+    <!-- Baby-Mom Sync kártya -->
+    <div class="szuleszet-card">
+      <div class="szuleszet-title">
+        ©Anya-Baba Kapcsolódási Facilitátor (trimeszter-alapú)
+        <div class="szuleszet-accredit">(IAOTH által akkreditált)</div>
+      </div>
+      <div class="szuleszet-date">Március 25-27, 1-2. nap 9:30–14:30, 3. nap 9:30–12:30</div>
+      <div class="szuleszet-info">Két nyelvű FAR + IAOTH nemzetközi tanúsítvány és Course Summary.</div>
+      <div class="szuleszet-price">134.990 Ft</div>
+      <ul class="szuleszet-list">
+        <li>Várandósság lelki kísérése</li>
+        <li>Kompetenciafejlesztés, esetelemzések</li>
+        <li>Önismeret, önfejlesztés várandósság alatt</li>
+        <li>Indítható vállalkozás</li>
+        <li>Praxisba beépíthető</li>
+      </ul>
+      <a href="https://tally.so/r/Pdz84x" target="_blank" class="szuleszet-btn">Jelentkezés</a>
+      <button onclick="openBabyMomSyncPackagePdf();" class="szuleszet-secondary">Tematika</button>
+    </div>
+
+  </div> <!-- Második sor vége -->
+
+</div> <!-- cards-wrapper vége -->
 
 <style>
-/* Szülő flex konténer */
-.card-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 45px;
-  justify-content: flex-start;
-}
-
-/* Kártya stílus */
-.card-container {
-  flex: 1 1 300px;
-  max-width: 380px;
-  background: #ffffff;
-  border-radius: 14px;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.06);
-  padding: 20px;
-  font-family: inherit;
-}
-
-/* Header elemek */
-.card-title {
-  font-size: 1rem;
-  font-weight: 600;
-  margin-bottom: 4px;
-}
-
-.card-date {
-  font-size: 0.85rem;
-  color: slateblue;
-  font-weight: 600;
-  margin: 8px 0;
-}
-
-.card-info {
-  font-size: 0.75rem;
-  color: #555;
-  margin-bottom: 10px;
-}
-
-.price-value .amount {
-  font-size: 1.3rem;
-  font-weight: 700;
-  color: #892cdc;
-  margin: 10px 0;
-}
-
-/* Lista stílus */
-.card-list {
-  list-style: none;
-  padding: 0;
-  margin: 10px 0;
-  font-size: 0.8rem;
-}
-
-.card-list li {
-  margin-bottom: 5px;
-  padding-left: 14px;
-  position: relative;
-}
-
-.card-list li::before {
-  content: "•";
-  position: absolute;
-  left: 0;
-  color: #da44bb;
-}
-
-/* Gombok */
-.card-buttons {
-  display: flex;
-  justify-content: flex-start;
-  gap: 10px;
-  margin-top: 10px;
-}
-
-.card-apply-btn {
-  padding: 8px 18px;
-  background: linear-gradient(135deg, #da44bb, #892cdc);
-  color: #fff;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 0.75rem;
-  border-radius: 30px;
-  display: inline-block;
-}
-
-.card-theme-btn {
-  padding: 6px 16px;
-  background: transparent;
-  border: 1.5px solid #C86B8A;
-  color: #C86B8A;
-  border-radius: 30px;
-  font-weight: 600;
-  font-size: 0.7rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.card-theme-btn:hover {
-  background-color: #C86B8A;
-  color: #fff;
-}
-</style>
-
-<script>
-function openImaginativPackagePdf() {
-  window.open('pdf/IMAGINATIVTEM.pdf');
-}
-function openbevezetesPackagePdf() {
-  window.open('pdf/MNSW-tematika.pdf');
-}
-function openBasicPackagePdf() {
-  window.open('pdf/nmvtematika.pdf');
-}
-</script>
-
-
-    </div>
-
- <div style="display: flex; flex-wrap: wrap; gap: 20px; margin-top: 40px;">
-<div class="card-container" style="display:flex; flex-wrap:wrap; gap:45px; justify-content:flex-start; margin-top:30px;">
-
-  <!-- Intermediate Package -->
-  <div class="szuleszet-card" id="intermediatePackageCard">
-    <div class="szuleszet-title">
-      Haladó Női meditáció vezető (IAOTH által akkreditált)
-    </div>
-    <div class="szuleszet-date">
-      2026 Február 7-8 9:30-14:30
-    </div>
-    <div class="szuleszet-info">
-      A képzés két nyelvű FAR tanúsítványt, valamint az International Association of Therapists (IAOTH) szakmai szervezet által kiadott akkreditációval rendelkező nemzetközi tanúsítványt és Course Summaryt biztosít.
-    </div>
-    <div class="szuleszet-price">
-      116.000 Ft
-    </div>
-    <ul class="szuleszet-list">
-      <li>Feltétel az alapképzés sikeres elvégzése</li>
-      <li>Pszichológiai és mentálhigiénés szemlélet</li>
-      <li>Tudásbővítés, elmélyülés a mély meditációk területén</li>
-      <li>13 új meditációs technika</li>
-      <li>Tömény elmélet</li>
-    </ul>
-    <a href="https://tally.so/r/Pdz84x" target="_blank" class="szuleszet-btn">
-      Jelentkezés
-    </a>
-    <button onclick="openIntermediatPackagePdf();" class="szuleszet-secondary">
-      Tematika
-    </button>
-  </div>
-
-  <!-- Professional Package -->
-  <div class="szuleszet-card" id="professionalPackageCard">
-    <div class="szuleszet-title">
-      Meditációs instruktor Professional (IAOTH által akkreditált)
-    </div>
-    <div class="szuleszet-date">
-      November 6 - Március 19, minden csütörtök 9:30-12:00
-    </div>
-    <div class="szuleszet-info">
-      A képzés két nyelvű FAR tanúsítványt, valamint az International Association of Therapists (IAOTH) szakmai szervezet által kiadott akkreditációval rendelkező nemzetközi tanúsítványt és Course Summaryt biztosít.
-    </div>
-    <div class="szuleszet-price">
-      184.990 Ft
-    </div>
-    <ul class="szuleszet-list">
-      <li>Feltétel az alap és a haladó képzés sikeres elvégzése</li>
-      <li>Esetmegbeszélők, mentálhigiénés műhely</li>
-      <li>Tudásbővítés</li>
-      <li>Klienssel való szerződés</li>
-      <li>75% gyakorlat, 25% elmélet</li>
-      <li>Professional minősítés</li>
-    </ul>
-    <a href="https://tally.so/r/Pdz84x" target="_blank" class="szuleszet-btn">
-      Jelentkezés
-    </a>
-    <button onclick="openProfessionalPackagePdf();" class="szuleszet-secondary">
-      Tematika
-    </button>
-  </div>
-
-  <!-- Baby Mom Sync Package -->
-  <div class="szuleszet-card" id="babyMomSyncPackageCard">
-    <div class="szuleszet-title">
-      ©Anya-Baba Kapcsolódási Facilitátor (trimeszter-alapú)(IAOTH által akkreditált)
-    </div>
-    <div class="szuleszet-date">
-      Március 25-27<br>Első két nap 9:30-14:30, 3. nap 9:30-12:30
-    </div>
-    <div class="szuleszet-info">
-      A képzés két nyelvű FAR tanúsítványt, valamint az International Association of Therapists (IAOTH) szakmai szervezet által kiadott akkreditációval rendelkező nemzetközi tanúsítványt és Course Summaryt biztosít.
-    </div>
-    <div class="szuleszet-price">
-      134.990 Ft
-    </div>
-    <ul class="szuleszet-list">
-      <li>Várandósság folyamatának lelki kísérése, várandóslélektan</li>
-      <li>Kompetenciafejlesztés, esetelemzések</li>
-      <li>Önismeret, önfejlesztés a várandósság alatt</li>
-      <li>Indítható vállalkozás</li>
-      <li>Praxisba beépíthető</li>
-    </ul>
-    <a href="https://tally.so/r/Pdz84x" target="_blank" class="szuleszet-btn">
-      Jelentkezés
-    </a>
-    <button onclick="openBabyMomSyncPackagePdf();" class="szuleszet-secondary">
-      Tematika
-    </button>
-  </div>
-
-</div>
-
-<style>
+/* --- SZÜLÉSZET STÍLUS --- */
 .szuleszet-card {
-  max-width: 380px;
+  max-width: 360px;
   width: 100%;
   background: #ffffff;
   border-radius: 14px;
@@ -1090,257 +934,67 @@ function openBasicPackagePdf() {
   cursor: pointer;
 }
 </style>
-
-
-
-        </div>
+<!-- HARMADIK SOR: Perinatális + Dúla (kettő) -->
+  <div class="card-row" style="display:flex; gap:45px;">
+    
+    <!-- Perinatális kártya -->
+    <div class="szuleszet-card">
+      <div class="szuleszet-title">
+        Perinatális- és rendszerszintű gyászkísérés
+        <div class="szuleszet-accredit">(IAOTH által akkreditált)</div>
+      </div>
+      <div class="szuleszet-date">
+        Modul I. Április 8, 10:00-16:00<br>Modul II. Április 15, 9:00-16:00
+      </div>
+      <div class="szuleszet-info">
+        Teljes képzés (2 modul) egy összegben: 85.980 Ft (42.990 Ft/modul)<br>
+        Modulonként külön fizetve: 49.990 Ft
+      </div>
+      <div class="szuleszet-price">42.990 Ft</div>
+      <ul class="szuleszet-list">
+        <li>Perinatális gyász spektrumjai</li>
+        <li>Fogalmak (orvosi vs pszichológiai definíciók)</li>
+        <li>Spirituális és vallási aspektusok a perinatális gyászban</li>
+        <li>Testemlék-szomatikus lenyomat</li>
+        <li>24. hét (jogi/orvosi/lélektani különbség)</li>
+        <li>A perinatális veszteség rendszerszintű hatásai, eszköztárai családterapeutával</li>
+        <li>Klinikai jelenlét és kísérés</li>
+        <li>Kórházi protokoll vs gyász</li>
+        <li>Búcsú munka, rituálék</li>
+      </ul>
+      <a href="https://tally.so/r/Pdz84x" target="_blank" class="szuleszet-btn">Jelentkezés</a>
+      <button onclick="openPerinatalisPackagePdf();" class="szuleszet-secondary">Tematika</button>
     </div>
-        <div class="card-container-fixed" id="PerinatalisPackageCard">
-        <div class="pricingTable">
-            <div class="pricingTable-header">
-                <h3 class="title" style="font-size: 1.4rem"><b>Perinatális-és rendszerszintű gyászkísérés(IAOTH által akkreditált)</h3></b>
-                <p style="font-size: 1.2rem; color:slateblue">Modul I. Április 8, 10:00-16:00 Modul II. Április 15, 9:00-16:00<br> </p>
-              <p style="font-size: 14px; line-height: 1.5; color: #555; margin-top: 15px; padding: 0 10px;">
-   Teljes képzés (2 modul) egy összegben: 85.980 Ft (42.990 Ft/ modul)
-Modulonként külön fizetve: 49.990 Ft
-                  
-</p>
-                <div class="price-value">
-                    <div class="value">
-                        <span class="amount">42.990 Ft<br></span>
-                    </div>
-                </div>
-            </div>
-            <ul class="pricing-content">
-                <li>Perinatális gyász spektrumjai </li>
-                <li>Fogalmak(orvosi vs pszichológiai definíciók)</li>
-                <li>Spirituális és vallási aspektusok a perinatális gyászban</li>
-                <li>Testemlék-szomatikus lenyomat</li>
-                <li>24.hét(jogi/orvosi/lélektani különbség)</li>
-                <li>A perinatális veszteség rendszerszintű hatásai, eszköztárai családterapeutával</li>
-                <li>Klinikai jelenlét és kísérés</li>
-                <li>Kórházi protokoll vs gyász</li>
-                <li>Búcsú munka, rituálék</li>
-              
-            </ul>
-  <style>
-  @keyframes pulse-glow {
-    0% { box-shadow: 0 0 0 0 rgba(218, 68, 187, 0.7); }
-    70% { box-shadow: 0 0 0 15px rgba(218, 68, 187, 0); }
-    100% { box-shadow: 0 0 0 0 rgba(218, 68, 187, 0); }
-  }
 
-  .pulse-btn {
-    display: inline-block;
-    background: linear-gradient(135deg, #da44bb, #892cdc);
-    color: #ffffff !important;
-    font-size: 16px;
-    font-weight: 700;
-    text-decoration: none !important;
-    padding: 12px 30px;
-    border-radius: 50px;
-    text-transform: uppercase;
-    font-family: sans-serif;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    transition: all 0.3s ease;
-    animation: pulse-glow 2s infinite;
-    cursor: pointer;
-    position: relative;
-    z-index: 999;
-  }
-  
-  .pulse-btn:hover {
-    transform: scale(1.05);
-    filter: brightness(1.1);
-    animation: none;
-    box-shadow: 0 10px 25px rgba(218, 68, 187, 0.5);
-  }
-</style>
+    <!-- Dúla kártya -->
+    <div class="szuleszet-card">
+      <div class="szuleszet-title">
+        Dúla a szülőszobán – Kórházi kommunikáció, lelki/mentális reziliencia
+        <div class="szuleszet-accredit">(IAOTH által akkreditált)</div>
+      </div>
+      <div class="szuleszet-date">
+        Következő turnus: Március 4. 9:30–15:30
+      </div>
+      <div class="szuleszet-info">
+        Két nyelvű FAR tanúsítvány + nemzetközi tanúsítvány
+      </div>
+      <div class="szuleszet-price">66.990 Ft</div>
+      <ul class="szuleszet-list">
+        <li>Minőségibb szülőszobai támogatás</li>
+        <li>Konfliktuskezelés kórházi környezetben</li>
+        <li>Dúlai hivatásba beépíthető</li>
+        <li>Szülész–dúla kapcsolati minőségek</li>
+        <li>Mentális reziliencia, öngondoskodás</li>
+      </ul>
+      <a href="https://tally.so/r/Pdz84x" target="_blank" class="szuleszet-btn">Jelentkezés</a>
+      <button onclick="openSzuleszetPackagePdf();" class="szuleszet-secondary">Tematika</button>
+    </div>
 
-<div style="text-align: center; padding: 20px 0; width: 100%;">
-    <a href="https://tally.so/r/Pdz84x" 
-       target="_blank" 
-       class="pulse-btn" 
-       onclick="event.stopPropagation();">
-        Jelentkezés
-    </a>
-</div>
-            <div style="text-align: center; padding: 15px 0;">
-    <button 
-        type="button"
-        onclick="event.stopPropagation(); openPerinatalisPackagePdf();" 
-        style="
-            background-color: transparent;
-            color: #C86B8A;
-            font-size: 13px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1.2px;
-            padding: 10px 30px;
-            border: 2px solid #C86B8A;
-            border-radius: 50px; 
-            cursor: pointer;
-            transition: all 0.3s ease;
-            display: inline-block;
-            font-family: sans-serif;
-        "
-        onmouseover="this.style.backgroundColor='#C86B8A'; this.style.color='#ffffff';"
-        onmouseout="this.style.backgroundColor='transparent'; this.style.color='#C86B8A';"
-    >
-        Tematika
-    </button>
-</div>
-        </div>
+  </div> <!-- Harmadik sor vége -->
 
-<div class="szuleszet-card">
+</div> <!-- cards-wrapper vége -->
 
-  <div class="perinatal-title">
-    Dúla a szülőszobán – Kórházi kommunikáció, lelki/mentális reziliencia
-    <div class="szuleset-accredit">(IAOTH által akkreditált)</div>
-  </div>
-
-  <div class="szuleszet-date">
-    Következő turnus: Március 4. 9:30–15:30
-  </div>
-
-  <div class="szuleszet-info">
-    Két nyelvű FAR tanúsítvány + nemzetközi  tanúsítvány.
-  </div>
-
-  <div class="szuleszet-price">
-    66.990 Ft
-  </div>
-
-  <ul class="szuleszet-list">
-    <li>Minőségibb szülőszobai támogatás</li>
-    <li>Konfliktuskezelés kórházi környezetben</li>
-    <li>Dúlai hivatásba beépíthető</li>
-    <li>Szülész–dúla kapcsolati minőségek</li>
-    <li>Mentális reziliencia, öngondoskodás</li>
-  </ul>
-
-  <a href="https://tally.so/r/Pdz84x" target="_blank" class="szuleszet-btn">
-    Jelentkezés
-  </a>
-
- <button 
-    type="button"
-    onclick="openSzuleszetPackagePdf();" 
-    style="
-        background-color: transparent;
-        color: #C86B8A;
-        font-size: 13px;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 1.2px;
-        padding: 10px 30px;
-        border: 2px solid #C86B8A;
-        border-radius: 50px; 
-        cursor: pointer;
-        transition: all 0.3s ease;
-        display: inline-block;
-        font-family: sans-serif;
-    "
-    onmouseover="this.style.backgroundColor='#C86B8A'; this.style.color='#ffffff';"
-    onmouseout="this.style.backgroundColor='transparent'; this.style.color='#C86B8A';"
->
-    Tematika
-</button>
-
-
-</div>
-
-<style>
-.szuleszet-card {
-  max-width: 380px; /* kicsit szélesebb */
-  width: 100%;
-  background: #ffffff;
-  border-radius: 14px;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.06);
-  padding: 20px 18px;
-  text-align: left;
-  font-family: inherit;
-}
-
-.szuleszet-title {
-  font-size: 0.95rem; /* kicsit nagyobb, mint 0.9, de még kompakt */
-  font-weight: 600;
-  line-height: 1.3;
-  margin-bottom: 4px;
-}
-
-.szuleszet-accredit {
-  font-size: 0.75rem;
-  color: #7b2cbf;
-  margin-top: 2px;
-}
-
-.szuleszet-date {
-  font-size: 0.85rem;
-  color: slateblue;
-  font-weight: 600;
-  margin: 8px 0;
-}
-
-.szuleszet-info {
-  font-size: 0.75rem;
-  color: #555;
-  margin-bottom: 10px;
-}
-
-.szuleszet-price {
-  font-size: 1.3rem;
-  font-weight: 700;
-  color: #892cdc;
-  margin: 10px 0;
-}
-
-.szuleszet-list {
-  list-style: none;
-  padding: 0;
-  margin: 10px 0;
-  font-size: 0.8rem;
-}
-
-.szuleszet-list li {
-  margin-bottom: 5px;
-  padding-left: 14px;
-  position: relative;
-}
-
-.szuleszet-list li::before {
-  content: "•";
-  position: absolute;
-  left: 0;
-  color: #da44bb;
-}
-
-.szuleszet-btn {
-  display: inline-block;
-  margin-top: 8px;
-  padding: 8px 18px;
-  background: linear-gradient(135deg, #da44bb, #892cdc);
-  color: #ffffff;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 0.75rem;
-  border-radius: 30px;
-}
-
-.szuleszet-secondary {
-  display: inline-block;
-  margin-top: 6px;
-  padding: 6px 16px;
-  background: transparent;
-  border: 1.5px solid #C86B8A;
-  color: #C86B8A;
-  border-radius: 30px;
-  font-weight: 600;
-  font-size: 0.7rem;
-  cursor: pointer;
-}
-</style>
-
+    
 
 </div>
 <div id="testimonials" class="section lb">
