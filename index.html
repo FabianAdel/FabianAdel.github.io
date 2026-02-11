@@ -1347,97 +1347,150 @@ Modulonként külön fizetve: 49.990 Ft
 </div>
         </div>
 
-    <div class="card-container-fixed" id="SzuleszetPackageCard">
-        <div class="pricingTable">
-            <div class="pricingTable-header">
-                <h3 class="title" style="font-size: 1.4rem"><b>Dúla a szülőszobán-Kórházi kommunikáció, lelki/mentális reziliencia(IAOTH által akkreditált)</h3></b>
-                <p style="font-size: 1.2rem; color:slateblue">Következő turnus: Március 4 9:30-15:30<br> </p>
-              <p style="font-size: 14px; line-height: 1.5; color: #555; margin-top: 15px; padding: 0 10px;">
-    A képzés két nyelvű FAR tanúsítványt, valamint az International Association of Therapists (IAOTH) szakmai szervezet által kiadott akkreditációval rendelkező nemzetközi tanúsítványt és Course Summaryt biztosít.
-</p>
-                <div class="price-value">
-                    <div class="value">
-                        <span class="amount">66.990Ft<br></span>
-                    </div>
-                </div>
-            </div>
-            <ul class="pricing-content">
-                <li>Minőségibb szülőszobai támogatás </li>
-                <li>Konfliktuskezelés, feszültségcsökkentés kórházi környezetben</li>
-                <li>Dúlai hivatásba beépíthető</li>
-                <li>Szülész/szülésznő/orvos- dúla kapcsolati minőségek</li>
-                <li>Dúla mentális és pszichés egyensúlya, öngondoskodás</li>
-                <li>Sikeresebb kórházi szüléskísérés</li>
-            </ul>
-  <style>
-  @keyframes pulse-glow {
-    0% { box-shadow: 0 0 0 0 rgba(218, 68, 187, 0.7); }
-    70% { box-shadow: 0 0 0 15px rgba(218, 68, 187, 0); }
-    100% { box-shadow: 0 0 0 0 rgba(218, 68, 187, 0); }
-  }
+   <div class="szuleszet-card">
 
-  .pulse-btn {
-    display: inline-block;
-    background: linear-gradient(135deg, #da44bb, #892cdc);
-    color: #ffffff !important;
-    font-size: 16px;
-    font-weight: 700;
-    text-decoration: none !important;
-    padding: 12px 30px;
-    border-radius: 50px;
-    text-transform: uppercase;
-    font-family: sans-serif;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    transition: all 0.3s ease;
-    animation: pulse-glow 2s infinite;
-    cursor: pointer;
-    position: relative;
-    z-index: 999;
-  }
-  
-  .pulse-btn:hover {
-    transform: scale(1.05);
-    filter: brightness(1.1);
-    animation: none;
-    box-shadow: 0 10px 25px rgba(218, 68, 187, 0.5);
-  }
+  <h3 class="szuleszet-title">
+    Dúla a szülőszobán – Kórházi kommunikáció, lelki/mentális reziliencia
+    <span class="szuleszet-accredit">(IAOTH által akkreditált)</span>
+  </h3>
+
+  <p class="szuleszet-date">
+    Következő turnus: Március 4. 9:30–15:30
+  </p>
+
+  <p class="szuleszet-info">
+    A képzés két nyelvű FAR tanúsítványt, valamint az International Association of Therapists (IAOTH) szakmai szervezet által kiadott nemzetközi tanúsítványt és Course Summaryt biztosít.
+  </p>
+
+  <div class="szuleszet-price">
+    66.990 Ft
+  </div>
+
+  <ul class="szuleszet-list">
+    <li>Minőségibb szülőszobai támogatás</li>
+    <li>Konfliktuskezelés, feszültségcsökkentés kórházi környezetben</li>
+    <li>Dúlai hivatásba beépíthető</li>
+    <li>Szülész/szülésznő/orvos – dúla kapcsolati minőségek</li>
+    <li>Dúla mentális és pszichés egyensúlya, öngondoskodás</li>
+    <li>Sikeresebb kórházi szüléskísérés</li>
+  </ul>
+
+  <a href="https://tally.so/r/Pdz84x" target="_blank" class="szuleszet-btn">
+    Jelentkezés
+  </a>
+
+  <button onclick="openSzuleszetPackagePdf();" class="szuleszet-secondary">
+    Tematika
+  </button>
+
+</div>
+
+<style>
+.szuleszet-card {
+  max-width: 500px;
+  width: 100%;
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.08);
+  padding: 35px 30px;
+  text-align: left;
+  transition: 0.3s ease;
+}
+
+.szuleszet-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 45px rgba(0,0,0,0.12);
+}
+
+.szuleszet-title {
+  font-size: 1.35rem;
+  line-height: 1.4;
+  margin-bottom: 8px;
+}
+
+.szuleszet-accredit {
+  display: block;
+  font-size: 0.9rem;
+  color: #7b2cbf;
+  margin-top: 6px;
+}
+
+.szuleszet-date {
+  font-size: 1.1rem;
+  color: slateblue;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.szuleszet-info {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.szuleszet-price {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #892cdc;
+  margin: 20px 0;
+}
+
+.szuleszet-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.szuleszet-list li {
+  margin-bottom: 10px;
+  padding-left: 18px;
+  position: relative;
+}
+
+.szuleszet-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #da44bb;
+  font-weight: bold;
+}
+
+.szuleszet-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 28px;
+  background: linear-gradient(135deg, #da44bb, #892cdc);
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 50px;
+  transition: 0.3s ease;
+}
+
+.szuleszet-btn:hover {
+  transform: scale(1.05);
+}
+
+.szuleszet-secondary {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 10px 25px;
+  background: transparent;
+  border: 2px solid #C86B8A;
+  color: #C86B8A;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.szuleszet-secondary:hover {
+  background: #C86B8A;
+  color: white;
+}
 </style>
 
-<div style="text-align: center; padding: 20px 0; width: 100%;">
-    <a href="https://tally.so/r/Pdz84x" 
-       target="_blank" 
-       class="pulse-btn" 
-       onclick="event.stopPropagation();">
-        Jelentkezés
-    </a>
-</div>
-            <div style="text-align: center; padding: 15px 0;">
-    <button 
-        type="button"
-        onclick="event.stopPropagation(); openSzuleszetPackagePdf();" 
-        style="
-            background-color: transparent;
-            color: #C86B8A;
-            font-size: 13px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1.2px;
-            padding: 10px 30px;
-            border: 2px solid #C86B8A;
-            border-radius: 50px; 
-            cursor: pointer;
-            transition: all 0.3s ease;
-            display: inline-block;
-            font-family: sans-serif;
-        "
-        onmouseover="this.style.backgroundColor='#C86B8A'; this.style.color='#ffffff';"
-        onmouseout="this.style.backgroundColor='transparent'; this.style.color='#C86B8A';"
-    >
-        Tematika
-    </button>
-</div>
-        </div>
-     </div>
 </div>
 <div id="testimonials" class="section lb">
     <div class="container-fluid">
