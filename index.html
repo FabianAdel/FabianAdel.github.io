@@ -844,96 +844,163 @@ function openImaginativPackagePdf() {
         </div>
     </div>
 
-    <div class="card-container-fixed" id="bevezetesPackageCard">
-        <div class="pricingTable">
-            <div class="pricingTable-header">
-                <h3 class="title" style="font-size: 1.6rem"><b>Meditációs alapok, idegrendszeri szabályozás és Wellbeing(🗣️ 🇭🇺/🇺🇸) (IAOTH által akkreditált) </h3></b>
-                <p style="font-size: 1.2rem; color:slateblue"> Március 9 9:30-16:00 &nbsp<br>&nbsp</p>
-                <p style="font-size: 14px; line-height: 1.5; color: #555; margin-top: 15px; padding: 0 10px;">
-    A képzés két nyelvű FAR tanúsítványt, valamint az International Association of Therapists (IAOTH) szakmai szervezet által kiadott akkreditációval rendelkező nemzetközi tanúsítványt és Course Summaryt biztosít.
-</p>
-                <div class="price-value">
-                    <div class="value">
-                        <span class="amount">72.990Ft<br></span>
-                    </div>
-                </div>
-            </div>
-            <ul class="pricing-content">
-                <li>Stressz és paraszimpatikus idegrendszer kapcsolata</li>
-                <li>Meditáció alapfogalmai</li>
-                <li>Testpásztázás, elraktározott feszültség enyhítése</li>
-                <li>Légzéstechnika és idegrendszer kapcsolata</li>
-                <li>Neuroplaszticitás- és ezt elősegítő gyakorlatok</li>
-                <li>Wellbeing fogalma, alapja és gyakorlatok</li>
-            </ul>
-              <style>
-  @keyframes pulse-glow {
-    0% { box-shadow: 0 0 0 0 rgba(218, 68, 187, 0.7); }
-    70% { box-shadow: 0 0 0 15px rgba(218, 68, 187, 0); }
-    100% { box-shadow: 0 0 0 0 rgba(218, 68, 187, 0); }
-  }
+  <div class="meditacio-card">
+  <div class="meditacio-title">
+    <span class="course-name">Meditációs alapok, idegrendszeri szabályozás és Wellbeing (🗣️ 🇭🇺/🇺🇸)</span>
+    <div class="meditacio-accredit">(IAOTH által akkreditált)</div>
+  </div>
 
-  .pulse-btn {
-    display: inline-block;
-    background: linear-gradient(135deg, #da44bb, #892cdc);
-    color: #ffffff !important;
-    font-size: 16px;
-    font-weight: 700;
-    text-decoration: none !important;
-    padding: 12px 30px;
-    border-radius: 50px;
-    text-transform: uppercase;
-    font-family: sans-serif;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    transition: all 0.3s ease;
-    animation: pulse-glow 2s infinite;
-    cursor: pointer;
-    position: relative;
-    z-index: 999;
-  }
-  
-  .pulse-btn:hover {
-    transform: scale(1.05);
-    filter: brightness(1.1);
-    animation: none;
-    box-shadow: 0 10px 25px rgba(218, 68, 187, 0.5);
-  }
+  <div class="meditacio-date">
+    Március 9, 9:30–16:00
+  </div>
+
+  <div class="meditacio-info">
+    Két nyelvű FAR tanúsítvány + IAOTH nemzetközi akkreditáció.
+  </div>
+
+  <div class="price-value">
+    72.990 Ft
+  </div>
+
+  <ul class="meditacio-list">
+    <li>Stressz és paraszimpatikus idegrendszer kapcsolata</li>
+    <li>Meditáció alapfogalmai</li>
+    <li>Testpásztázás, elraktározott feszültség enyhítése</li>
+    <li>Légzéstechnika és idegrendszer kapcsolata</li>
+    <li>Neuroplaszticitás- és ezt elősegítő gyakorlatok</li>
+    <li>Wellbeing fogalma, alapja és gyakorlatok</li>
+  </ul>
+
+  <div class="button-row">
+    <!-- Jelentkezés -->
+    <a href="https://tally.so/r/Pdz84x" target="_blank" class="meditacio-btn">
+      Jelentkezés
+    </a>
+
+    <!-- Tematika -->
+    <button type="button" class="meditacio-secondary" onclick="openbevezetesPackagePdf();">
+      Tematika
+    </button>
+  </div>
+</div>
+
+<style>
+.meditacio-card {
+  max-width: 380px;
+  width: 100%;
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+  padding: 20px 18px;
+  font-family: inherit;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.meditacio-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.3;
+  margin-bottom: 4px;
+}
+
+.course-name {
+  font-size: 1rem; /* kicsit nagyobb */
+}
+
+.meditacio-accredit {
+  font-size: 0.75rem;
+  color: #7b2cbf;
+  margin-top: 2px;
+}
+
+.meditacio-date {
+  font-size: 0.85rem;
+  color: slateblue;
+  font-weight: 600;
+  margin: 8px 0;
+}
+
+.meditacio-info {
+  font-size: 0.75rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.price-value {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #892cdc;
+  margin: 10px 0;
+}
+
+.meditacio-list {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+  font-size: 0.8rem;
+}
+
+.meditacio-list li {
+  margin-bottom: 5px;
+  padding-left: 14px;
+  position: relative;
+}
+
+.meditacio-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #da44bb;
+}
+
+.button-row {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 12px;
+}
+
+/* Jelentkezés gomb */
+.meditacio-btn {
+  display: inline-block;
+  padding: 8px 18px;
+  background: linear-gradient(135deg, #da44bb, #892cdc);
+  color: #ffffff !important;
+  text-decoration: none !important;
+  font-weight: 600;
+  font-size: 0.75rem;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+/* Tematika gomb */
+.meditacio-secondary {
+  display: inline-block;
+  padding: 6px 16px;
+  background: transparent;
+  border: 1.5px solid #C86B8A;
+  color: #C86B8A;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 0.7rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.meditacio-secondary:hover {
+  background-color: #C86B8A;
+  color: #ffffff;
+}
 </style>
 
-<div style="text-align: center; padding: 20px 0; width: 100%;">
-    <a href="https://tally.so/r/Pdz84x" 
-       target="_blank" 
-       class="pulse-btn" 
-       onclick="event.stopPropagation();">
-        Jelentkezés
-    </a>
-</div>
-            <div style="text-align: center; padding: 15px 0;">
-    <button 
-        type="button"
-        onclick="event.stopPropagation(); openbevezetesPackagePdf();" 
-        style="
-            background-color: transparent;
-            color: #C86B8A;
-            font-size: 13px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1.2px;
-            padding: 10px 30px;
-            border: 2px solid #C86B8A;
-            border-radius: 50px; 
-            cursor: pointer;
-            transition: all 0.3s ease;
-            display: inline-block;
-            font-family: sans-serif;
-        "
-        onmouseover="this.style.backgroundColor='#C86B8A'; this.style.color='#ffffff';"
-        onmouseout="this.style.backgroundColor='transparent'; this.style.color='#C86B8A';"
-    >
-        Tematika
-    </button>
-</div>
-        </div>
+<script>
+function openbevezetesPackagePdf() {
+    window.open('pdf/MNSW-tematika.pdf');
+}
+</script>
+ 
+
     </div>
 
     <div class="card-container-fixed" id="basicPackageCard">
