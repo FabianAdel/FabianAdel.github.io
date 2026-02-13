@@ -302,74 +302,69 @@ Saját tapasztalati tudásom a családon belüli erőszak, az agresszió, a gyer
             align-items: center !important;
             justify-content: center !important;
         ">✕</button>
-<!-- MailerLite Fixed Subscription Form -->
+<!-- Unified Fixed Subscription Bar -->
 <style>
-/* FIXED BOTTOM BAR */
-#ml-fixed-bottom {
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+/* FIXED BAR */
+#ml-fixed-bar {
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
-  background: #fff;
-  box-shadow: 0 -6px 25px rgba(0,0,0,0.25);
-  z-index: 999999;
-  font-family: Arial, sans-serif;
+  background: linear-gradient(90deg, #f4c2c2, #ffb6c1);
+  box-shadow: 0 -4px 20px rgba(0,0,0,0.15);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 12px 16px;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-/* HIDDEN STATE */
-#ml-fixed-bottom.hidden {
-  transform: translateY(100%);
-  opacity: 0;
-  pointer-events: none;
+  padding: 16px 20px;
+  z-index: 9999;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  transition: height 0.3s ease;
+  overflow: hidden;
 }
 
 /* TEXT */
-#ml-fixed-text {
-  font-size: 16px;
-  color: #333;
-  margin-right: 12px;
+#ml-fixed-bar-text {
+  color: #fff;
+  font-size: 17px;
+  font-weight: 600;
 }
 
 /* BUTTON */
-#ml-fixed-button {
-  background-color: #f4c2c2; /* puder rózsaszín */
-  color: #fff;
+#ml-fixed-bar-button {
+  background-color: #fff;
+  color: #f4c2c2;
   border: none;
-  padding: 10px 18px;
+  padding: 10px 22px;
   font-size: 16px;
-  border-radius: 6px;
+  font-weight: bold;
+  border-radius: 30px;
   cursor: pointer;
-  z-index: 1000000; /* biztos a sáv fölött */
-  transition: background 0.2s ease;
+  transition: transform 0.2s, background 0.2s;
 }
-#ml-fixed-button:hover {
-  background-color: #ffb6c1; /* világosabb rózsaszín */
+#ml-fixed-bar-button:hover {
+  background-color: #ffe0e6;
+  transform: scale(1.05);
 }
 
 /* MAILERLITE FORM CONTAINER */
-#ml-fixed-inner {
-  position: fixed;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%) translateY(100%);
+#ml-fixed-form {
   max-width: 480px;
   width: 100%;
   background: #fff;
-  box-shadow: 0 -6px 25px rgba(0,0,0,0.25);
-  padding: 48px 16px 24px;
-  font-family: Arial, sans-serif;
-  z-index: 1000000;
-  transition: transform 0.3s ease;
-}
-
-/* SHOW FORM */
-#ml-fixed-inner.active {
-  transform: translateX(-50%) translateY(0);
+  padding: 24px 16px 16px;
+  margin-top: 12px;
+  border-radius: 12px;
+  box-shadow: 0 -4px 20px rgba(0,0,0,0.15);
+  display: none; /* alapból rejtve */
+  flex-direction: column;
+  position: relative;
 }
 
 /* CLOSE BUTTON */
@@ -388,51 +383,43 @@ Saját tapasztalati tudásom a családon belüli erőszak, az agresszió, a gyer
 }
 </style>
 
-<!-- BOTTOM BAR -->
-<div id="ml-fixed-bottom">
-  <div id="ml-fixed-text">Nem szeretnél lemaradni a képzésekről?</div>
-  <button id="ml-fixed-button">Feliratkozás</button>
-</div>
+<div id="ml-fixed-bar">
+  <div id="ml-fixed-bar-text">Nem szeretnél lemaradni a képzésekről?</div>
+  <button id="ml-fixed-bar-button">Feliratkozás</button>
 
-<!-- MAILERLITE FORM -->
-<div id="ml-fixed-inner">
-  <div id="ml-fixed-close">×</div>
-  <!-- MailerLite Script -->
-  <script>
-    (function(w,d,e,u,f,l,n){
-      w[f]=w[f]||function(){(w[f].q=w[f].q||[]).push(arguments);};
-      l=d.createElement(e); l.async=1; l.src=u;
-      n=d.getElementsByTagName(e)[0]; n.parentNode.insertBefore(l,n);
-    })(window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
-    ml('account','2094197'); // itt a te fiókod azonosítója
-  </script>
+  <!-- EMBEDDED FORM (initially hidden) -->
+  <div id="ml-fixed-form">
+    <div id="ml-fixed-close">×</div>
+    <!-- MailerLite Script -->
+    <script>
+      (function(w,d,e,u,f,l,n){
+        w[f]=w[f]||function(){(w[f].q=w[f].q||[]).push(arguments);};
+        l=d.createElement(e); l.async=1; l.src=u;
+        n=d.getElementsByTagName(e)[0]; n.parentNode.insertBefore(l,n);
+      })(window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+      ml('account','2094197'); // Itt a fiókod azonosítója
+    </script>
 
-  <!-- Embedded Form -->
-  <div class="ml-embedded" data-form="PVTDFE"></div>
-</div>
-
-<script>
-// SELECTORS
-const btn = document.getElementById('ml-fixed-button');
-const form = document.getElementById('ml-fixed-inner');
-const close = document.getElementById('ml-fixed-close');
-
-// OPEN FORM
-btn.onclick = () => {
-  form.classList.add('active');
-};
-
-// CLOSE FORM
-close.onclick = () => {
-  form.classList.remove('active');
-};
-</script>
-
+    <!-- Embedded Form -->
+    <div class="ml-embedded" data-form="PVTDFE"></div>
   </div>
 </div>
 
+<script>
+const button = document.getElementById('ml-fixed-bar-button');
+const form = document.getElementById('ml-fixed-form');
+const close = document.getElementById('ml-fixed-close');
+
+button.onclick = () => {
+  form.style.display = 'flex';  // megjelenítjük
+  form.scrollIntoView({ behavior: 'smooth' }); // ha alul van, gördül le
+};
+
+close.onclick = () => {
+  form.style.display = 'none';
 };
 </script>
+
 
 
     </div>
