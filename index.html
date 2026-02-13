@@ -75,123 +75,60 @@ ted <!DOCTYPE html>
 <script>
 <style>
 /* Fix sáv stílusa */
-#ml-fixed-bottom {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background: linear-gradient(135deg, #fce4ec, #ffe4e1);
-  z-index: 999999;
-  box-shadow: 0 -4px 15px rgba(0,0,0,0.2);
-  font-family: Arial, sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 8px 0;
-}
-
-#ml-fixed-inner {
-  max-width: 480px;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  padding: 0 15px;
-}
-
-#ml-fixed-text {
-  font-size: 14px;
-  font-weight: bold;
-  color: #333;
-}
-
-#ml-fixed-toggle {
-  background-color: #f48fb1;
-  color: #fff;
-  border: none;
-  padding: 6px 15px;
-  border-radius: 20px;
-  font-size: 13px;
-  cursor: pointer;
-  white-space: nowrap;
-}
-
-#ml-fixed-hide {
-  font-size: 22px;
-  cursor: pointer;
-  color: #f06292;
-  line-height: 1;
-}
-
-/* Az űrlap tárolója - fontos a padding és a háttér */
-#ml-form-container {
-  display: none;
-  width: 90%;
-  max-width: 400px;
-  background: #fff;
-  margin-top: 10px;
-  border-radius: 10px;
-  padding: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-</style>
-
-<div id="ml-fixed-bottom">
-  <div id="ml-fixed-inner">
-    <div id="ml-fixed-text">Ingyen tananyag és hírek?</div>
-    <button id="ml-fixed-toggle">Feliratkozás</button>
-    <div id="ml-fixed-hide">×</div>
-  </div>
-  
-  <div id="ml-form-container">
-    <div class="ml-embedded" data-form="PVTDFE"></div>
-  </div>
-</div>
-
+<!-- MailerLite script betöltése -->
 <script>
-  (function(w,d,e,u,f,l,n){
-    w[f]=w[f]||function(){(w[f].q=w[f].q||[]).push(arguments);};
-    l=d.createElement(e); l.async=1; l.src=u;
-    n=d.getElementsByTagName(e)[0]; n.parentNode.insertBefore(l,n);
-  })(window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
-  ml('account', '2094197');
+(function(w,d,e,u,f,l,n){
+  w[f]=w[f]||function(){(w[f].q=w[f].q||[]).push(arguments);};
+  l=d.createElement(e); l.async=1; l.src=u;
+  n=d.getElementsByTagName(e)[0]; n.parentNode.insertBefore(l,n);
+})(window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+ml('account', '2094197');
 </script>
 
+<!-- Popup megjelenítés és dizájn -->
 <script>
 (function() {
-  // 1. POPUP KÉNYSZERÍTÉS (10%-os kupon)
-  function showCouponPopup() {
+  function forcePopup() {
     if (typeof ml === "function") {
       ml('show', 'MxKWIV', true);
+
+      ml('on', 'popup:open', function(popup) {
+        const formContainer = popup.el.querySelector('.ml-subscribe-form');
+        const allCloseBtns = popup.el.querySelectorAll('[class*="close"]');
+
+        if (formContainer) {
+          formContainer.style.maxWidth = '380px';
+          formContainer.style.width = '90%';
+          formContainer.style.maxHeight = '85vh';
+          formContainer.style.overflowY = 'auto';
+          formContainer.style.margin = 'auto';
+          formContainer.style.borderRadius = '15px';
+          formContainer.style.paddingTop = '30px';
+        }
+
+        allCloseBtns.forEach(btn => {
+          btn.style.display = 'block';
+          btn.style.visibility = 'visible';
+          btn.style.opacity = '1';
+          btn.style.fontSize = '24px';
+          btn.style.color = '#333';
+          btn.style.top = '10px';
+          btn.style.right = '10px';
+          btn.style.zIndex = '9999';
+        });
+      });
+
     } else {
-      setTimeout(showCouponPopup, 500);
+      setTimeout(forcePopup, 300);
     }
   }
 
-  // Indítás betöltés után
   window.addEventListener('load', function() {
-    setTimeout(showCouponPopup, 1500); // 1.5 mp múlva jön a 10%
+    setTimeout(forcePopup, 1000);
   });
-
-  // 2. FIX SÁV KEZELÉSE
-  const toggleBtn = document.getElementById('ml-fixed-toggle');
-  const formCont = document.getElementById('ml-form-container');
-  const hideBtn = document.getElementById('ml-fixed-hide');
-
-  toggleBtn.onclick = function() {
-    if (formCont.style.display === 'block') {
-      formCont.style.display = 'none';
-    } else {
-      formCont.style.display = 'block';
-    }
-  };
-
-  hideBtn.onclick = function() {
-    document.getElementById('ml-fixed-bottom').style.display = 'none';
-  };
 })();
 </script>
+
 
 
     <!-- LOADER -->
