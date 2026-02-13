@@ -72,41 +72,49 @@ ted <!DOCTYPE html>
     });
 </script>
 <body>
-<!-- Modern Fixed Subscription Bar -->
+<!-- Unified Fixed Subscription Bar - Stable Version -->
 <style>
-/* RESET BODY MARGIN */
 body {
   margin: 0;
   padding: 0;
+  font-family: 'Arial', sans-serif;
 }
 
-/* FIXED BOTTOM BAR */
-#ml-fixed-bottom {
+/* FIXED BAR */
+#ml-fixed-bar {
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
-  background: linear-gradient(90deg, #f4c2c2, #ffb6c1); /* finom színátmenet */
+  background: linear-gradient(90deg, #f4c2c2, #ffb6c1);
   box-shadow: 0 -4px 20px rgba(0,0,0,0.15);
+  display: flex;
+  flex-direction: column; /* flex oszlop, így nő a magasság */
+  align-items: center;
+  padding: 16px 20px;
   z-index: 9999;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  transition: height 0.3s ease;
+}
+
+/* TEXT + BUTTON CONTAINER */
+#ml-bar-top {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 14px 20px;
-  font-family: 'Arial', sans-serif;
-  border-top-left-radius: 12px;
-  border-top-right-radius: 12px;
 }
 
 /* TEXT */
-#ml-fixed-text {
+#ml-fixed-bar-text {
   color: #fff;
   font-size: 17px;
   font-weight: 600;
 }
 
 /* BUTTON */
-#ml-fixed-button {
+#ml-fixed-bar-button {
   background-color: #fff;
   color: #f4c2c2;
   border: none;
@@ -117,31 +125,23 @@ body {
   cursor: pointer;
   transition: transform 0.2s, background 0.2s;
 }
-#ml-fixed-button:hover {
+#ml-fixed-bar-button:hover {
   background-color: #ffe0e6;
   transform: scale(1.05);
 }
 
 /* MAILERLITE FORM CONTAINER */
-#ml-fixed-inner {
-  position: fixed;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%) translateY(100%);
+#ml-fixed-form {
   max-width: 480px;
-  width: 95%;
+  width: 100%;
   background: #fff;
-  box-shadow: 0 -6px 25px rgba(0,0,0,0.25);
-  padding: 48px 16px 24px;
-  font-family: Arial, sans-serif;
-  border-radius: 12px 12px 0 0;
-  z-index: 10000;
-  transition: transform 0.3s ease;
-}
-
-/* SHOW FORM */
-#ml-fixed-inner.active {
-  transform: translateX(-50%) translateY(0);
+  padding: 24px 16px 16px;
+  margin-top: 12px;
+  border-radius: 12px;
+  box-shadow: 0 -4px 20px rgba(0,0,0,0.15);
+  display: none; /* alapból rejtve */
+  flex-direction: column;
+  position: relative;
 }
 
 /* CLOSE BUTTON */
@@ -160,46 +160,44 @@ body {
 }
 </style>
 
-<!-- BOTTOM BAR -->
-<div id="ml-fixed-bottom">
-  <div id="ml-fixed-text">Nem szeretnél lemaradni a képzésekről?</div>
-  <button id="ml-fixed-button">Feliratkozás</button>
-</div>
+<div id="ml-fixed-bar">
+  <div id="ml-bar-top">
+    <div id="ml-fixed-bar-text">Nem szeretnél lemaradni a képzésekről?</div>
+    <button id="ml-fixed-bar-button">Feliratkozás</button>
+  </div>
 
-<!-- MAILERLITE FORM -->
-<div id="ml-fixed-inner">
-  <div id="ml-fixed-close">×</div>
-  <!-- MailerLite Script -->
-  <script>
-    (function(w,d,e,u,f,l,n){
-      w[f]=w[f]||function(){(w[f].q=w[f].q||[]).push(arguments);};
-      l=d.createElement(e); l.async=1; l.src=u;
-      n=d.getElementsByTagName(e)[0]; n.parentNode.insertBefore(l,n);
-    })(window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
-    ml('account','2094197'); // itt a te fiókod azonosítója
-  </script>
+  <!-- EMBEDDED FORM (initially hidden) -->
+  <div id="ml-fixed-form">
+    <div id="ml-fixed-close">×</div>
+    <!-- MailerLite Script -->
+    <script>
+      (function(w,d,e,u,f,l,n){
+        w[f]=w[f]||function(){(w[f].q=w[f].q||[]).push(arguments);};
+        l=d.createElement(e); l.async=1; l.src=u;
+        n=d.getElementsByTagName(e)[0]; n.parentNode.insertBefore(l,n);
+      })(window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+      ml('account','2094197'); // Itt a fiókod azonosítója
+    </script>
 
-  <!-- Embedded Form -->
-  <div class="ml-embedded" data-form="PVTDFE"></div>
+    <!-- Embedded Form -->
+    <div class="ml-embedded" data-form="PVTDFE"></div>
+  </div>
 </div>
 
 <script>
-// SELECTORS
-const btn = document.getElementById('ml-fixed-button');
-const form = document.getElementById('ml-fixed-inner');
+const button = document.getElementById('ml-fixed-bar-button');
+const form = document.getElementById('ml-fixed-form');
 const close = document.getElementById('ml-fixed-close');
 
-// OPEN FORM
-btn.onclick = () => {
-  form.classList.add('active');
+button.onclick = () => {
+  form.style.display = form.style.display === 'flex' ? 'none' : 'flex';
+  form.scrollIntoView({ behavior: 'smooth' });
 };
 
-// CLOSE FORM
 close.onclick = () => {
-  form.classList.remove('active');
+  form.style.display = 'none';
 };
 </script>
-
 
 
     <!-- LOADER -->
