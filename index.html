@@ -302,58 +302,53 @@ Saját tapasztalati tudásom a családon belüli erőszak, az agresszió, a gyer
             align-items: center !important;
             justify-content: center !important;
         ">✕</button>
-<!-- FIX SÁV MAILERLITE-AL -->
+<!-- MailerLite Fixed Subscription Form - frissített X-el -->
 <style>
-/* Fix sáv alap */
 #ml-fixed-bottom {
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
-  background: linear-gradient(135deg, #fce4ec, #ffe4e1);
+  max-height: 90vh;
+  background: #fff;
   z-index: 999999;
   box-shadow: 0 -6px 25px rgba(0,0,0,0.25);
+  overflow-y: auto;
   font-family: Arial, sans-serif;
   transition: transform 0.3s ease, opacity 0.3s ease;
-  display: flex;
-  justify-content: center;
-  padding: 16px;
 }
 
-/* Sáv belső tartalom */
 #ml-fixed-inner {
   max-width: 480px;
-  width: 100%;
+  margin: 0 auto;
+  padding: 24px 16px 16px;
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 12px;
-  position: relative;
 }
 
-/* Szöveg */
 #ml-fixed-text {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
   color: #333;
   text-align: center;
 }
 
-/* Gombok sor */
 #ml-fixed-buttons {
   display: flex;
-  gap: 12px;
   align-items: center;
+  gap: 12px;
 }
 
-/* Feliratkozás gomb */
 #ml-fixed-toggle {
   background-color: #f48fb1;
   color: #fff;
   border: none;
-  padding: 12px 24px;
+  padding: 10px 20px;
   border-radius: 24px;
-  font-size: 16px;
+  font-size: 14px;
   cursor: pointer;
   transition: background 0.3s ease;
 }
@@ -361,25 +356,28 @@ Saját tapasztalati tudásom a családon belüli erőszak, az agresszió, a gyer
   background-color: #f06292;
 }
 
-/* Bezáró X a gomb mellett */
 #ml-fixed-close-bottom {
-  font-size: 26px;
+  font-size: 24px;
   font-weight: bold;
   cursor: pointer;
-  color: #f06292;
+  color: #f4c2c2; /* puder rózsaszín */
   transition: color 0.2s ease;
 }
 #ml-fixed-close-bottom:hover {
-  color: #ff80ab;
+  color: #ffb6c1; /* világosabb rózsaszín hover-re */
 }
 
-/* MailerLite form rejtve alapból */
+#ml-fixed-bottom.hidden {
+  transform: translateY(100%);
+  opacity: 0;
+  pointer-events: none;
+}
+
 #ml-fixed-form {
   width: 100%;
   max-width: 480px;
-  margin-top: 12px;
   display: none;
-  transition: max-height 0.3s ease;
+  margin-top: 8px;
 }
 #ml-fixed-form.active {
   display: block;
@@ -417,17 +415,15 @@ const toggleBtn = document.getElementById('ml-fixed-toggle');
 const formDiv = document.getElementById('ml-fixed-form');
 const closeBtnBottom = document.getElementById('ml-fixed-close-bottom');
 
-// Feliratkozás gomb megnyitja az űrlapot
 toggleBtn.onclick = () => {
   formDiv.classList.add('active');
 };
 
-// Bezáró X alul
 closeBtnBottom.onclick = () => {
-  formDiv.classList.remove('active');
-  document.getElementById('ml-fixed-bottom').style.display = 'none'; // sáv bezárása teljesen
+  document.getElementById('ml-fixed-bottom').classList.add('hidden');
 };
 </script>
+
 
 
 
