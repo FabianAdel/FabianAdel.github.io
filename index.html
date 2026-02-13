@@ -63,7 +63,7 @@ ted <!DOCTYPE html>
 <script>
 <style>
 
-<  -->
+<!-- MailerLite Universal -->
 <script>
 (function(w,d,e,u,f,l,n){
     w[f]=w[f]||function(){(w[f].q=w[f].q||[]).push(arguments);};
@@ -71,23 +71,76 @@ ted <!DOCTYPE html>
     n=d.getElementsByTagName(e)[0]; n.parentNode.insertBefore(l,n);
 })(window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
 ml('account', '2094197');
-
-// Biztos, hogy a popup mindig feljön
-window.addEventListener('load', function() {
-    setTimeout(function(){
-        var popup = document.querySelector('.ml-embedded');
-        if(popup){
-            popup.style.display = 'block';
-            popup.style.position = 'fixed';
-            popup.style.zIndex = '9999999';
-            popup.style.top = '50%';
-            popup.style.left = '50%';
-            popup.style.transform = 'translate(-50%, -50%)';
-        }
-    }, 500); // 0.5s késleltetés a DOM stabil betöltésére
-});
 </script>
 <!-- End MailerLite Universal -->
+
+<!-- Buborék gomb -->
+<div id="subscribe-bubble">Feliratkozás</div>
+
+<!-- Rejtett űrlap -->
+<div id="subscribe-form-container" style="display:none;">
+  <div class="ml-embedded" data-form="PVTDFE"></div>
+</div>
+
+<style>
+/* Buborék stílus */
+#subscribe-bubble {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #c94d4d;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 50px;
+    font-weight: bold;
+    font-family: 'Open Sans', sans-serif;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    z-index: 9999;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#subscribe-bubble:hover {
+    background-color: #333333;
+    transform: scale(1.05);
+}
+
+/* Űrlap megjelenítés buborékra kattintva */
+#subscribe-form-container {
+    position: fixed;
+    bottom: 70px; /* buborék felett */
+    right: 20px;
+    width: 350px;
+    max-width: 90%;
+    background-color: #f0e1e1;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    z-index: 9999;
+}
+
+/* Mobil optimalizálás */
+@media (max-width: 480px) {
+    #subscribe-form-container {
+        width: 90%;
+        right: 5%;
+        bottom: 70px;
+    }
+}
+</style>
+
+<script>
+// Buborék kattintás: űrlap toggle
+document.getElementById('subscribe-bubble').addEventListener('click', function() {
+    const form = document.getElementById('subscribe-form-container');
+    if (form.style.display === 'none') {
+        form.style.display = 'block';
+    } else {
+        form.style.display = 'none';
+    }
+});
+</script>
+
 
 
 
