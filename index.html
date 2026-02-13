@@ -302,122 +302,130 @@ Saját tapasztalati tudásom a családon belüli erőszak, az agresszió, a gyer
             align-items: center !important;
             justify-content: center !important;
         ">✕</button>
-<!-- FIX SÁV MAILERLITE-AL -->
+<!-- Unified Fixed Subscription Bar - Stable Version -->
 <style>
-/* Fix sáv alap */
-#ml-fixed-bottom {
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+/* FIXED BAR */
+#ml-fixed-bar {
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
-  background: linear-gradient(135deg, #fce4ec, #ffe4e1);
-  z-index: 999999;
-  box-shadow: 0 -6px 25px rgba(0,0,0,0.25);
-  font-family: Arial, sans-serif;
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  background: linear-gradient(90deg, #f4c2c2, #ffb6c1);
+  box-shadow: 0 -4px 20px rgba(0,0,0,0.15);
   display: flex;
-  justify-content: center;
-  padding: 16px;
+  flex-direction: column; /* flex oszlop, így nő a magasság */
+  align-items: center;
+  padding: 16px 20px;
+  z-index: 9999;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  transition: height 0.3s ease;
 }
 
-/* Sáv belső tartalom */
-#ml-fixed-inner {
-  max-width: 480px;
+/* TEXT + BUTTON CONTAINER */
+#ml-bar-top {
   width: 100%;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  gap: 12px;
+}
+
+/* TEXT */
+#ml-fixed-bar-text {
+  color: #fff;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+/* BUTTON */
+#ml-fixed-bar-button {
+  background-color: #fff;
+  color: #f4c2c2;
+  border: none;
+  padding: 10px 22px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.2s;
+}
+#ml-fixed-bar-button:hover {
+  background-color: #ffe0e6;
+  transform: scale(1.05);
+}
+
+/* MAILERLITE FORM CONTAINER */
+#ml-fixed-form {
+  max-width: 480px;
+  width: 100%;
+  background: #fff;
+  padding: 24px 16px 16px;
+  margin-top: 12px;
+  border-radius: 12px;
+  box-shadow: 0 -4px 20px rgba(0,0,0,0.15);
+  display: none; /* alapból rejtve */
+  flex-direction: column;
   position: relative;
 }
 
-/* Szöveg */
-#ml-fixed-text {
-  font-size: 18px;
-  font-weight: bold;
-  color: #333;
-  text-align: center;
-}
-
-/* Feliratkozás gomb */
-#ml-fixed-toggle {
-  background-color: #f48fb1;
-  color: #fff;
-  border: none;
-  padding: 12px 24px;
-  border-radius: 24px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-#ml-fixed-toggle:hover {
-  background-color: #f06292;
-}
-
-/* Bezáró X */
+/* CLOSE BUTTON */
 #ml-fixed-close {
   position: absolute;
-  top: 8px;
+  top: 10px;
   right: 12px;
   font-size: 26px;
   font-weight: bold;
   cursor: pointer;
-  color: #f06292;
+  color: #f4c2c2;
   transition: color 0.2s ease;
 }
 #ml-fixed-close:hover {
-  color: #ff80ab;
-}
-
-/* MailerLite form rejtve alapból */
-#ml-fixed-form {
-  width: 100%;
-  max-width: 480px;
-  margin-top: 12px;
-  display: none;
-  transition: max-height 0.3s ease;
-}
-#ml-fixed-form.active {
-  display: block;
+  color: #ffb6c1;
 }
 </style>
 
-<div id="ml-fixed-bottom">
-  <div id="ml-fixed-inner">
-    <div id="ml-fixed-text">Nem szeretnél lemaradni a képzésekről?</div>
-    <button id="ml-fixed-toggle">Feliratkozás</button>
+<div id="ml-fixed-bar">
+  <div id="ml-bar-top">
+    <div id="ml-fixed-bar-text">Nem szeretnél lemaradni a képzésekről?</div>
+    <button id="ml-fixed-bar-button">Feliratkozás</button>
+  </div>
 
-    <div id="ml-fixed-form">
-      <div id="ml-fixed-close">×</div>
-      <!-- MailerLite Script -->
-      <script>
-        (function(w,d,e,u,f,l,n){
-          w[f]=w[f]||function(){(w[f].q=w[f].q||[]).push(arguments);};
-          l=d.createElement(e); l.async=1; l.src=u;
-          n=d.getElementsByTagName(e)[0]; n.parentNode.insertBefore(l,n);
-        })(window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
-        ml('account','2094197'); // Fiók azonosító
-      </script>
+  <!-- EMBEDDED FORM (initially hidden) -->
+  <div id="ml-fixed-form">
+    <div id="ml-fixed-close">×</div>
+    <!-- MailerLite Script -->
+    <script>
+      (function(w,d,e,u,f,l,n){
+        w[f]=w[f]||function(){(w[f].q=w[f].q||[]).push(arguments);};
+        l=d.createElement(e); l.async=1; l.src=u;
+        n=d.getElementsByTagName(e)[0]; n.parentNode.insertBefore(l,n);
+      })(window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+      ml('account','2094197'); // Itt a fiókod azonosítója
+    </script>
 
-      <!-- Embedded Form -->
-      <div class="ml-embedded" data-form="PVTDFE"></div>
-    </div>
+    <!-- Embedded Form -->
+    <div class="ml-embedded" data-form="PVTDFE"></div>
   </div>
 </div>
 
 <script>
-const toggleBtn = document.getElementById('ml-fixed-toggle');
-const formDiv = document.getElementById('ml-fixed-form');
-const closeBtn = document.getElementById('ml-fixed-close');
+const button = document.getElementById('ml-fixed-bar-button');
+const form = document.getElementById('ml-fixed-form');
+const close = document.getElementById('ml-fixed-close');
 
-// Feliratkozás gomb megnyitja az űrlapot
-toggleBtn.onclick = () => {
-  formDiv.classList.add('active');
+button.onclick = () => {
+  form.style.display = form.style.display === 'flex' ? 'none' : 'flex';
+  form.scrollIntoView({ behavior: 'smooth' });
 };
 
-// Bezáró X
-closeBtn.onclick = () => {
-  formDiv.classList.remove('active');
+close.onclick = () => {
+  form.style.display = 'none';
 };
 </script>
 
