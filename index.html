@@ -59,18 +59,6 @@ ted <!DOCTYPE html>
     });
 </script>
 
-<script>
-    function saveAdelCookie() {
-        localStorage.setItem("adel_cookies_accepted_v2", "true");
-        document.getElementById("adel-cookie-box").style.display = "none";
-    }
-
-    window.addEventListener('DOMContentLoaded', function() {
-        if (localStorage.getItem("adel_cookies_accepted_v2") !== "true") {
-            document.getElementById("adel-cookie-box").style.display = "block";
-        }
-    });
-</script>
 <body>
 <script>
 <style>
