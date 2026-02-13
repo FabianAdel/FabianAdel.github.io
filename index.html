@@ -73,66 +73,47 @@ ted <!DOCTYPE html>
 </script>
 <body>
 
-<!-- MailerLite Universal – kompakt popup -->
+<!-- MailerLite Universal -->
 <script>
 (function(w,d,e,u,f,l,n){
   w[f]=w[f]||function(){(w[f].q=w[f].q||[]).push(arguments);};
-  l=d.createElement(e);
-  l.async=1;
-  l.src=u;
-  n=d.getElementsByTagName(e)[0];
-  n.parentNode.insertBefore(l,n);
+  l=d.createElement(e); l.async=1; l.src=u;
+  n=d.getElementsByTagName(e)[0]; n.parentNode.insertBefore(l,n);
 })(window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
 
 ml('account', '2094197');
 </script>
 
-<!-- Kompakt stílus a popuphoz -->
-<style>
-/* Kis popup stílus */
-.ml-popup {
-  max-width: 420px !important;
-  width: 90% !important;
-  padding: 24px !important;
-  border-radius: 12px !important;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.25) !important;
-  font-family: Arial, sans-serif !important;
-}
-
-/* X nagyobb, jól látható */
-.ml-popup-close {
-  font-size: 28px !important;
-  font-weight: bold !important;
-  color: #f06292 !important;
-  top: 12px !important;
-  right: 12px !important;
-  width: 32px !important;
-  height: 32px !important;
-}
-.ml-popup-close:hover {
-  color: #ff80ab !important;
-}
-
-/* Gombok és űrlap elemek kisebbek, kompaktabbak */
-.ml-popup input,
-.ml-popup select,
-.ml-popup textarea {
-  font-size: 14px !important;
-  padding: 8px !important;
-}
-.ml-popup button {
-  font-size: 14px !important;
-  padding: 8px 16px !important;
-}
-</style>
-
-<!-- Force popup on every page load – kisebb popup -->
+<!-- Force popup on every page load -->
 <script>
 (function() {
   function forcePopup() {
     if (typeof ml === "function") {
-      // true = force show
-      ml('show', 'MxKWIV', true);
+      ml('show', 'MxKWIV', true); // true = force show
+
+      // Amikor a popup megjelenik, testreszabjuk
+      ml('on', 'popup:open', function(popup) {
+        const popupEl = popup.el; // a popup DOM eleme
+
+        // Kompakt méret és stílus
+        popupEl.style.maxWidth = '420px';
+        popupEl.style.width = '90%';
+        popupEl.style.padding = '20px';
+        popupEl.style.borderRadius = '12px';
+        popupEl.style.boxShadow = '0 8px 30px rgba(0,0,0,0.25)';
+
+        // X nagyobb és látható
+        const closeBtn = popupEl.querySelector('.ml-popup-close');
+        if (closeBtn) {
+          closeBtn.style.fontSize = '28px';
+          closeBtn.style.width = '32px';
+          closeBtn.style.height = '32px';
+          closeBtn.style.top = '12px';
+          closeBtn.style.right = '12px';
+          closeBtn.style.color = '#f06292';
+        }
+      });
+
     } else {
       setTimeout(forcePopup, 300);
     }
