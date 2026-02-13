@@ -348,7 +348,7 @@ Saját tapasztalati tudásom a családon belüli erőszak, az agresszió, a gyer
         </div><!-- end row -->
     </div><!-- end container -->
 </div><!-- end section -->
-<!-- MailerLite Universal -->
+<!-- MailerLite Universal Script -->
 <script>
 (function(w,d,e,u,f,l,n){
   w[f]=w[f]||function(){(w[f].q=w[f].q||[]).push(arguments);};
@@ -359,55 +359,27 @@ Saját tapasztalati tudásom a családon belüli erőszak, az agresszió, a gyer
 ml('account','2094197');
 </script>
 
-
-<!-- Fix alsó feliratkozás gomb -->
-<style>
-#ml-fixed-button {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #e60023;
-  color: #ffffff;
-  padding: 14px 20px;
-  border-radius: 30px;
-  font-size: 15px;
-  font-weight: bold;
-  cursor: pointer;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  z-index: 9999;
-  transition: all 0.3s ease;
-}
-
-#ml-fixed-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.3);
-}
-</style>
-
-<div id="ml-fixed-button">
-  🎁 Feliratkozás az akcióra
-</div>
-
-
+<!-- Force popup on page load -->
 <script>
-document.addEventListener("DOMContentLoaded", function() {
-
-  document.getElementById("ml-fixed-button").addEventListener("click", function() {
-
-    function openPopup() {
-      if (typeof ml === "function") {
-        ml('show', 'MxKWIV', true);  // <-- itt a popup ID
-      } else {
-        setTimeout(openPopup, 300);
-      }
+(function() {
+  function openPopup() {
+    if (typeof ml === "function") {
+      ml('show', 'MxKWIV', true); // popup ID
+    } else {
+      setTimeout(openPopup, 300);
     }
+  }
 
-    openPopup();
-
-  });
-
-});
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", function() {
+      setTimeout(openPopup, 800);
+    });
+  } else {
+    setTimeout(openPopup, 800);
+  }
+})();
 </script>
+
 
 
     </div>
