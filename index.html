@@ -72,74 +72,73 @@ ted <!DOCTYPE html>
     });
 </script>
 <body>
-<!-- Unified Fixed Subscription Bar - Stable Version -->
-<style>
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Arial', sans-serif;
-}
 
-/* FIXED BAR */
+<style>
+/* FIXED BAR - Vékonyabb és elegánsabb */
 #ml-fixed-bar {
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
   background: linear-gradient(90deg, #f4c2c2, #ffb6c1);
-  box-shadow: 0 -4px 20px rgba(0,0,0,0.15);
+  box-shadow: 0 -2px 15px rgba(0,0,0,0.1);
   display: flex;
-  flex-direction: column; /* flex oszlop, így nő a magasság */
+  flex-direction: column;
   align-items: center;
-  padding: 16px 20px;
+  padding: 8px 15px; /* Lecsökkentve 16px-ről 8px-re */
   z-index: 9999;
-  border-top-left-radius: 12px;
-  border-top-right-radius: 12px;
-  transition: height 0.3s ease;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
 }
 
 /* TEXT + BUTTON CONTAINER */
 #ml-bar-top {
   width: 100%;
+  max-width: 1100px; /* Hogy asztali gépen ne ússzon szét a szélére */
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-/* TEXT */
+/* TEXT - Kisebb méret */
 #ml-fixed-bar-text {
   color: #fff;
-  font-size: 17px;
-  font-weight: 600;
+  font-size: 14px; /* Lecsökkentve 17px-ről */
+  font-weight: 500;
+  letter-spacing: 0.3px;
 }
 
-/* BUTTON */
+/* BUTTON - Kompaktabb */
 #ml-fixed-bar-button {
   background-color: #fff;
   color: #f4c2c2;
   border: none;
-  padding: 10px 22px;
-  font-size: 16px;
+  padding: 6px 15px; /* Vékonyabb gomb */
+  font-size: 13px; /* Kisebb betű a gombon */
   font-weight: bold;
-  border-radius: 30px;
+  border-radius: 20px;
   cursor: pointer;
-  transition: transform 0.2s, background 0.2s;
-}
-#ml-fixed-bar-button:hover {
-  background-color: #ffe0e6;
-  transform: scale(1.05);
+  white-space: nowrap;
+  transition: all 0.2s ease;
+  margin-left: 10px;
 }
 
-/* MAILERLITE FORM CONTAINER */
+#ml-fixed-bar-button:hover {
+  background-color: #fdfdfd;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* MAILERLITE FORM CONTAINER - Kisebb popup */
 #ml-fixed-form {
-  max-width: 480px;
-  width: 100%;
+  max-width: 400px;
+  width: 95%;
   background: #fff;
-  padding: 24px 16px 16px;
-  margin-top: 12px;
+  padding: 20px 15px 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   border-radius: 12px;
-  box-shadow: 0 -4px 20px rgba(0,0,0,0.15);
-  display: none; /* alapból rejtve */
+  box-shadow: 0 5px 25px rgba(0,0,0,0.2);
+  display: none;
   flex-direction: column;
   position: relative;
 }
@@ -147,39 +146,42 @@ body {
 /* CLOSE BUTTON */
 #ml-fixed-close {
   position: absolute;
-  top: 10px;
-  right: 12px;
-  font-size: 26px;
-  font-weight: bold;
+  top: 5px;
+  right: 10px;
+  font-size: 22px;
   cursor: pointer;
   color: #f4c2c2;
-  transition: color 0.2s ease;
 }
-#ml-fixed-close:hover {
-  color: #ffb6c1;
+
+/* MOBIL FINOMÍTÁS */
+@media (max-width: 480px) {
+  #ml-fixed-bar-text {
+    font-size: 12px;
+    line-height: 1.2;
+  }
+  #ml-fixed-bar-button {
+    padding: 5px 12px;
+    font-size: 11px;
+  }
 }
 </style>
 
 <div id="ml-fixed-bar">
   <div id="ml-bar-top">
-    <div id="ml-fixed-bar-text">Nem szeretnél lemaradni a képzésekről?</div>
+    <div id="ml-fixed-bar-text">Értesítés a képzésekről?</div>
     <button id="ml-fixed-bar-button">Feliratkozás</button>
   </div>
 
-  <!-- EMBEDDED FORM (initially hidden) -->
   <div id="ml-fixed-form">
     <div id="ml-fixed-close">×</div>
-    <!-- MailerLite Script -->
     <script>
       (function(w,d,e,u,f,l,n){
         w[f]=w[f]||function(){(w[f].q=w[f].q||[]).push(arguments);};
         l=d.createElement(e); l.async=1; l.src=u;
         n=d.getElementsByTagName(e)[0]; n.parentNode.insertBefore(l,n);
       })(window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
-      ml('account','2094197'); // Itt a fiókod azonosítója
+      ml('account','2094197');
     </script>
-
-    <!-- Embedded Form -->
     <div class="ml-embedded" data-form="PVTDFE"></div>
   </div>
 </div>
@@ -189,9 +191,9 @@ const button = document.getElementById('ml-fixed-bar-button');
 const form = document.getElementById('ml-fixed-form');
 const close = document.getElementById('ml-fixed-close');
 
-button.onclick = () => {
-  form.style.display = form.style.display === 'flex' ? 'none' : 'flex';
-  form.scrollIntoView({ behavior: 'smooth' });
+button.onclick = (e) => {
+  e.preventDefault();
+  form.style.display = (form.style.display === 'flex') ? 'none' : 'flex';
 };
 
 close.onclick = () => {
