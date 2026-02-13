@@ -73,76 +73,130 @@ ted <!DOCTYPE html>
 </script>
 <body>
 <script>
+<!-- Thinner Fixed Subscription Bar with MailerLite Popup -->
+<style>
+#ml-fixed-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(90deg, #f4c2c2, #ffb6c1);
+  box-shadow: 0 -4px 20px rgba(0,0,0,0.15);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px; /* vékonyabb */
+  z-index: 9999;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  font-family: Arial, sans-serif;
+}
+
+#ml-bar-top {
+  width: 100%;
+  max-width: 480px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#ml-fixed-bar-text {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+#ml-fixed-bar-button {
+  background-color: #fff;
+  color: #f4c2c2;
+  border: none;
+  padding: 8px 18px;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.2s;
+}
+#ml-fixed-bar-button:hover {
+  background-color: #ffe0e6;
+  transform: scale(1.05);
+}
+</style>
+
+<div id="ml-fixed-bar">
+  <div id="ml-bar-top">
+    <div id="ml-fixed-bar-text">Nem szeretnél lemaradni a képzésekről?</div>
+    <button id="ml-fixed-bar-button">Feliratkozás</button>
+  </div>
+</div>
+
+<!-- MailerLite Universal Script -->
+<script>
 (function(w,d,e,u,f,l,n){
   w[f]=w[f]||function(){(w[f].q=w[f].q||[]).push(arguments);};
-  l=d.createElement(e); l.async=1; l.src=u;
-  n=d.getElementsByTagName(e)[0]; n.parentNode.insertBefore(l,n);
+  l=d.createElement(e);
+  l.async=1;
+  l.src=u;
+  n=d.getElementsByTagName(e)[0];
+  n.parentNode.insertBefore(l,n);
 })(window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+
 ml('account', '2094197');
 </script>
 
 <script>
-(function() {
-  function forcePopup() {
-    if (typeof ml === "function") {
-      ml('show', 'MxKWIV', true); 
+// Gomb megnyitja a MailerLite popupot
+const button = document.getElementById('ml-fixed-bar-button');
 
-      ml('on', 'popup:open', function(popup) {
-        // A teljes külső konténer (ez felel a pozícióért)
-        const wrapper = popup.el; 
-        // A tényleges űrlap doboza
-        const formBox = popup.el.querySelector('.ml-subscribe-form'); 
+button.onclick = () => {
+  if (typeof ml === "function") {
+    ml('show', 'MxKWIV', true); // itt a popup azonosító
+    // popup stílus finomítása
+    ml('on', 'popup:open', function(popup) {
+      const wrapper = popup.el;
+      const formBox = popup.el.querySelector('.ml-subscribe-form');
 
-        if (wrapper) {
-            wrapper.style.display = 'flex';
-            wrapper.style.alignItems = 'center';
-            wrapper.style.justifyContent = 'center';
-            wrapper.style.zIndex = '999999';
-        }
+      if (wrapper) {
+        wrapper.style.display = 'flex';
+        wrapper.style.alignItems = 'center';
+        wrapper.style.justifyContent = 'center';
+        wrapper.style.zIndex = '999999';
+      }
 
-        if (formBox) {
-          // Kompakt méret beállítása
-          formBox.style.maxWidth = '400px'; 
-          formBox.style.width = '90%';
-          formBox.style.maxHeight = '90vh'; 
-          formBox.style.overflowY = 'auto';
-          formBox.style.borderRadius = '15px';
-          formBox.style.position = 'relative'; // Az X gomb viszonyításához
-          formBox.style.margin = '0 auto'; 
-          formBox.style.boxShadow = '0 10px 40px rgba(0,0,0,0.3)';
-        }
+      if (formBox) {
+        formBox.style.maxWidth = '400px';
+        formBox.style.width = '90%';
+        formBox.style.maxHeight = '90vh';
+        formBox.style.overflowY = 'auto';
+        formBox.style.borderRadius = '15px';
+        formBox.style.position = 'relative';
+        formBox.style.margin = '0 auto';
+        formBox.style.boxShadow = '0 10px 40px rgba(0,0,0,0.3)';
+      }
 
-        // Az X gomb keresése és stílusozása
-        // A MailerLite több különböző osztálynevet is használhat, ezért mindet keressük
-        const closeBtn = popup.el.querySelector('.ml-popup-close-button') || 
-                         popup.el.querySelector('.close') || 
-                         popup.el.querySelector('.ml-popup-close');
-
-        if (closeBtn) {
-          closeBtn.style.display = 'block';
-          closeBtn.style.visibility = 'visible';
-          closeBtn.style.opacity = '1';
-          closeBtn.style.color = '#333'; 
-          closeBtn.style.fontSize = '30px';
-          closeBtn.style.fontWeight = 'bold';
-          closeBtn.style.top = '10px';
-          closeBtn.style.right = '15px';
-          closeBtn.style.cursor = 'pointer';
-          closeBtn.style.position = 'absolute';
-          closeBtn.style.zIndex = '1000000';
-          closeBtn.innerHTML = '×'; // Biztosítjuk, hogy legyen benne egy X karakter
-        }
-      });
-    } else {
-      setTimeout(forcePopup, 300);
-    }
+      // X gomb stílus
+      const closeBtn = popup.el.querySelector('.ml-popup-close-button') || 
+                       popup.el.querySelector('.close') || 
+                       popup.el.querySelector('.ml-popup-close');
+      if (closeBtn) {
+        closeBtn.style.display = 'block';
+        closeBtn.style.visibility = 'visible';
+        closeBtn.style.opacity = '1';
+        closeBtn.style.color = '#333';
+        closeBtn.style.fontSize = '30px';
+        closeBtn.style.fontWeight = 'bold';
+        closeBtn.style.top = '5px'; // picit feljebb
+        closeBtn.style.right = '15px';
+        closeBtn.style.cursor = 'pointer';
+        closeBtn.style.position = 'absolute';
+        closeBtn.style.zIndex = '1000000';
+        closeBtn.innerHTML = '×';
+      }
+    });
   }
-
-  window.addEventListener('load', function() {
-    setTimeout(forcePopup, 1000);
-  });
-})();
+};
 </script>
+
 
     <!-- LOADER -->
     <div id="preloader">
