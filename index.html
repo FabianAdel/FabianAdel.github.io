@@ -62,60 +62,31 @@ ted <!DOCTYPE html>
 <body>
 <script>
 <style>
-/* Fix sáv stílusa */
-<!-- MailerLite script betöltése -->
+<!-- MailerLite Universal -->
 <script>
 (function(w,d,e,u,f,l,n){
-  w[f]=w[f]||function(){(w[f].q=w[f].q||[]).push(arguments);};
-  l=d.createElement(e); l.async=1; l.src=u;
-  n=d.getElementsByTagName(e)[0]; n.parentNode.insertBefore(l,n);
+    w[f]=w[f]||function(){(w[f].q=w[f].q||[]).push(arguments);};
+    l=d.createElement(e); l.async=1; l.src=u;
+    n=d.getElementsByTagName(e)[0]; n.parentNode.insertBefore(l,n);
 })(window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
 ml('account', '2094197');
-</script>
 
-<!-- Popup megjelenítés és dizájn -->
-<script>
-(function() {
-  function forcePopup() {
-    if (typeof ml === "function") {
-      ml('show', 'MxKWIV', true);
-
-      ml('on', 'popup:open', function(popup) {
-        const formContainer = popup.el.querySelector('.ml-subscribe-form');
-        const allCloseBtns = popup.el.querySelectorAll('[class*="close"]');
-
-        if (formContainer) {
-          formContainer.style.maxWidth = '380px';
-          formContainer.style.width = '90%';
-          formContainer.style.maxHeight = '85vh';
-          formContainer.style.overflowY = 'auto';
-          formContainer.style.margin = 'auto';
-          formContainer.style.borderRadius = '15px';
-          formContainer.style.paddingTop = '30px';
+// Biztos, hogy a popup mindig feljön
+window.addEventListener('load', function() {
+    setTimeout(function(){
+        var popup = document.querySelector('.ml-embedded');
+        if(popup){
+            popup.style.display = 'block';
+            popup.style.position = 'fixed';
+            popup.style.zIndex = '9999999';
+            popup.style.top = '50%';
+            popup.style.left = '50%';
+            popup.style.transform = 'translate(-50%, -50%)';
         }
-
-        allCloseBtns.forEach(btn => {
-          btn.style.display = 'block';
-          btn.style.visibility = 'visible';
-          btn.style.opacity = '1';
-          btn.style.fontSize = '24px';
-          btn.style.color = '#333';
-          btn.style.top = '10px';
-          btn.style.right = '10px';
-          btn.style.zIndex = '9999';
-        });
-      });
-
-    } else {
-      setTimeout(forcePopup, 300);
-    }
-  }
-
-  window.addEventListener('load', function() {
-    setTimeout(forcePopup, 1000);
-  });
-})();
+    }, 500); // 0.5s késleltetés a DOM stabil betöltésére
+});
 </script>
+<!-- End MailerLite Universal -->
 
 
 
