@@ -348,72 +348,66 @@ Saját tapasztalati tudásom a családon belüli erőszak, az agresszió, a gyer
         </div><!-- end row -->
     </div><!-- end container -->
 </div><!-- end section -->
+<!-- MailerLite Universal -->
+<script>
+(function(w,d,e,u,f,l,n){
+  w[f]=w[f]||function(){(w[f].q=w[f].q||[]).push(arguments);};
+  l=d.createElement(e); l.async=1; l.src=u;
+  n=d.getElementsByTagName(e)[0]; n.parentNode.insertBefore(l,n);
+})(window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+
+ml('account','2094197');
+</script>
+
+
+<!-- Fix alsó feliratkozás gomb -->
+<style>
+#ml-fixed-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #e60023;
+  color: #ffffff;
+  padding: 14px 20px;
+  border-radius: 30px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  z-index: 9999;
+  transition: all 0.3s ease;
+}
+
+#ml-fixed-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+}
+</style>
+
+<div id="ml-fixed-button">
+  🎁 Feliratkozás az akcióra
+</div>
 
 
 <script>
-(function() {
-  function forcePopup() {
-    if (typeof ml === "function") {
-      ml('show', 'MxKWIV', true); 
+document.addEventListener("DOMContentLoaded", function() {
 
-      ml('on', 'popup:open', function(popup) {
-        const wrapper = popup.el; 
-        const formBox = popup.el.querySelector('.ml-subscribe-form'); 
+  document.getElementById("ml-fixed-button").addEventListener("click", function() {
 
-        if (wrapper) {
-            wrapper.style.display = 'flex';
-            wrapper.style.alignItems = 'center';
-            wrapper.style.justifyContent = 'center';
-            wrapper.style.zIndex = '999999';
-        }
-
-        if (formBox) {
-          formBox.style.maxWidth = '380px'; 
-          formBox.style.width = '90%';
-          formBox.style.maxHeight = '85vh'; 
-          formBox.style.overflowY = 'auto';
-          formBox.style.borderRadius = '15px';
-          formBox.style.position = 'relative'; 
-          formBox.style.margin = '0 auto'; 
-          formBox.style.boxShadow = '0 10px 40px rgba(0,0,0,0.3)';
-          // EZ TOLJA LE A SZÖVEGET AZ X ALÓL:
-          formBox.style.paddingTop = '45px'; 
-          formBox.style.paddingLeft = '20px';
-          formBox.style.paddingRight = '20px';
-          formBox.style.paddingBottom = '20px';
-        }
-
-        const closeBtn = popup.el.querySelector('.ml-popup-close-button') || 
-                         popup.el.querySelector('.close') || 
-                         popup.el.querySelector('.ml-popup-close');
-
-        if (closeBtn) {
-          closeBtn.style.display = 'block';
-          closeBtn.style.visibility = 'visible';
-          closeBtn.style.opacity = '1';
-          closeBtn.style.color = '#333'; 
-          closeBtn.style.fontSize = '28px';
-          closeBtn.style.fontWeight = '300'; // Vékonyabb X elegánsabb
-          // POZICIONÁLÁS A SAROKBA:
-          closeBtn.style.top = '8px';
-          closeBtn.style.right = '12px';
-          closeBtn.style.cursor = 'pointer';
-          closeBtn.style.position = 'absolute';
-          closeBtn.style.lineHeight = '1';
-          closeBtn.innerHTML = '×'; 
-        }
-      });
-    } else {
-      setTimeout(forcePopup, 300);
+    function openPopup() {
+      if (typeof ml === "function") {
+        ml('show', 'MxKWIV', true);  // <-- itt a popup ID
+      } else {
+        setTimeout(openPopup, 300);
+      }
     }
-  }
 
-  window.addEventListener('load', function() {
-    setTimeout(forcePopup, 1000);
+    openPopup();
+
   });
-})();
-</script>
 
+});
+</script>
 
 
     </div>
