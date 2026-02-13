@@ -1178,10 +1178,12 @@ function openSzuleszetPackagePdf() { window.open('pdf/dulatematika1.pdf'); }
 function openPerinatalisPackagePdf() { window.open('pdf/perinatgyasz.pdf'); }
 </script>
 
-<!-- ================== AJÁNLÁSOK – KÖZÉPRE IGAZÍTVA ================== -->
+<!-- ================== AJÁNLÁSOK TELJES BLOKK – JAVÍTVA ================== -->
 
-<!-- Owl Carousel szükséges fájlok -->
+<!-- jQuery (ha már be van töltve, ezt törölheted) -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Owl Carousel -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"/>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
@@ -1201,20 +1203,46 @@ function openPerinatalisPackagePdf() { window.open('pdf/perinatgyasz.pdf'); }
 
             <div class="testimonial-box">
                 <h4>Szuper vagy!</h4>
-                <p>Szeretném megköszönni a képzést, nagyon sokat tanultam!</p>
-                <div class="author">E. Krisztina – Budapest</div>
+                <p>Szeretném megköszönni a képzést, nagyon sokat tanultam, sok új infót kaptam! Szuper vagy, nagyon jó, hogy át mered adni a tudásod...</p>
+                <div class="author">Együd Krisztina – Budapest</div>
             </div>
 
             <div class="testimonial-box">
                 <h4>Gyakorlatias tudásanyag!</h4>
-                <p>Sok használható tudásanyagot kaptunk, inspiráló oktatás volt.</p>
-                <div class="author">Dr. M Zita – Zalaegerszeg</div>
+                <p>A tanfolyam csak 3 napos, de sok használható tudásanyagot kaptunk. Az oktató személyisége rendkívül inspiráló.</p>
+                <div class="author">Dr. Muszil Zita, pszichiáter – Zalaegerszeg</div>
             </div>
 
             <div class="testimonial-box">
                 <h4>Sokkal többet kaptam!</h4>
-                <p>Sokkal többet kaptam, mint amire számítottam.</p>
-                <div class="author">dr. F. Edina – Szeged</div>
+                <p>Sokkal többet kaptam a képzés során, mint amire számítottam.</p>
+                <div class="author">Edina </div>
+            </div>
+
+            <div class="testimonial-box">
+                <h4>Mindent lehet hasznosítani!</h4>
+                <p>Nem gondoltam volna, hogy ennyi összefüggés és tudományosság van a meditáció mögött. Nagyon értelmesen el volt magyarázva.</p>
+                <div class="author"> Anna – Debrecen</div>
+            </div>
+
+            <div class="testimonial-box">
+                <h4>Jó hangulat!</h4>
+                <p>Szuper volt a tananyag, az egész dinamika és hangulat. Jól éreztem magam Veled és a csajokkal. 🤗</p>
+                <div class="author">B. Anita</div>
+            </div>
+
+            <div class="testimonial-box">
+                <h4>Kellemes csalódás!</h4>
+                <p> Bár nagyon hívott ez a tanfolyam, úgy jelentkeztem, hogy azért komfortzónán túli volt nekem ☺️, de nagyon kellemesen csalódtam. Még magamban is. 🙃
+Fantasztikus a tudásod és az hogy ilyen erőt és másoknak is való mentőövet kovàcsoltál èleted igen nehéz súlyaiból. 
+Minden jót kívánok Neked a magánèleted mérföldköveihez is! </p>
+                <div class="author">Hálás szívvel, Ancsi</div>
+            </div>
+
+            <div class="testimonial-box">
+                <h4>Kifogyhatatlan érdeklődés!</h4>
+                <p>Nagyon szeretem, ahogy Adél oktat. Végig fenntartja a figyelmet és nyitott minden kérdésre.</p>
+                <div class="author">F. Anikó – Székesfehérvár</div>
             </div>
 
         </div>
@@ -1223,7 +1251,7 @@ function openPerinatalisPackagePdf() { window.open('pdf/perinatgyasz.pdf'); }
 </div>
 
 <style>
-/* TELJES KÖZÉPRE ZÁRÁS */
+/* KÖZÉPRE IGAZÍTÁS */
 #testimonials-wrapper{
     width:100%;
     display:flex;
@@ -1238,19 +1266,14 @@ function openPerinatalisPackagePdf() { window.open('pdf/perinatgyasz.pdf'); }
     text-align:center;
 }
 
-/* Cím */
-.title-area{
-    margin-bottom:40px;
-}
-
-/* Kártyák */
+/* Kisebb, elegánsabb kártyák */
 .testimonial-box{
-    background:#fff;
+    background:#ffffff;
     padding:22px;
     border-radius:10px;
     box-shadow:0 6px 18px rgba(0,0,0,0.06);
     margin:10px auto;
-    max-width:600px;
+    max-width:650px;
 }
 
 .testimonial-box h4{
@@ -1262,6 +1285,7 @@ function openPerinatalisPackagePdf() { window.open('pdf/perinatgyasz.pdf'); }
     font-size:14px;
     font-style:italic;
     color:#444;
+    line-height:1.6;
 }
 
 .author{
@@ -1283,6 +1307,7 @@ function openPerinatalisPackagePdf() { window.open('pdf/perinatgyasz.pdf'); }
     height:40px;
     font-size:20px !important;
     margin:0 10px;
+    transition:0.3s;
 }
 
 .testi-carousel .owl-nav button:hover{
@@ -1311,6 +1336,7 @@ $(document).ready(function(){
 </script>
 
 <!-- ================== VÉGE ================== -->
+
 
 
 <div id="blog" class="section wb pb-0">
