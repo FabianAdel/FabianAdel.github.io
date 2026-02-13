@@ -73,6 +73,51 @@ ted <!DOCTYPE html>
 </script>
 <body>
 
+    <!-- MailerLite Universal -->
+<script>
+(function(w,d,e,u,f,l,n){
+  w[f]=w[f]||function(){(w[f].q=w[f].q||[]).push(arguments);};
+  l=d.createElement(e);
+  l.async=1;
+  l.src=u;
+  n=d.getElementsByTagName(e)[0];
+  n.parentNode.insertBefore(l,n);
+})(window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+
+ml('account', '2094197');
+</script>
+<!-- End MailerLite Universal -->
+
+
+<!-- Popup trigger script -->
+<script>
+(function() {
+
+  function initMailerLiteButtons() {
+
+    document.addEventListener("click", function(e) {
+      var trigger = e.target.closest(".ml-popup-trigger");
+      if (!trigger) return;
+
+      e.preventDefault();
+
+      if (typeof ml === "function") {
+        ml('show', 'MxKWIV', true);
+      }
+    });
+
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initMailerLiteButtons);
+  } else {
+    initMailerLiteButtons();
+  }
+
+})();
+</script>
+
+
 
     <!-- LOADER -->
     <div id="preloader">
