@@ -302,9 +302,9 @@ Saját tapasztalati tudásom a családon belüli erőszak, az agresszió, a gyer
             align-items: center !important;
             justify-content: center !important;
         ">✕</button>
-<!-- FIX SÁV MAILERLITE-AL – vékonyabb dizájn, X a sávhoz -->
+<!-- FIX SÁV MAILERLITE-AL – kompakt egy sor -->
 <style>
-/* Fix sáv alap – vékonyabb sáv */
+/* Fix sáv alap – teljesen vékony */
 #ml-fixed-bottom {
   position: fixed;
   bottom: 0;
@@ -314,21 +314,21 @@ Saját tapasztalati tudásom a családon belüli erőszak, az agresszió, a gyer
   z-index: 999999;
   box-shadow: 0 -4px 15px rgba(0,0,0,0.2);
   font-family: Arial, sans-serif;
-  transition: transform 0.3s ease, opacity 0.3s ease;
   display: flex;
   justify-content: center;
-  padding: 10px 0;
+  padding: 8px 0;
 }
 
-/* Sáv belső tartalom */
+/* Sáv belső tartalom – egy sorban */
 #ml-fixed-inner {
   max-width: 480px;
   width: 100%;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 10px;
+  justify-content: space-between;
+  gap: 12px;
   position: relative;
+  padding: 0 12px;
 }
 
 /* Szöveg */
@@ -336,7 +336,7 @@ Saját tapasztalati tudásom a családon belüli erőszak, az agresszió, a gyer
   font-size: 16px;
   font-weight: bold;
   color: #333;
-  text-align: center;
+  white-space: nowrap;
 }
 
 /* Feliratkozás gomb */
@@ -344,7 +344,7 @@ Saját tapasztalati tudásom a családon belüli erőszak, az agresszió, a gyer
   background-color: #f48fb1;
   color: #fff;
   border: none;
-  padding: 10px 20px;
+  padding: 6px 18px;
   border-radius: 20px;
   font-size: 14px;
   cursor: pointer;
@@ -355,17 +355,15 @@ Saját tapasztalati tudásom a családon belüli erőszak, az agresszió, a gyer
 }
 
 /* Bezáró X a sávhoz */
-#ml-fixed-close {
-  position: absolute;
-  top: 6px;
-  right: 10px;
-  font-size: 24px;
+#ml-fixed-hide {
+  font-size: 20px;
   font-weight: bold;
   cursor: pointer;
   color: #f06292;
+  margin-left: 8px;
   transition: color 0.2s ease;
 }
-#ml-fixed-close:hover {
+#ml-fixed-hide:hover {
   color: #ff80ab;
 }
 
@@ -373,7 +371,7 @@ Saját tapasztalati tudásom a családon belüli erőszak, az agresszió, a gyer
 #ml-fixed-form {
   width: 100%;
   max-width: 480px;
-  margin-top: 10px;
+  margin-top: 8px;
   display: none;
   transition: max-height 0.3s ease;
 }
@@ -386,7 +384,7 @@ Saját tapasztalati tudásom a családon belüli erőszak, az agresszió, a gyer
   <div id="ml-fixed-inner">
     <div id="ml-fixed-text">Nem szeretnél lemaradni a képzésekről?</div>
     <button id="ml-fixed-toggle">Feliratkozás</button>
-    <div id="ml-fixed-close">×</div> <!-- X a sáv bezárásához -->
+    <div id="ml-fixed-hide">×</div>
 
     <div id="ml-fixed-form">
       <!-- MailerLite Script -->
@@ -408,19 +406,19 @@ Saját tapasztalati tudásom a családon belüli erőszak, az agresszió, a gyer
 <script>
 const toggleBtn = document.getElementById('ml-fixed-toggle');
 const formDiv = document.getElementById('ml-fixed-form');
-const closeBtn = document.getElementById('ml-fixed-close');
-const fixedBottom = document.getElementById('ml-fixed-bottom');
+const hideBtn = document.getElementById('ml-fixed-hide');
 
 // Feliratkozás gomb megnyitja az űrlapot
 toggleBtn.onclick = () => {
   formDiv.classList.add('active');
 };
 
-// Bezáró X a fix sávhoz
-closeBtn.onclick = () => {
-  fixedBottom.style.display = 'none';
+// X elrejti a teljes sávot
+hideBtn.onclick = () => {
+  document.getElementById('ml-fixed-bottom').style.display = 'none';
 };
 </script>
+
 
 
     </div>
