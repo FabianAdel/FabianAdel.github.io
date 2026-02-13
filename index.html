@@ -73,62 +73,77 @@ ted <!DOCTYPE html>
 </script>
 <body>
 
-<!-- MailerLite Universal -->
 <script>
 (function(w,d,e,u,f,l,n){
   w[f]=w[f]||function(){(w[f].q=w[f].q||[]).push(arguments);};
   l=d.createElement(e); l.async=1; l.src=u;
   n=d.getElementsByTagName(e)[0]; n.parentNode.insertBefore(l,n);
 })(window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
-
 ml('account', '2094197');
 </script>
 
-<!-- Force popup on every page load -->
 <script>
 (function() {
   function forcePopup() {
     if (typeof ml === "function") {
-      ml('show', 'MxKWIV', true); // true = force show
+      ml('show', 'MxKWIV', true); 
 
-      // Amikor a popup megjelenik, testreszabjuk
       ml('on', 'popup:open', function(popup) {
-        const popupEl = popup.el; // a popup DOM eleme
+        // A teljes külső konténer (ez felel a pozícióért)
+        const wrapper = popup.el; 
+        // A tényleges űrlap doboza
+        const formBox = popup.el.querySelector('.ml-subscribe-form'); 
 
-        // Kompakt méret és stílus
-        popupEl.style.maxWidth = '420px';
-        popupEl.style.width = '90%';
-        popupEl.style.padding = '20px';
-        popupEl.style.borderRadius = '12px';
-        popupEl.style.boxShadow = '0 8px 30px rgba(0,0,0,0.25)';
+        if (wrapper) {
+            wrapper.style.display = 'flex';
+            wrapper.style.alignItems = 'center';
+            wrapper.style.justifyContent = 'center';
+            wrapper.style.zIndex = '999999';
+        }
 
-        // X nagyobb és látható
-        const closeBtn = popupEl.querySelector('.ml-popup-close');
+        if (formBox) {
+          // Kompakt méret beállítása
+          formBox.style.maxWidth = '400px'; 
+          formBox.style.width = '90%';
+          formBox.style.maxHeight = '90vh'; 
+          formBox.style.overflowY = 'auto';
+          formBox.style.borderRadius = '15px';
+          formBox.style.position = 'relative'; // Az X gomb viszonyításához
+          formBox.style.margin = '0 auto'; 
+          formBox.style.boxShadow = '0 10px 40px rgba(0,0,0,0.3)';
+        }
+
+        // Az X gomb keresése és stílusozása
+        // A MailerLite több különböző osztálynevet is használhat, ezért mindet keressük
+        const closeBtn = popup.el.querySelector('.ml-popup-close-button') || 
+                         popup.el.querySelector('.close') || 
+                         popup.el.querySelector('.ml-popup-close');
+
         if (closeBtn) {
-          closeBtn.style.fontSize = '28px';
-          closeBtn.style.width = '32px';
-          closeBtn.style.height = '32px';
-          closeBtn.style.top = '12px';
-          closeBtn.style.right = '12px';
-          closeBtn.style.color = '#f06292';
+          closeBtn.style.display = 'block';
+          closeBtn.style.visibility = 'visible';
+          closeBtn.style.opacity = '1';
+          closeBtn.style.color = '#333'; 
+          closeBtn.style.fontSize = '30px';
+          closeBtn.style.fontWeight = 'bold';
+          closeBtn.style.top = '10px';
+          closeBtn.style.right = '15px';
+          closeBtn.style.cursor = 'pointer';
+          closeBtn.style.position = 'absolute';
+          closeBtn.style.zIndex = '1000000';
+          closeBtn.innerHTML = '×'; // Biztosítjuk, hogy legyen benne egy X karakter
         }
       });
-
     } else {
       setTimeout(forcePopup, 300);
     }
   }
 
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", function() {
-      setTimeout(forcePopup, 800);
-    });
-  } else {
-    setTimeout(forcePopup, 800);
-  }
+  window.addEventListener('load', function() {
+    setTimeout(forcePopup, 1000);
+  });
 })();
 </script>
-
 
 
 
