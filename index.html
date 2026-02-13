@@ -88,7 +88,9 @@ ml('account', '2094197');
       ml('show', 'MxKWIV', true); 
 
       ml('on', 'popup:open', function(popup) {
+        // A teljes külső konténer (ez felel a pozícióért)
         const wrapper = popup.el; 
+        // A tényleges űrlap doboza
         const formBox = popup.el.querySelector('.ml-subscribe-form'); 
 
         if (wrapper) {
@@ -99,17 +101,19 @@ ml('account', '2094197');
         }
 
         if (formBox) {
+          // Kompakt méret beállítása
           formBox.style.maxWidth = '400px'; 
           formBox.style.width = '90%';
           formBox.style.maxHeight = '90vh'; 
           formBox.style.overflowY = 'auto';
           formBox.style.borderRadius = '15px';
-          formBox.style.position = 'relative'; 
+          formBox.style.position = 'relative'; // Az X gomb viszonyításához
           formBox.style.margin = '0 auto'; 
           formBox.style.boxShadow = '0 10px 40px rgba(0,0,0,0.3)';
-          // Itt NEM változtatunk a belső paddingen, marad a dizájnod!
         }
 
+        // Az X gomb keresése és stílusozása
+        // A MailerLite több különböző osztálynevet is használhat, ezért mindet keressük
         const closeBtn = popup.el.querySelector('.ml-popup-close-button') || 
                          popup.el.querySelector('.close') || 
                          popup.el.querySelector('.ml-popup-close');
@@ -118,17 +122,15 @@ ml('account', '2094197');
           closeBtn.style.display = 'block';
           closeBtn.style.visibility = 'visible';
           closeBtn.style.opacity = '1';
-          closeBtn.style.color = '#ffffff'; // FEHÉR legyen, mert a sötét háttéren lesz
-          closeBtn.style.fontSize = '35px';
-          closeBtn.style.fontWeight = '300';
-          // KÍVÜLRE HELYEZÉS:
-          closeBtn.style.position = 'fixed'; // A képernyőhöz rögzítjük a doboz sarkához képest
-          closeBtn.style.top = '20px';
-          closeBtn.style.right = '20px';
+          closeBtn.style.color = '#333'; 
+          closeBtn.style.fontSize = '30px';
+          closeBtn.style.fontWeight = 'bold';
+          closeBtn.style.top = '10px';
+          closeBtn.style.right = '15px';
           closeBtn.style.cursor = 'pointer';
-          closeBtn.style.zIndex = '1000001';
-          closeBtn.style.textShadow = '0 0 10px rgba(0,0,0,0.5)'; // Hogy látszódjon ha világos a háttér
-          closeBtn.innerHTML = '×'; 
+          closeBtn.style.position = 'absolute';
+          closeBtn.style.zIndex = '1000000';
+          closeBtn.innerHTML = '×'; // Biztosítjuk, hogy legyen benne egy X karakter
         }
       });
     } else {
