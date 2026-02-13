@@ -1178,109 +1178,154 @@ function openSzuleszetPackagePdf() { window.open('pdf/dulatematika1.pdf'); }
 function openPerinatalisPackagePdf() { window.open('pdf/perinatgyasz.pdf'); }
 </script>
 
-<div id="testimonials" class="section lb" style="padding: 40px 0;">
-    <div class="container-fluid">
-        <div class="section-title text-center">
+<!-- ================== AJÁNLÁSOK SZEKCIÓ – TELJES BLOKK ================== -->
+
+<!-- jQuery (ha már be van töltve, ezt törölheted) -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Owl Carousel -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+<div id="testimonials" style="padding:50px 0; background:#f9f9f9;">
+    <div style="max-width:900px; margin:0 auto;">
+
+        <div style="text-align:center; margin-bottom:40px;">
             <h3>Ajánlások</h3>
-            <p>A weboldalon látható vélemények értékelés bekérő szabályzat alapján lettek hozzájárulással feltüntetve. Köszönöm szépen! 😊🙏</p>
+            <p>
+                A weboldalon látható vélemények hozzájárulással kerültek feltüntetésre.
+                Köszönöm szépen az összes fantasztikus visszajelzést! 😊🙏
+            </p>
         </div>
 
-        <div class="row">
-            <div class="col-md-12">
-                <div class="testi-carousel owl-carousel owl-theme">
-                    
-                    <div class="testimonial clearfix">
-                        <div class="desc">
-                            <h3><i class="fa fa-quote-left"></i> Szuper vagy!</h3>
-                            <p class="lead">Szeretném megköszönni a képzést, nagyon sokat tanultam, sok új infót kaptam! Szuper vagy, nagyon jó, hogy át mered adni a tudásod...</p>
-                        </div>
-                        <div class="testi-meta">
-                            <h4>E. Krisztina <small>- Budapest</small></h4>
-                        </div>
-                    </div>
+        <div class="testi-carousel owl-carousel owl-theme">
 
-                    <div class="testimonial clearfix">
-                        <div class="desc">
-                            <h3><i class="fa fa-quote-left"></i> Gyakorlatias tudásanyag!</h3>
-                            <p class="lead">A tanfolyam csak 3 napos, de ahhoz képest sok használható, gyakorlatias tudásanyagot kaptunk. Az oktató személyisége rendkívül inspiráló.</p>
-                        </div>
-                        <div class="testi-meta">
-                            <h4>Dr. M Zita, pszichiáter <small>- Zalaegerszeg</small></h4>
-                        </div>
-                    </div>
+            <div class="testimonial-box">
+                <h4>Szuper vagy!</h4>
+                <p>
+                    Szeretném megköszönni a képzést, nagyon sokat tanultam, sok új infót kaptam!
+                    Szuper vagy, nagyon jó, hogy át mered adni a tudásod...
+                </p>
+                <div class="author">E. Krisztina – Budapest</div>
+            </div>
 
-                    <div class="testimonial clearfix">
-                        <div class="desc">
-                            <h3><i class="fa fa-quote-left"></i> Sokkal többet kaptam!</h3>
-                            <p class="lead">Sokkal többet kaptam a képzés során, mint amire számítottam.</p>
-                        </div>
-                        <div class="testi-meta">
-                            <h4>dr. F.Edina <small>- Szeged</small></h4>
-                        </div>
-                    </div>
+            <div class="testimonial-box">
+                <h4>Gyakorlatias tudásanyag!</h4>
+                <p>
+                    A tanfolyam csak 3 napos, de sok használható, gyakorlatias tudásanyagot kaptunk.
+                    Az oktató személyisége rendkívül inspiráló.
+                </p>
+                <div class="author">Dr. M Zita – Zalaegerszeg</div>
+            </div>
 
-                    <div class="testimonial clearfix">
-                        <div class="desc">
-                            <h3><i class="fa fa-quote-left"></i> Mindent lehet hasznosítani!</h3>
-                            <p class="lead">Nem gondoltam volna, hogy ennyi összefüggés és tudományosság van a meditáció mögött. Nagyon értelmesen el volt magyarázva.</p>
-                        </div>
-                        <div class="testi-meta">
-                            <h4>F. Anna <small>- Debrecen</small></h4>
-                        </div>
-                    </div>
+            <div class="testimonial-box">
+                <h4>Sokkal többet kaptam!</h4>
+                <p>
+                    Sokkal többet kaptam a képzés során, mint amire számítottam.
+                </p>
+                <div class="author">dr. F. Edina – Szeged</div>
+            </div>
 
-                </div></div>
+            <div class="testimonial-box">
+                <h4>Mindent lehet hasznosítani!</h4>
+                <p>
+                    Nem gondoltam volna, hogy ennyi tudományosság van a meditáció mögött.
+                    Nagyon értelmesen el volt magyarázva.
+                </p>
+                <div class="author">F. Anna – Debrecen</div>
+            </div>
+
+            <div class="testimonial-box">
+                <h4>Kellemes csalódás!</h4>
+                <p>
+                    Komfortzónán túli volt, de nagyon kellemesen csalódtam.
+                    Fantasztikus a tudásod!
+                </p>
+                <div class="author">Ancsi</div>
+            </div>
+
         </div>
     </div>
 </div>
 
 <style>
-    .testi-carousel.owl-theme .owl-nav {
-        margin-top: 25px !important;
-        text-align: center !important;
-        display: block !important; /* Biztosítja, hogy látható legyen */
-    }
+/* Kártyák kisebb, elegánsabb */
+.testimonial-box{
+    background:#ffffff;
+    padding:22px;
+    border-radius:10px;
+    box-shadow:0 6px 18px rgba(0,0,0,0.06);
+    text-align:center;
+    margin:10px;
+}
 
-    .testi-carousel.owl-theme .owl-nav [class*='owl-'] {
-        background: #d4af37 !important; /* Arany háttér */
-        color: #fff !important; /* Fehér nyíl */
-        border-radius: 50% !important;
-        width: 50px !important;
-        height: 50px !important;
-        line-height: 46px !important;
-        text-align: center !important;
-        font-size: 20px !important;
-        display: inline-block !important;
-        margin: 0 15px !important;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.2) !important;
-        cursor: pointer !important;
-    }
+.testimonial-box h4{
+    font-size:17px;
+    margin-bottom:12px;
+}
 
-    .testi-carousel.owl-theme .owl-nav [class*='owl-']:hover {
-        background: #333 !important; /* Sötétítés hoverre */
-    }
+.testimonial-box p{
+    font-size:14px;
+    font-style:italic;
+    color:#444;
+    line-height:1.6;
+}
 
-    #testimonials { padding-bottom: 60px !important; }
-    .desc p.lead { font-style: italic; color: #444; }
+.author{
+    margin-top:12px;
+    font-weight:600;
+    font-size:13px;
+}
+
+/* Arany nyilak */
+.testi-carousel .owl-nav{
+    margin-top:25px;
+    text-align:center;
+}
+
+.testi-carousel .owl-nav button{
+    background:#d4af37 !important;
+    color:#fff !important;
+    border-radius:50% !important;
+    width:40px;
+    height:40px;
+    font-size:20px !important;
+    margin:0 12px;
+    transition:0.3s;
+}
+
+.testi-carousel .owl-nav button:hover{
+    background:#b8962e !important;
+}
+
+.testi-carousel .owl-dots{
+    margin-top:15px;
+}
 </style>
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <script>
-    $(document).ready(function(){
-        $(".testi-carousel").owlCarousel({
-            loop: true,
-            margin: 30,
-            nav: true, // Bekapcsolja a nyilakat
-            dots: true, // Bekapcsolja a pöttyöket alul
-            autoplay: true,
-            navText: ["<i class='fa fa-chevron-left'></i>", "<i class='fa fa-chevron-right'></i>"], // FontAwesome ikonok
-            responsive: {
-                0: { items: 1 },
-                600: { items: 1 },
-                1000: { items: 1 }
-            }
-        });
+<script>
+$(document).ready(function(){
+    $(".testi-carousel").owlCarousel({
+        loop:true,
+        margin:15,
+        nav:true,
+        dots:true,
+        autoplay:true,
+        autoplayTimeout:5000,
+        smartSpeed:700,
+        navText:["‹","›"],
+        responsive:{
+            0:{items:1},
+            600:{items:1},
+            1000:{items:1}
+        }
     });
+});
 </script>
+
+<!-- ================== VÉGE ================== -->
+
 <div id="blog" class="section wb pb-0">
     <div class="container-fluid">
         <div class="section-title text-center">
