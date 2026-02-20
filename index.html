@@ -1440,7 +1440,29 @@ $(document).ready(function(){
             </div></div></div>
 </div>
     
-
+<style>
+  /* Ez a kód meggyógyítja a szétcsúszást */
+  @media (max-width: 767px) {
+    #blog h5 { 
+      word-break: break-all !important; /* Itt töri el az emailt, hogy ne tolja el az oldalt */
+      font-size: 14px !important;
+    }
+    .footer-links a { 
+      display: block !important; /* Egymás alá rakja a linkeket mobilon */
+      margin: 10px 0 !important;
+      text-align: center;
+    }
+    .footer-left {
+      float: none !important;
+      width: 100% !important;
+      text-align: center;
+    }
+    /* Biztosítja, hogy az oldal ne legyen szélesebb a telefonnál */
+    body, html {
+      overflow-x: hidden !important;
+    }
+  }
+</style>
     <a href="#" id="scroll-to-top" class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
     <!-- ALL JS FILES -->
     <script src="js/all.js"></script>
