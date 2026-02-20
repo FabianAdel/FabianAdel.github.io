@@ -1393,6 +1393,32 @@ $(document).ready(function(){
                 </div> 
             </div></div></div>
 </div>
+    <style>
+  /* Mobilbarát kényszerítő kód */
+  @media (max-width: 767px) {
+    /* Megakadályozza, hogy az e-mail cím szétnyomja az oldalt */
+    h5, p, a { 
+      word-wrap: break-word !important; 
+      overflow-wrap: break-word !important; 
+    }
+    /* Középre igazít mindent mobilon */
+    .section, .footer-links, .footer-left, .footer-distributed {
+      text-align: center !important;
+      padding-left: 10px !important;
+      padding-right: 10px !important;
+    }
+    /* A linkek ne egymás mellett, hanem egymás alatt legyenek, hogy elférjenek */
+    .footer-links a {
+      display: block !important;
+      margin: 10px 0 !important;
+    }
+    /* Eltünteti a vízszintes csúszkát */
+    body, html {
+      overflow-x: hidden !important;
+      width: 100% !important;
+    }
+  }
+</style>
 
     <a href="#" id="scroll-to-top" class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
     <!-- ALL JS FILES -->
