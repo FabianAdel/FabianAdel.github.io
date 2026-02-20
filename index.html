@@ -1277,6 +1277,29 @@ function openImagalapPackagePdf() { window.open('pdf/imaginaciotematika.pdf'); }
 </script>
 <!-- ================== AJÁNLÁSOK – MOBILBARÁT JAVÍTOTT ================== -->
 
+    <style>
+  /* Csak az alatta lévő szekcióra vonatkozó mobil javítás */
+  @media (max-width: 767px) {
+    #blog { 
+      padding: 30px 15px !important; 
+      text-align: center !important;
+    }
+    #blog h5, #blog p, #blog a { 
+      word-wrap: break-word !important; 
+      word-break: break-all !important; 
+      overflow-wrap: break-word !important;
+    }
+    .footer-links a { 
+      display: block !important; 
+      margin: 10px 0 !important; 
+    }
+    .footer-left, .footer-distributed {
+      float: none !important;
+      width: 100% !important;
+      text-align: center !important;
+    }
+  }
+</style>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
 
@@ -1360,6 +1383,29 @@ $(document).ready(function(){
     }); 
 }); 
 </script> 
+    <style>
+  /* Csak az alatta lévő szekcióra vonatkozó mobil javítás */
+  @media (max-width: 767px) {
+    #blog { 
+      padding: 30px 15px !important; 
+      text-align: center !important;
+    }
+    #blog h5, #blog p, #blog a { 
+      word-wrap: break-word !important; 
+      word-break: break-all !important; 
+      overflow-wrap: break-word !important;
+    }
+    .footer-links a { 
+      display: block !important; 
+      margin: 10px 0 !important; 
+    }
+    .footer-left, .footer-distributed {
+      float: none !important;
+      width: 100% !important;
+      text-align: center !important;
+    }
+  }
+</style>
 
 <div id="blog" class="section wb pb-0"> 
     <div class="container-fluid"> 
@@ -1393,32 +1439,7 @@ $(document).ready(function(){
                 </div> 
             </div></div></div>
 </div>
-    <style>
-  /* Mobilbarát kényszerítő kód */
-  @media (max-width: 767px) {
-    /* Megakadályozza, hogy az e-mail cím szétnyomja az oldalt */
-    h5, p, a { 
-      word-wrap: break-word !important; 
-      overflow-wrap: break-word !important; 
-    }
-    /* Középre igazít mindent mobilon */
-    .section, .footer-links, .footer-left, .footer-distributed {
-      text-align: center !important;
-      padding-left: 10px !important;
-      padding-right: 10px !important;
-    }
-    /* A linkek ne egymás mellett, hanem egymás alatt legyenek, hogy elférjenek */
-    .footer-links a {
-      display: block !important;
-      margin: 10px 0 !important;
-    }
-    /* Eltünteti a vízszintes csúszkát */
-    body, html {
-      overflow-x: hidden !important;
-      width: 100% !important;
-    }
-  }
-</style>
+    
 
     <a href="#" id="scroll-to-top" class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
     <!-- ALL JS FILES -->
