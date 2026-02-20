@@ -1278,6 +1278,34 @@ function openImagalapPackagePdf() { window.open('pdf/imaginaciotematika.pdf'); }
 
 <!-- ================== AJÁNLÁSOK TELJES BLOKK – JAVÍTVA ================== -->
 
+    <style>
+/* Helyfüggetlen mobilbarát CSS a Vélemények + Kapcsolat blokkokhoz */
+@media (max-width: 767px) {
+    /* Carousel mobilra optimalizálva */
+    .testi-carousel .owl-stage {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    .testimonial-box {
+        max-width: 90%;   /* kisebb kártyák mobilon */
+        margin: 10px auto; /* középre */
+    }
+
+    /* Kapcsolat rész mobilra optimalizálva */
+    #blog {
+        margin-top: 20px;
+        padding: 0 10px;   /* kis oldalsó padding, ne lógjon ki */
+        overflow-x: hidden; /* semmi ne lógjon ki oldalra */
+    }
+
+    #blog p, #blog h5 {
+        word-wrap: break-word;
+        overflow-wrap: break-word; /* hosszú email, szöveg ne lógjon ki */
+    }
+}
+</style>
+
 <!-- jQuery (ha már be van töltve, ezt törölheted) -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
