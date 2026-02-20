@@ -1275,11 +1275,10 @@ function openSzuleszetPackagePdf() { window.open('pdf/dulatematika1.pdf'); }
 function openPerinatalisPackagePdf() { window.open('pdf/perinatgyasz.pdf'); }
 function openImagalapPackagePdf() { window.open('pdf/imaginaciotematika.pdf'); }
 </script>
+<!-- ================== AJÁNLÁSOK – MOBILBARÁT JAVÍTOTT ================== -->
 
-<!-- ================== AJÁNLÁSOK TELJES BLOKK – JAVÍTVA ================== -->
-
-    <style>
-/* Helyfüggetlen mobilbarát CSS a Vélemények + Kapcsolat blokkokhoz */
+<!-- Mobil-specifikus CSS – bárhova a <head> vagy HTML elején -->
+<style>
 @media (max-width: 767px) {
     /* Carousel mobilra optimalizálva */
     .testi-carousel .owl-stage {
@@ -1304,19 +1303,11 @@ function openImagalapPackagePdf() { window.open('pdf/imaginaciotematika.pdf'); }
         overflow-wrap: break-word; /* hosszú email, szöveg ne lógjon ki */
     }
 }
+</style>
 
-
-<!-- jQuery (ha már be van töltve, ezt törölheted) -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-<!-- Owl Carousel -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"/>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-
+<!-- AJÁNLÁSOK / CAROUSEL -->
 <div id="testimonials-wrapper">
     <div id="testimonials">
-
         <div class="title-area">
             <h3>Ajánlások</h3>
             <p>
@@ -1326,187 +1317,62 @@ function openImagalapPackagePdf() { window.open('pdf/imaginaciotematika.pdf'); }
         </div>
 
         <div class="testi-carousel owl-carousel owl-theme">
-
             <div class="testimonial-box">
                 <h4>Szuper vagy!</h4>
                 <p>Szeretném megköszönni a képzést, nagyon sokat tanultam, sok új infót kaptam! Szuper vagy, nagyon jó, hogy át mered adni a tudásod...</p>
                 <div class="author">Együd Krisztina, Jógastúdió tulajdonos</div>
             </div>
-
             <div class="testimonial-box">
                 <h4>Gyakorlatias tudásanyag!</h4>
                 <p>A tanfolyam csak 3 napos, de sok használható tudásanyagot kaptunk. Az oktató személyisége rendkívül inspiráló.</p>
-                <div class="author">Dr. Muszil Zita, pszichiáter </div>
+                <div class="author">Dr. Muszil Zita, pszichiáter</div>
             </div>
-
             <div class="testimonial-box">
                 <h4>Sokkal többet kaptam!</h4>
                 <p>Sokkal többet kaptam a képzés során, mint amire számítottam.</p>
-                <div class="author">Edina </div>
+                <div class="author">Edina</div>
             </div>
-
             <div class="testimonial-box">
                 <h4>Mindent lehet hasznosítani!</h4>
                 <p>Nem gondoltam volna, hogy ennyi összefüggés és tudományosság van a meditáció mögött. Nagyon értelmesen el volt magyarázva.</p>
-                <div class="author"> Anna </div>
+                <div class="author">Anna</div>
             </div>
-
             <div class="testimonial-box">
                 <h4>Jó hangulat!</h4>
                 <p>Szuper volt a tananyag, az egész dinamika és hangulat. Jól éreztem magam Veled és a csajokkal. 🤗</p>
                 <div class="author">B. Anita</div>
             </div>
-
             <div class="testimonial-box">
                 <h4>Kellemes csalódás!</h4>
-                <p> Bár nagyon hívott ez a tanfolyam, úgy jelentkeztem, hogy azért komfortzónán túli volt nekem ☺️, de nagyon kellemesen csalódtam. Még magamban is. 🙃
-Fantasztikus a tudásod és az hogy ilyen erőt és másoknak is való mentőövet kovàcsoltál èleted igen nehéz súlyaiból. 
-Minden jót kívánok Neked a magánèleted mérföldköveihez is! </p>
+                <p>Bár nagyon hívott ez a tanfolyam, úgy jelentkeztem, hogy azért komfortzónán túli volt nekem ☺️, de nagyon kellemesen csalódtam. Még magamban is. 🙃 Fantasztikus a tudásod és az, hogy ilyen erőt és másoknak is való mentőövet kovàcsoltál életed igen nehéz súlyaiból. Minden jót kívánok Neked a magánéleted mérföldköveihez is!</p>
                 <div class="author">Hálás szívvel, Ancsi</div>
             </div>
-
             <div class="testimonial-box">
                 <h4>Kifogyhatatlan érdeklődés!</h4>
-                <p>Nagyon szeretem, ahogy Adél oktat. Végig fenntartja a figyelmet és nyitott minden kérdésre.Lehetőséget és teret ad a megértésre és a gyakorlásra.
-Köszönöm szépen a lehetőséget, öröm volt az oktatás minden napja</p>
-                <div class="author">F. Anikó – </div>
+                <p>Nagyon szeretem, ahogy Adél oktat. Végig fenntartja a figyelmet és nyitott minden kérdésre. Lehetőséget és teret ad a megértésre és a gyakorlásra. Köszönöm szépen a lehetőséget, öröm volt az oktatás minden napja.</p>
+                <div class="author">F. Anikó</div>
             </div>
-
         </div>
-
     </div>
 </div>
 
-<style>
-/* KÖZÉPRE IGAZÍTÁS */
-#testimonials-wrapper{
-    width:100%;
-    display:flex;
-    justify-content:center;
-    padding:60px 0;
-    background:#f9f9f9;
-}
-
-#testimonials{
-    width:100%;
-    max-width:900px;
-    text-align:center;
-}
-
-/* Kisebb, elegánsabb kártyák */
-.testimonial-box{
-    background:#ffffff;
-    padding:22px;
-    border-radius:10px;
-    box-shadow:0 6px 18px rgba(0,0,0,0.06);
-    margin:10px auto;
-    max-width:650px;
-}
-
-.testimonial-box h4{
-    font-size:17px;
-    margin-bottom:12px;
-}
-
-.testimonial-box p{
-    font-size:14px;
-    font-style:italic;
-    color:#444;
-    line-height:1.6;
-}
-
-.author{
-    margin-top:12px;
-    font-weight:600;
-    font-size:13px;
-}
-
-/* Arany nyilak */
-.testi-carousel .owl-nav{
-    margin-top:25px;
-}
-
-.testi-carousel .owl-nav button{
-    background:#d4af37 !important;
-    color:#fff !important;
-    border-radius:50% !important;
-    width:40px;
-    height:40px;
-    font-size:20px !important;
-    margin:0 10px;
-    transition:0.3s;
-}
-
-.testi-carousel .owl-nav button:hover{
-    background:#b8962e !important;
-}
-</style>
-
-<script>
-$(document).ready(function(){
-    $(".testi-carousel").owlCarousel({
-        loop:true,
-        margin:15,
-        nav:true,
-        dots:true,
-        autoplay:true,
-        autoplayTimeout:5000,
-        smartSpeed:700,
-        navText:["‹","›"],
-        responsive:{
-            0:{items:1},
-            600:{items:1},
-            1000:{items:1}
-        }
-    });
-});
-</script>
-
-<!-- ================== VÉGE ================== -->
-
-
-
+<!-- Kapcsolat rész -->
 <div id="blog" class="section wb pb-0">
     <div class="container-fluid">
         <div class="section-title text-center">
-            <h3>
-                Kapcsolat
-            </h3>
-        </div><!-- end title -->
-
-                    <h5>
-                       Konzultáció:fabianadel.info@gmail.com <p style="color:red;">(Jelenleg minden helyem betelt, új klienseket csak várandósság vagy szüléskísérés esetén tudok fogadni. Köszönöm a megértést!)</p>
- <p>
- <p>
-Képzésekkel kapcsolatban: kepzes@fabianadel.com
-                    </h5>
-                    <p>
-    
-
-<div class="copyrights">
-    <div class="container-fluid">
-        <div class="footer-distributed">
-            <div class="footer-left">
-                <p class="footer-links">
-                    <a href="#about">Rólam</a>
-                    <a href="#services">Segítségnyújtás</a>
-                    <a href="#pricing">Képzések</a>
-                    <a href="#testimonials">Ajánlások</a>
-                    <a href="#blog">Kapcsolat</a>
-                    <a href="pdf/Fabian Adel-Adatkezelesi tajekoztato.pdf">Adatkezelési tájékoztató</a>
-                    <a href="pdf/IMPRESSZUM.pdf">Impresszum</a>
-                    <a href="pdf/Értékelésbekérő és közzétételi szabályzat.docx">Értékelésbekérő és közzétételi szabályzat</a>
-                </p>
-                <p class="footer-company-name">All Rights Reserved. &copy; 2018<a href="#">Deluxe Interior</a>Design By
-                    :<a href="https://html.design/">html design</a></p>
-                    <span id="siteseal"><script async type="text/javascript" src="https://seal.godaddy.com/getSeal?sealID=cNzvVAcrlWZmFiLeXZnHCaBMmlBHwxvcNp6GFPgRZkrDIZvnE7XMkdOf8yiA"></script></span>
-
-                <p class="footer-company-name">Minden jog fenntartva. &copy; 2023-2026</p>
-                </div>
-            </div>
-        </div><!-- end container -->
-    </div><!-- end copyrights -->
-        </style>
+            <h3>Kapcsolat</h3>
+        </div>
+        <h5>
+            Konzultáció: fabianadel.info@gmail.com
+        </h5>
+        <p style="color:red;">
+            (Jelenleg minden helyem betelt, új klienseket csak várandósság vagy szüléskísérés esetén tudok fogadni. Köszönöm a megértést!)
+        </p>
+        <p>
+            Képzésekkel kapcsolatban: kepzes@fabianadel.com
+        </p>
+    </div>
+</div>
 
     <a href="#" id="scroll-to-top" class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
     <!-- ALL JS FILES -->
