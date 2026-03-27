@@ -920,6 +920,23 @@ Program megismerése
 <div class="card-row">
 
   <!-- Imaginatív kártya -->
+     <!-- Early Bird szalag -->
+  <div style="
+    position: absolute;
+    top: 15px;
+    right: -35px;
+    background: linear-gradient(45deg, #d4af37, #f9f295, #ab8e28);
+    color: #000;
+    padding: 5px 40px;
+    transform: rotate(45deg);
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    z-index: 10;">
+    Early Bird
+  </div>
+
   <div class="card-container" id="ImaginativPackageCard">
     <div class="card-header">
       <div class="card-title">
@@ -929,8 +946,27 @@ Program megismerése
       <div class="card-info">
        Két nyelvű FAR tanúsítványt és Nemzetközi tanúsítványt ad, Course Summaryvel.
       </div>
-      <div class="price-value"><span class="amount">498.990 Ft</span></div>
+       <!-- ÁR BLOKK -->
+    <div class="price-value" style="display: flex; flex-direction: column; align-items: center; gap: 5px;">
+      
+      <span style="
+        text-decoration: line-through;
+        color: #888;
+        font-size: 0.95em;
+        opacity: 0.8;">
+        498.990 Ft
+      </span>
+
+      <span class="amount" style="
+        color: #d4af37;
+        font-weight: 700;
+        font-size: 1.6em;
+        letter-spacing: 0.5px;">
+        423.990 Ft
+      </span>
+
     </div>
+  </div>
     <ul class="card-list">
       <li>Imagináció alapjai</li>
       <li>Tudattalan működése, értelmezése</li>
