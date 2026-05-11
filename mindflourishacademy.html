@@ -1,244 +1,386 @@
-<style>
-/* --- Összevont stílusok --- */
-.card-row { display: flex; flex-wrap: wrap; gap: 45px; justify-content: flex-start; margin-bottom: 40px; }
-.card-container { flex: 0 0 380px; max-width: 380px; background: #ffffff; border-radius: 14px; box-shadow: 0 8px 25px rgba(0,0,0,0.06); padding: 20px; display: flex; flex-direction: column; }
-.card-title { font-size: 1rem; font-weight: 600; margin-bottom: 4px; min-height: 2.5em; }
-.card-date { font-size: 0.85rem; color: slateblue; font-weight: 600; margin: 8px 0; }
-.card-info { font-size: 0.75rem; color: #555; margin-bottom: 10px; }
-.card-list { list-style: none; padding: 0; margin: 15px 0; font-size: 0.8rem; flex-grow: 1; }
-.card-list li { margin-bottom: 5px; padding-left: 14px; position: relative; }
-.card-list li::before { content: "•"; position: absolute; left: 0; color: #da44bb; }
-.card-buttons { display: flex; justify-content: flex-start; gap: 10px; margin-top: 10px; }
-.card-apply-btn { padding: 8px 18px; background: linear-gradient(135deg, #da44bb, #892cdc); color: #fff !important; text-decoration: none !important; font-weight: 600; font-size: 0.75rem; border-radius: 30px; display: inline-block; }
-.card-theme-btn { padding: 6px 16px; background: transparent; border: 1.5px solid #C86B8A; color: #C86B8A; border-radius: 30px; font-weight: 600; font-size: 0.7rem; cursor: pointer; transition: all 0.3s ease; }
-.card-theme-btn:hover { background-color: #C86B8A; color: #fff; }
-@keyframes blink-orange-purple-green { 0%, 50%, 100% { color: #9b59b6; border-color: #ff9900; } 25%, 75% { color: #28a745; border-color: #ffb84d; } }
-.early-bird-badge { background: linear-gradient(45deg, #d4af37, #f9f295, #ab8e28); color: #000; text-align: center; padding: 8px; border-radius: 4px; font-size: 13px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; box-shadow: 0 2px 10px rgba(212, 175, 55, 0.4); margin: 10px 0; border: 1px solid #ab8e28; }
+<!-- CÍMSOR ÉS JOGI NYILATKOZAT -->
+<div style="max-width: 1200px; margin: 0 auto; font-family: 'Playfair Display', serif;">
+    <h3 style="margin:10px 0; text-align:center; letter-spacing:1px; color: #2d5a27;">
+        ONLINE, ÉLŐ Képzések
+    </h3>
+    <p style="font-size:0.85rem; text-align:center; margin-top:20px; font-family: sans-serif; color: #555;">
+        A MindFlourish Academy™ képzései szerzői jogi védelem alatt állnak. A tartalom(név,tematika,tananyag,módszertan, felépítés és struktúra) engedély nélküli másolása vagy felhasználása jogi következményeket vonhat maga után.
+    </p>
 
-/* Ajánlások stílusa */
-#testimonials-wrapper{ width:100%; display:flex; justify-content:center; padding:60px 0; background:#f9f9f9; }
-#testimonials{ width:100%; max-width:900px; text-align:center; }
-.testimonial-box{ background:#ffffff; padding:22px; border-radius:10px; box-shadow:0 6px 18px rgba(0,0,0,0.06); margin:10px auto; max-width:650px; }
-.testimonial-box h4{ font-size:17px; margin-bottom:12px; }
-.testimonial-box p{ font-size:14px; font-style:italic; color:#444; line-height:1.6; }
-.author{ margin-top:12px; font-weight:600; font-size:13px; }
-.testi-carousel .owl-nav{ margin-top:25px; }
-.testi-carousel .owl-nav button{ background:#d4af37 !important; color:#fff !important; border-radius:50% !important; width:40px; height:40px; font-size:20px !important; margin:0 10px; transition:0.3s; }
-.testi-carousel .owl-nav button:hover{ background:#b8962e !important; }
-</style>
+    <h3 style="font-size:0.9rem; margin:15px 0; text-align:center; font-family: sans-serif; color: #4a6741;">
+        Felnőttképzési nyilvántartási szám: B/2023/000573 | IAOTH APT NUMBER: FR251031
+    </h3>
 
-<div class="card-row" style="margin-top: 20px;">
-    <div class="card-container" id="ImaginativPackageCard">
-        <div class="card-header">
-            <div class="card-title">©Imaginatív Személyiségfejlesztő Mentor (162 óra) (IAOTH által akkreditált)</div>
-            <div class="card-date">Új turnus 2026 Május 8- 2027.Június 18 ( két hetente péntek 8:30-12:30-ig) </div>
-            <div class="card-info">Két nyelvű FAR tanúsítványt és Nemzetközi tanúsítványt ad, Course Summaryvel.</div>
-        </div>
-        <div class="early-bird-badge">✨ Early Bird Kedvezmény ✨</div>
-        <ul class="card-list">
-            <li>Elsajátítod az magináció alapjait </li>
-            <li>Megtanulod a tudattalan működését és értelmezését</li>
-            <li>Kliensekkel való önálló imaginatív munkára leszel képes </li>
-            <li>Családterapeuta szakmai közreműködése </li>
-            <li>Rendszerszemléletű imaginációs konzultációkat vezetsz</li>
-            <li>50 óra kötelező saját élmény +10 óra mentorálásod van</li>
-            <li>Szupervíziók, esetmegbeszéléseid vannak</li>
-            <li>Etikai határvonalak, Etikai Kódex </li>
-            <li>Részletfizetési lehetőség</li>
-        </ul>
-        <div style="color: #3b82f6; font-size: 15px; font-weight: bold; text-align: center; margin: 15px 0;">498.990 Early Bird: 423.990 Ft</div>
-        <div class="card-buttons">
-            <a href="https://subscribepage.io/gxjAHk" target="_blank" class="card-apply-btn">© ISZM Jelentkezés</a>
-            <a href="https://subscribepage.io/0tEzQp" target="_blank" class="card-theme-btn">Tematika</a>
+    <div style="margin: 25px 0; text-align: center;">
+        <a href="https://iaoth.com/author/adel-fabian/" target="_blank" rel="noopener noreferrer">
+            <img src="uploads/logo" alt="IAOTH Accredited Training Provider" style="max-width: 280px; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(45, 90, 39, 0.15);">
+        </a>
+        <div style="margin: 20px 0; text-align: center; font-family: sans-serif; font-size: 0.9rem; color: #3e5c36;">
+            Képzéseink az IAOTH (International Association of Therapists) által akkreditáltak. Az IAOTH nem állami, hanem nemzetközi szakmai szervezet.
         </div>
     </div>
-    <div class="card-container" id="bevezetesPackageCard">
-        <div class="card-header">
+
+    <style>
+        .pricing-grid-fixed {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 35px;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .card-container {
+            flex: 0 1 360px;
+            background: #ffffff;
+            border-radius: 14px;
+            box-shadow: 0 8px 25px rgba(45, 90, 39, 0.08);
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #e8f0e6;
+            font-family: sans-serif;
+            transition: transform 0.3s ease;
+            margin-bottom: 10px;
+        }
+        
+        .card-container:hover {
+            transform: translateY(-5px);
+            border-color: #a8c69f;
+        }
+
+        .card-title {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            min-height: 3.5em;
+            line-height: 1.4;
+            color: #1b3a1a;
+        }
+
+        .card-date {
+            font-size: 0.82rem;
+            color: #4a7c44;
+            font-weight: 600;
+            margin: 10px 0;
+            background: #f0f7ef;
+            padding: 6px 10px;
+            border-radius: 6px;
+            display: block;
+        }
+
+        .card-info {
+            font-size: 0.72rem;
+            color: #666;
+            margin-bottom: 15px;
+            line-height: 1.4;
+            min-height: 3em;
+        }
+
+        .eb-banner {
+            background: linear-gradient(45deg, #d4af37, #f9f295, #ab8e28);
+            color: #000;
+            text-align: center;
+            padding: 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin: 10px 0;
+            border: 1px solid #ab8e28;
+        }
+
+        .card-list {
+            list-style: none;
+            padding: 0;
+            margin: 15px 0;
+            font-size: 0.78rem;
+            flex-grow: 1;
+        }
+
+        .card-list li {
+            margin-bottom: 7px;
+            padding-left: 18px;
+            position: relative;
+            line-height: 1.4;
+            color: #444;
+        }
+
+        .card-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #5ba350;
+            font-weight: bold;
+        }
+
+        .price-style {
+            color: #2d5a27;
+            font-size: 15px;
+            font-weight: bold;
+            text-align: center;
+            margin: 15px 0;
+            border-top: 1px solid #eee;
+            padding-top: 15px;
+        }
+
+        .card-buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: auto;
+        }
+
+        .card-apply-btn {
+            flex: 1.2;
+            padding: 10px;
+            background: linear-gradient(135deg, #5ba350, #2d5a27);
+            color: #fff !important;
+            text-decoration: none !important;
+            font-weight: 600;
+            font-size: 0.72rem;
+            border-radius: 30px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card-theme-btn {
+            flex: 0.8;
+            padding: 10px;
+            background: transparent;
+            border: 1.5px solid #5ba350;
+            color: #2d5a27;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 0.7rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .card-theme-btn:hover {
+            background-color: #5ba350;
+            color: #fff;
+        }
+    </style>
+
+    <div class="pricing-grid-fixed">
+
+        <!-- 1. ISZM -->
+        <div class="card-container">
+            <div class="card-title">©Imaginatív Személyiségfejlesztő Mentor-Depth-Oriented Imagination (162 óra) (IAOTH által akkreditált)</div>
+            <div class="card-date">Új turnus 2026 Május 8- 2027.Június 18 ( két hetente péntek 8:30-12:30-ig)</div>
+            <div class="card-info">Két nyelvű FAR tanúsítványt és Nemzetközi tanúsítványt ad, Course Summaryvel. Képzés létrejött: 2025 január</div>
+            <div class="eb-banner">✨ Early Bird Kedvezmény ✨</div>
+            <ul class="card-list">
+                <li>Elsajátítod az magináció alapjait</li>
+                <li>Megtanulod a tudattalan működését és értelmezését</li>
+                <li>Kliensekkel való önálló imaginatív munkára leszel képes</li>
+                <li>Családterapeuta szakmai közreműködése</li>
+                <li>Rendszerszemléletű imaginációs konzultációkat vezetsz</li>
+                <li>50 óra kötelező saját élmény +10 óra mentorálásod van</li>
+                <li>Szupervíziók, esetmegbeszéléseid vannak</li>
+                <li>Etikai határvonalak, Etikai Kódex</li>
+                <li>Részletfizetési lehetőség</li>
+            </ul>
+            <div class="price-style">498.990 Early Bird: 423.990 Ft</div>
+            <div class="card-buttons">
+                <a href="https://subscribepage.io/gxjAHk" target="_blank" class="card-apply-btn">© ISZM Jelentkezés</a>
+                <a href="https://subscribepage.io/0tEzQp" target="_blank" class="card-theme-btn">Tematika</a>
+            </div>
+        </div>
+
+        <!-- 2. Bevezetés -->
+        <div class="card-container">
             <div class="card-title">Meditációs alapok, idegrendszeri szabályozás és Wellbeing (🗣️ 🇭🇺/🇺🇸) (IAOTH által akkreditált)</div>
             <div class="card-date">Március 9 9:30-16:00</div>
-            <div class="card-info">Két nyelvű FAR tanúsítványt és Nemzetközi tanúsítványt ad, Course Summaryvel.</div>
+            <div class="card-info">Két nyelvű FAR tanúsítványt és Nemzetközi tanúsítványt ad, Course Summaryvel. Képzés létrejött: 2024</div>
+            <ul class="card-list">
+                <li>Megérted a stressz és paraszimpatikus idegrendszer kapcsolatát</li>
+                <li>Ismerni fogod a meditáció hatása az idegrendszerre</li>
+                <li>Több mint 10 stabilizáló technikt sajátítassz el</li>
+                <li>Traumatudatos szemléletű stabilizációt tanulsz</li>
+                <li>Neuroplaszticitás- és ezt elősegítő gyakorlatokat ismersz meg</li>
+                <li>Alkalmazhatod a Wellbeing és PERMA modell alapjait a segítői munkában</li>
+            </ul>
+            <div class="price-style">72.990 Ft</div>
+            <div class="card-buttons">
+                <a href="https://tally.so/r/Pdz84x" target="_blank" class="card-apply-btn">Jelentkezés</a>
+                <button type="button" onclick="openbevezetesPackagePdf();" class="card-theme-btn">Tematika</button>
+            </div>
         </div>
-        <ul class="card-list">
-            <li>Megérted a stressz és paraszimpatikus idegrendszer kapcsolatát</li>
-            <li>Ismerni fogod a meditáció hatása az idegrendszerre</li>
-            <li>Több mint 10 stabilizáló technikt sajátítassz el </li>
-            <li>Traumatudatos szemléletű stabilizációt tanulsz</li>
-            <li>Neuroplaszticitás- és ezt elősegítő gyakorlatokat ismersz meg</li>
-            <li>Alkalmazhatod a Wellbeing és PERMA modell alapjait a segítői munkában</li>
-        </ul>
-        <div style="color: #3b82f6; font-size: 15px; font-weight: bold; text-align: center; margin: 15px 0;">72.990 Ft</div>
-        <div class="card-buttons">
-            <a href="https://tally.so/r/Pdz84x" target="_blank" class="card-apply-btn">Jelentkezés</a>
-            <button type="button" onclick="openbevezetesPackagePdf();" class="card-theme-btn">Tematika</button>
+
+        <!-- 3. Alap Női Meditáció -->
+        <div class="card-container">
+            <div class="card-title">Neuroalapú Integratív Női Meditációvezető Képzés(Psychologically and Mental Health-Informed Approach) (IAOTH által akkreditált)</div>
+            <div class="card-date">Új turnus: Június 10-11 9:30-14:30 Június 12 9:30-13:15</div>
+            <div class="card-info">Két nyelvű FAR tanúsítványt és Nemzetközi tanúsítványt ad, Course Summaryvel. Képzés létrejött: 2023</div>
+            <ul class="card-list">
+                <li>Pszichológiai és mentálhigiénés szemléletű meditációt tanulsz</li>
+                <li>Beépítheted praxisodba vagy indíthatsz új vállalkozást</li>
+                <li>Létrehozhatsz női köröket</li>
+                <li>Workshopok, meditációk, és sikeres hanganyagokat adsz</li>
+                <li>Gyakorlatorientált képzés</li>
+                <li>Tömény pszichológia és mentálhigiénés elmélet</li>
+            </ul>
+            <div class="price-style">134.990 Ft</div>
+            <div class="card-buttons">
+                <a href="https://tally.so/r/Pdz84x" target="_blank" class="card-apply-btn">Jelentkezés</a>
+                <button type="button" onclick="openBasicPackagePdf();" class="card-theme-btn">Tematika</button>
+            </div>
         </div>
-    </div>
-    <div class="card-container" id="basicPackageCard">
-        <div class="card-header">
-            <div class="card-title">Női meditáció vezető alapképzés (IAOTH által akkreditált)</div>
-            <div class="card-date">Új turnus: Május 1-2 9:30-14:30 Május 3 9:30-12:00 </div>
-            <div class="card-info">Két nyelvű FAR tanúsítványt és Nemzetközi tanúsítványt ad, Course Summaryvel. ❤️🌷Anyák napi akció keretein belül meditáció vezető lehetsz mindössze 99.000 Ft-ért.❤️🌷</div>
-        </div>
-        <ul class="card-list">
-            <li>Pszichológiai és mentálhigiénés szemléletű meditációt tanulsz</li>
-            <li>Beépítheted praxisodba vagy indíthatsz új vállalkozást</li>
-            <li>Létrehozhatsz női köröket</li>
-            <li>Workshopok, meditációk, és sikeres hanganyagokat adsz</li>
-            <li>Gyakorlatorientált képzés</li>
-            <li>Tömény pszichológia és mentálhigiénés elmélet</li>
-        </ul>
-        <div style="color: #3b82f6; font-size: 15px; font-weight: bold; text-align: center; margin: 15px 0;">134.990 Ft</div>
-        <div class="card-buttons">
-            <a href="https://tally.so/r/Pdz84x" target="_blank" class="card-apply-btn">Jelentkezés</a>
-            <button type="button" onclick="openBasicPackagePdf();" class="card-theme-btn">Tematika</button>
-        </div>
-    </div>
-    <div class="card-container" id="HaladoPackageCard">
-        <div class="card-header">
-            <div class="card-title">Haladó Női meditáció vezető (IAOTH által akkreditált)</div>
+
+        <!-- 4. Haladó Női Meditáció -->
+        <div class="card-container">
+            <div class="card-title">Neuroalapú Integratív Női Meditációvezető Képzés HALADÓ (IAOTH által akkreditált)</div>
             <div class="card-date">2026 Február 7-8 9:30-14:30</div>
-            <div class="card-info">Két nyelvű FAR tanúsítványt és Nemzetközi tanúsítványt ad, Course Summaryvel.</div>
+            <div class="card-info">Két nyelvű FAR tanúsítványt és Nemzetközi tanúsítványt ad, Course Summaryvel. Képzés létrejött: 2023</div>
+            <ul class="card-list">
+                <li>Feltétel az alapképzés sikeres elvégzése</li>
+                <li>Pszichológiai és mentálhigiénés szemléletű haladó oldó meditációkat tanulsz</li>
+                <li>Elmélyülsz a mély meditációk területén +13 új technikával és témában</li>
+                <li>Tömény elmélet</li>
+            </ul>
+            <div class="price-style">116.000 Ft</div>
+            <div class="card-buttons">
+                <a href="https://tally.so/r/Pdz84x" target="_blank" class="card-apply-btn">Jelentkezés</a>
+                <button type="button" onclick="openHaladoPackagePdf();" class="card-theme-btn">Tematika</button>
+            </div>
         </div>
-        <ul class="card-list">
-            <li>Feltétel az alapképzés sikeres elvégzése</li>
-            <li>Pszichológiai és mentálhigiénés szemléletű haladó oldó meditációkat tanulsz</li>
-            <li>Elmélyülsz a mély meditációk területén +13 új technikával és témában</li>
-            <li>Tömény elmélet</li>
-        </ul>
-        <div style="color: #3b82f6; font-size: 15px; font-weight: bold; text-align: center; margin: 15px 0;">116.000 Ft</div>
-        <div class="card-buttons">
-            <a href="https://tally.so/r/Pdz84x" target="_blank" class="card-apply-btn">Jelentkezés</a>
-            <button type="button" onclick="openHaladoPackagePdf();" class="card-theme-btn">Tematika</button>
-        </div>
-    </div>
-    <div class="card-container" id="professionalPackageCard">
-        <div class="card-header">
-            <div class="card-title">Meditációs instruktor Professional (IAOTH által akkreditált)</div>
+
+        <!-- 5. Professional Instruktor -->
+        <div class="card-container">
+            <div class="card-title">Neuroalapú Integratív Női Meditációs instruktor Professional (IAOTH által akkreditált)</div>
             <div class="card-date">November 6 – Március 19, minden csütörtök 9:30-12:00</div>
-            <div class="card-info">Két nyelvű FAR tanúsítványt és Nemzetközi tanúsítványt ad, Course Summaryvel.</div>
+            <div class="card-info">Két nyelvű FAR tanúsítványt és Nemzetközi tanúsítványt ad, Course Summaryvel. Képzés létrejött: 2023</div>
+            <ul class="card-list">
+                <li>Feltétel az alap és a haladó képzés sikeres elvégzése</li>
+                <li>Esetmegbeszélők, mentálhigiénés műhelyeken veszel részt</li>
+                <li>Kliens és csoporton belüli szerződést tanulsz</li>
+                <li>75%gyakorlat 25% elmélet</li>
+                <li>A képzés önreflektíven készít fel csoporttal való munkára</li>
+                <li>Nemzetközi professional minősítést kapsz</li>
+            </ul>
+            <div class="price-style">184.990 Ft</div>
+            <div class="card-buttons">
+                <a href="https://tally.so/r/Pdz84x" target="_blank" class="card-apply-btn">Jelentkezés</a>
+                <button type="button" onclick="openProfessionalPackagePdf();" class="card-theme-btn">Tematika</button>
+            </div>
         </div>
-        <ul class="card-list">
-            <li>Feltétel az alap és a haladó képzés sikeres elvégzése</li>
-            <li>Esetmegbeszélők, mentálhigiénés műhelyeken veszel részt</li>
-            <li>Kliens és csoporton belüli szerződést tanulsz</li>
-            <li>75%gyakorlat 25% elmélet</li>
-            <li>A képzés önreflektíven készít fel csoporttal való munkára</li>
-            <li>Nemzetközi professional minősítést kapsz</li>
-        </ul>
-        <div style="color: #3b82f6; font-size: 15px; font-weight: bold; text-align: center; margin: 15px 0;">184.990 Ft</div>
-        <div class="card-buttons">
-            <a href="https://tally.so/r/Pdz84x" target="_blank" class="card-apply-btn">Jelentkezés</a>
-            <button type="button" onclick="openProfessionalPackagePdf();" class="card-theme-btn">Tematika</button>
-        </div>
-    </div>
-    <div class="card-container" id="babyMomSyncPackageCard">
-        <div class="card-header">
+
+        <!-- 6. Anya-Baba Facilitátor -->
+        <div class="card-container">
             <div class="card-title">©Anya-Baba Kapcsolódási Facilitátor (trimeszter-alapú) (IAOTH által akkreditált)</div>
             <div class="card-date">Május 29-31, 1-2. nap 9:30-14:30, 3. nap 9:30-12:30</div>
-            <div class="card-info">Két nyelvű FAR tanúsítványt és Nemzetközi tanúsítványt ad, Course Summaryvel.</div>
+            <div class="card-info">Két nyelvű FAR tanúsítványt és Nemzetközi tanúsítványt ad, Course Summaryvel. Képzés létrejött: 2024</div>
+            <ul class="card-list">
+                <li>Kíséred a várandósság folyamatának lelkiállomásait-várandóslélektan</li>
+                <li>Megtanulod a fogantatási dinamikák, és motivációkat</li>
+                <li>Képes leszel kapcsolódást segíteni trimeszterlélektan szerint</li>
+                <li>Prekoncepciós hatás és az idegrendszer ismeretei</li>
+                <li>Indítóprogramok (születésinformációk az idegrendszerben)</li>
+                <li>Indítható vállalkozás</li>
+                <li>Praxisba beépíthető</li>
+            </ul>
+            <div class="price-style">134.990 Ft</div>
+            <div class="card-buttons">
+                <a href="https://tally.so/r/Pdz84x" target="_blank" class="card-apply-btn">Jelentkezés</a>
+                <button type="button" onclick="openBabyMomSyncPackagePdf();" class="card-theme-btn">Tematika</button>
+            </div>
         </div>
-        <ul class="card-list">
-            <li>Kíséred a várandósság folyamatának lelkiállomásait-várandóslélektan</li>
-            <li>Megtanulod a fogantatási dinamikák, és motivációkat</li>
-            <li>Képes leszel kapcsolódást segíteni trimeszterlélektan szerint</li>
-            <li>Prekoncepciós hatás és az idegrendszer ismeretei</li>
-            <li>Indítóprogramok (születésinformációk az idegrendszerben)</li>
-            <li>Indítható vállalkozás</li>
-            <li>Praxisba beépíthető</li>
-        </ul>
-        <div style="color: #3b82f6; font-size: 15px; font-weight: bold; text-align: center; margin: 15px 0;">134.990 Ft</div>
-        <div class="card-buttons">
-            <a href="https://tally.so/r/Pdz84x" target="_blank" class="card-apply-btn">Jelentkezés</a>
-            <button type="button" onclick="openBabyMomSyncPackagePdf();" class="card-theme-btn">Tematika</button>
-        </div>
-    </div>
-    <div class="card-container" id="PerinatalisPackageCard">
-        <div class="card-header">
+
+        <!-- 7. Perinatális Gyász -->
+        <div class="card-container">
             <div class="card-title">Perinatális-és rendszerszintű gyászkísérés (IAOTH által akkreditált)</div>
-            <div class="card-date">Modul I. Május 16, 10:00-16:00 | Modul II. MMájus 17, 9:00-16:00<span style="color: #e74c3c; font-weight: bold;">(betelt)</span></div>
-            <div class="card-info">Két nyelvű FAR tanúsítványt és Nemzetközi tanúsítványt ad, Course Summaryvel.</div>
+            <div class="card-date">Modul I. Május 16, 10:00-16:00 | Modul II. Május 17, 9:00-16:00</div>
+            <div class="card-info">Két nyelvű FAR tanúsítványt és Nemzetközi tanúsítványt ad, Course Summaryvel. Képzés létrejött: 2026. március</div>
+            <ul class="card-list">
+                <li>Perinatális gyász spektrumjai és fogalmak</li>
+                <li>Spirituális és vallási aspektusok</li>
+                <li>Testemlék-szomatikus lenyomat</li>
+                <li>24.hét (jogi,orvosi, lélektani különbségek)</li>
+                <li>A perinatális veszteség mint egyéni és rendszerszintű krízis</li>
+                <li>Klinikai jelenlét, gyakorlat, kórházi protokoll és rituálék</li>
+            </ul>
+            <div class="price-style">42.990 Ft/ modul (85.980 Ft)</div>
+            <div class="card-buttons">
+                <a href="https://tally.so/r/Pdz84x" target="_blank" class="card-apply-btn">Jelentkezés</a>
+                <button type="button" onclick="openPerinatalisPackagePdf();" class="card-theme-btn">Tematika</button>
+            </div>
         </div>
-        <ul class="card-list">
-            <li>Perinatális gyász spektrumjai és fogalmak</li>
-            <li>Spirituális és vallási aspektusok</li>
-            <li>Testemlék-szomatikus lenyomat</li>
-            <li>24.hét (jogi,orvosi, lélektani különbségek)</li>
-            <li>A perinatális veszteség mint egyéni és rendszerszintű krízis</li>
-            <li>Klinikai jelenlét, gyakorlat, kórházi protokoll és rituálék</li>
-            <li>Búcsú terv, és emlékmunka alapjai klinikai és/vagy otthoni kísérésben</li>
-        </ul>
-        <div style="color: #3b82f6; font-size: 15px; font-weight: bold; text-align: center; margin: 15px 0;">42.990 Ft/ modul (85.980 Ft)</div>
-        <div class="card-buttons">
-            <a href="https://tally.so/r/Pdz84x" target="_blank" class="card-apply-btn">Jelentkezés</a>
-            <button type="button" onclick="openPerinatalisPackagePdf();" class="card-theme-btn">Tematika</button>
-        </div>
-    </div>
-    <div class="card-container" id="SzuleszetPackageCard">
-        <div class="card-header">
+
+        <!-- 8. Dúla -->
+        <div class="card-container">
             <div class="card-title">Dúla a szülőszobán – Intézményi jelenlét alapjai, lelki-mentális reziliencia (IAOTH által akkreditált)</div>
             <div class="card-date">Következő turnus: Március 4. 9:30–15:30</div>
-            <div class="card-info">Két nyelvű FAR tanúsítványt és Nemzetközi tanúsítványt ad, Course Summaryvel.</div>
+            <div class="card-info">Két nyelvű FAR tanúsítványt és Nemzetközi tanúsítványt ad, Course Summaryvel. Képzés létrejött: 2024.</div>
+            <ul class="card-list">
+                <li>Minőségibb szülőszobai támogatás, félelem nélkül</li>
+                <li>Konfliktuskezelés kórházi környezetben, áthidalás</li>
+                <li>Kórházi kommunikáció</li>
+                <li>Érzelmi gátak és ellenszenv feloldása</li>
+                <li>Feszültségmentesítési alapok</li>
+                <li>Szülész–dúla kapcsolati minőségek</li>
+            </ul>
+            <div class="price-style">69.990 Ft</div>
+            <div class="card-buttons">
+                <a href="https://tally.so/r/Pdz84x" target="_blank" class="card-apply-btn">Jelentkezés</a>
+                <button type="button" onclick="openSzuleszetPackagePdf();" class="card-theme-btn">Tematika</button>
+            </div>
         </div>
-        <ul class="card-list">
-            <li>Minőségibb szülőszobai támogatás, félelem nélkül</li>
-            <li>Konfliktuskezelés kórházi környezetben, áthidalás</li>
-            <li>Kórházi kommunikáció</li>
-            <li>Érzelmi gátak és ellenszenv feloldása</li>
-            <li>Feszültségmentesítési alapok</li>
-            <li>Szülész–dúla kapcsolati minőségek</li>
-            <li>Mentális reziliencia, öngondoskodási alapok</li>
-            <li>Szituációs gyakorlat</li>
-        </ul>
-        <div style="color: #3b82f6; font-size: 15px; font-weight: bold; text-align: center; margin: 15px 0;">69.990 Ft</div>
-        <div class="card-buttons">
-            <a href="https://tally.so/r/Pdz84x" target="_blank" class="card-apply-btn">Jelentkezés</a>
-            <button type="button" onclick="openSzuleszetPackagePdf();" class="card-theme-btn">Tematika</button>
-        </div>
-    </div>
-    <div class="card-container" id="ImagalapPackageCard">
-        <div class="card-header">
+
+        <!-- 9. Imagináció Alapjai -->
+        <div class="card-container">
             <div class="card-title">Az Imagináció Alapjai – Eszköztár a segítő munkához (IAOTH által akkreditált)</div>
-            <div class="card-date">Április 8. 18:00–21:00, Április 9, 18:00-21:00, Április 10, 18:00-21:00</div>
-            <div class="card-info">Két nyelvű FAR tanúsítványt és Nemzetközi tanúsítványt ad, Course Summaryvel és 15% kedvezményt ha kedvet kaptál az ©ISZM képzéshez!</div>
+            <div class="card-date">Április 8-10. 18:00–21:00</div>
+            <div class="card-info">Két nyelvű FAR tanúsítványt és Nemzetközi tanúsítványt ad, Course Summaryvel és 15% kedvezményt az ©ISZM képzéshez!</div>
+            <ul class="card-list">
+                <li>Hogyan vezessünk egy folyamatot? (Instrukciók, tempó)</li>
+                <li>Kliens saját jelentéseinek kibontása</li>
+                <li>Kérdezéstechnika az imagináció alatt</li>
+                <li>Kliensfókuszú belső erőforrás kép hívása</li>
+                <li>Kép és érzelem összekapcsolása</li>
+                <li>Páros gyakorlatok és etikai határok</li>
+            </ul>
+            <div class="price-style">19.996/nap (59.990) Ft</div>
+            <div class="card-buttons">
+                <a href="https://tally.so/r/Pdz84x" target="_blank" class="card-apply-btn">Jelentkezés</a>
+                <button type="button" onclick="openImagalapPackagePdf();" class="card-theme-btn">Tematika</button>
+            </div>
         </div>
-        <ul class="card-list">
-            <li>Segítő szakmában dolgozóknak</li>
-            <li>Hogyan vezessünk egy folyamatot? (Instrukciók, hanghordozás, tempó)</li>
-            <li>Kliens saját jelentéseinek kibontása</li>
-            <li>Kérdezéstechnika az imagináció alatt</li>
-            <li>Kliensfókuszú belső erőforrás kép hívása</li>
-            <li>Kép és érzelem összekapcsolása,kreatív eszközök integrálása</li>
-            <li>Etikai határok</li>
-            <li>Páros gyakorlat</li>
-        </ul>
-        <div style="color: #3b82f6; font-size: 15px; font-weight: bold; text-align: center; margin: 15px 0;">19.996/nap (59.990) Ft</div>
-        <div class="card-buttons">
-            <a href="https://tally.so/r/Pdz84x" target="_blank" class="card-apply-btn">Jelentkezés</a>
-            <button type="button" onclick="openImagalapPackagePdf();" class="card-theme-btn">Tematika</button>
-        </div>
-    </div>
-    <div class="card-container" id="traumaPackageCard">
-        <div class="card-header">
-            <div class="card-title">Traumaérzékeny jelenlét és konzultáció lépésről lépésre (IAOTH által akkreditált)</div>
+
+        <!-- 10. Trauma -->
+        <div class="card-container">
+            <div class="card-title">Trauma-Informed Presence and Consultation: Step-by-Step Training (IAOTH akkreditált)</div>
             <div class="card-date">Május 7 8:30-14:30</div>
-            <div class="card-info">Két nyelvű FAR tanúsítványt és Nemzetközi tanúsítványt ad, Course Summaryvel.</div>
-        </div>
-        <ul class="card-list">
-            <li>Segítőknek, akik találkozhatnak bántalmazottakkal</li>
-            <li>Gyermekkortól a családon belüli bántalamzásig</li>
-            <li>Traumatudatos jelenlét</li>
-            <li>Néma jelek a konzultáció során</li>
-            <li>A segítő jelenléte és kérdései, retraumatizálás kerülése</li>
-            <li>Feldolgozás szakaszai</li>
-            <li>Stabilizáló technikák és alkalmazásuk</li>
-            <li>Segítői határok és önvédelem, szekunder traumatizáció</li>
-            <li>Anonim, jelentett esetek a gyakorlati résznél</li>
-        </ul>
-        <div style="color: #3b82f6; font-size: 15px; font-weight: bold; text-align: center; margin: 15px 0;">75.000 Ft</div>
-        <div class="card-buttons">
-            <a href="https://tally.so/r/Pdz84x" target="_blank" class="card-apply-btn">Jelentkezés</a>
-            <a href="https://subscribepage.io/1xhmKS" target="_blank" class="card-theme-btn">Tematika</a>
-        </div>
+            <div class="card-info">Két nyelvű FAR tanúsítványt és Nemzetközi tanúsítványt ad, Course Summaryvel. Képzés létrejött: 2026. március</div>
+            <ul class="card-list">
+                <li>Traumatudatos konzultáció és tértartás alapjai</li>
+                <li>Néma jelek felismerése a konzultáció során</li>
+                <li>A segítő jelenléte és a retraumatizálás kerülése</li>
+                <li>Stabilizáló technikák és alkalmazásuk</li>
+                <li>Segítői határok és önvédelem (szekunder trauma)</li>
+                <li>Feldolgozás, flourishing from trauma szakaszai</li>
+            </ul>
+            <div class="price-style">75.000 Ft</div>
+            <div class="card-buttons">
+                <a href="https://tally.so/r/Pdz84x" target="_blank" class="card-apply-btn">Jelentkezés</a>
+                <a href="https://subscribepage.io/1xhmKS" target="_blank" class="card-theme-btn">Tematika</a>
+            </div>
+        </div
     </div>
+
+<script>
+function openbevezetesPackagePdf() { window.open('pdf/MNSW-tematika.pdf'); }
+function openBasicPackagePdf() { window.open('pdf/nnmvtematika.pdf'); }
+function openHaladoPackagePdf() { window.open('pdf/Halado.pdf'); }
+function openProfessionalPackagePdf() { window.open('pdf/instruktortematika.pdf'); }
+function openBabyMomSyncPackagePdf() { window.open('pdf/anyababa1.pdf'); }
+function openPerinatalisPackagePdf() { window.open('pdf/perinatgyasz.pdf'); }
+function openSzuleszetPackagePdf() { window.open('pdf/dulatematika1.pdf'); }
+function openImagalapPackagePdf() { window.open('pdf/imaginaciotematika.pdf'); }
+</script>
 </div>
 
 <div id="testimonials-wrapper"> 
